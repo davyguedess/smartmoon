@@ -1,7 +1,6 @@
 """
 ToolRegistry — Central registry for all NEXUS.IA agent tools.
 
-Inspired by: Claude Code's tool registration pattern with schema validation.
 
 The ToolRegistry is the single source of truth for:
   - Which tools are available

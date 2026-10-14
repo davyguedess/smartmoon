@@ -5,7 +5,6 @@ Records cost to:
   1. Redis (real-time counter, 90-day TTL) — for instant dashboard queries
   2. DB UsageLog.ai_cost_usd — for billing and monthly reports
 
-Inspired by Claude Code's CostTracker pattern.
 
 Price table (per 1M tokens, USD, April 2026):
   https://openai.com/pricing

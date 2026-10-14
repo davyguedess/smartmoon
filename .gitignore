@@ -59,3 +59,19 @@ scripts/deploy_vps.sh
 .agents/scripts/sync-logo.sh
 .agents/workflows/deploy-vps.md
 seed_duarte_api.sql
+
+# ───────── Artefatos de auditoria/revisão e quarentena de IA ─────────
+/AUDITORIA_*.md
+/audit/
+/sandbox/
+
+# ───────── Logs de sessão de IDE / ferramentas de IA ─────────
+.specstory/
+.history/
+.cursor/
+.aider*
+.antigravity/
+.claude/
+.windsurf/
+.continue/
+*.session.log

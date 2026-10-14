@@ -2,7 +2,6 @@
 AIClient — Unified entry point for ALL LLM communication in NEXUS.IA.
 
 Replaces: 9 separate AI call blocks scattered across chat.py (707 lines)
-Inspired by: Claude Code's queryModelWithStreaming pattern
 
 Every AI call in NEXUS.IA must go through this client to ensure:
   ✅ Consistent error handling

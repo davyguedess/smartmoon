@@ -1,7 +1,6 @@
 """
 PromptBuilder — Token-aware system prompt + context assembler.
 
-Inspired by: Claude Code's compileSystemPrompt / countTokens pattern.
 
 Ensures the final messages list always fits within the model's context window
 by trimming the oldest history first while always preserving:

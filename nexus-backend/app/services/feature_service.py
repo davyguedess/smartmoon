@@ -2,7 +2,6 @@
 FeatureService — Per-company feature gates for NEXUS.IA.
 
 Replaces: app/feature_flags.py (3 global hardcoded flags)
-Inspired by: Claude Code's feature gate system
 
 Features are controlled by:
   1. Plan tier (free / pro / enterprise)

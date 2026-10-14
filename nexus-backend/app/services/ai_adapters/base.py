@@ -5,7 +5,6 @@ Every adapter (OpenAI, Gemini, Claude, Groq, Ollama) must implement:
   - stream()   → AsyncIterator[AIChunk]     (for SSE streaming)
   - complete() → AIResponse                 (for single-shot calls)
 
-Inspired by Claude Code's provider abstraction layer.
 """
 from __future__ import annotations
 

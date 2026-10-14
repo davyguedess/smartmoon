@@ -1075,7 +1075,6 @@ def auto_dream_task():
       2. Generates a "dream" insight using AIClient (Ollama fallback)
       3. Stores insight as a company_shared AgentMemory record
 
-    Inspired by: Claude Code's agentic background task pattern.
     Runs daily at 03:00 UTC (configured in celery_app.py beat schedule).
     """
     logger.info("💭 autoDream: starting nightly insight generation...")
