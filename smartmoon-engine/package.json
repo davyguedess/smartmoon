@@ -1,0 +1,36 @@
+{
+  "name": "smartmoon-engine",
+  "version": "1.0.0",
+  "description": "SmartMoon WhatsApp Engine — Baileys-powered WhatsApp gateway for NEXUS.IA",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "dev": "tsx watch src/index.ts"
+  },
+  "dependencies": {
+    "@hapi/boom": "^10.0.1",
+    "@whiskeysockets/baileys": "^6.7.16",
+    "bullmq": "^5.34.8",
+    "express": "^4.21.2",
+    "ioredis": "^5.4.2",
+    "mime-types": "^2.1.35",
+    "pino": "^9.6.0",
+    "qrcode": "^1.5.4",
+    "uuid": "^11.1.0",
+    "ws": "^8.18.0"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.0",
+    "@types/mime-types": "^2.1.4",
+    "@types/node": "^22.13.10",
+    "@types/qrcode": "^1.5.5",
+    "@types/uuid": "^10.0.0",
+    "@types/ws": "^8.5.14",
+    "tsx": "^4.19.3",
+    "typescript": "^5.7.3"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  }
+}

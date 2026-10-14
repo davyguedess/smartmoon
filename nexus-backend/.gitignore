@@ -1,0 +1,47 @@
+# Python
+venv/
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# Env — nunca versionar segredos
+.env
+.env.*
+*.env
+
+# Credenciais Google (tokens OAuth reais)
+google_credentials.json
+google_token.json
+*credentials*.json
+*token*.json
+
+# DB local
+*.db
+*.sqlite
+
+# IDE
+.vscode/
+.idea/
+*.swp
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+logs/
+
+# Alembic autogen backup
+sandbox/
+
+# Dados de runtime — não versionar
+uploads/
+storage/
+scratch/
+_agents/

@@ -1,0 +1,61 @@
+# ───────── Segredos (NUNCA versionar) ─────────
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+google_credentials.json
+google_token.json
+*credentials*.json
+*service-account*.json
+id_rsa*
+id_ed25519*
+secrets/
+*.secret
+
+# ───────── Python ─────────
+venv/
+.venv/
+env/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+
+# ───────── Node / Frontend ─────────
+node_modules/
+dist/
+build/
+.vite/
+*.local
+
+# ───────── Dados / runtime ─────────
+*.db
+*.sqlite
+*.sqlite3
+logs/
+*.log
+storage/
+uploads/
+sessions/
+media/
+tmp/
+.cache/
+
+# ───────── Sistema / IDE ─────────
+.DS_Store
+.idea/
+.vscode/
+*.swp
+*~
+
+# ───────── Ops/deploy com segredos de infra (senha root VPS) ─────────
+scripts/deploy_vps.sh
+.agents/scripts/sync-logo.sh
+.agents/workflows/deploy-vps.md
+seed_duarte_api.sql

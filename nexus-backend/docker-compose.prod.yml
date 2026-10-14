@@ -1,0 +1,206 @@
+
+
+services:
+  postgres:
+    image: postgres:16-alpine
+    container_name: nexus_postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: nexus
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?POSTGRES_PASSWORD não definido}
+      POSTGRES_DB: nexus_db
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    networks:
+      - nexus_net
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U nexus -d nexus_db"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  redis:
+    image: redis:7-alpine
+    container_name: nexus_redis
+    restart: unless-stopped
+    command: redis-server --appendonly yes --maxmemory 512mb --maxmemory-policy allkeys-lru
+    volumes:
+      - redis_data:/data
+    networks:
+      - nexus_net
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  qdrant:
+    image: qdrant/qdrant:latest
+    container_name: nexus_qdrant
+    restart: unless-stopped
+    volumes:
+      - qdrant_data:/qdrant/storage
+    networks:
+      - nexus_net
+
+  kokoro-tts:
+    image: ghcr.io/remsky/kokoro-fastapi-cpu:v0.2.1
+    container_name: kokoro-tts
+    restart: unless-stopped
+    volumes:
+      - kokoro_models:/app/models
+    networks:
+      - nexus_net
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8880/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 30s
+    deploy:
+      resources:
+        limits:
+          memory: 2G
+
+  localai:
+    image: localai/localai:v2.25.0-ffmpeg-core
+    container_name: nexus_localai
+    restart: unless-stopped
+    environment:
+      - MODELS_PATH=/models
+      - DEBUG=false
+      - THREADS=4
+    volumes:
+      - localai_models:/models
+    networks:
+      - nexus_net
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8080/readyz"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+      start_period: 120s
+    deploy:
+      resources:
+        limits:
+          memory: 4G
+
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile.prod
+    container_name: nexus_api
+    restart: unless-stopped
+    env_file: .env
+    environment:
+      DATABASE_URL: postgresql+asyncpg://nexus:${POSTGRES_PASSWORD:?POSTGRES_PASSWORD não definido}@postgres:5432/nexus_db
+      DATABASE_URL_SYNC: postgresql+psycopg2://nexus:${POSTGRES_PASSWORD:?POSTGRES_PASSWORD não definido}@postgres:5432/nexus_db
+      REDIS_URL: redis://redis:6379/0
+      CELERY_BROKER_URL: redis://redis:6379/1
+      CELERY_RESULT_BACKEND: redis://redis:6379/2
+      QDRANT_URL: http://qdrant:6333
+      KOKORO_TTS_URL: http://kokoro-tts:8880
+      LOCALAI_BASE_URL: http://nexus_localai:8080/v1
+    ports:
+      - "127.0.0.1:8000:8000"
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+    networks:
+      - nexus_net
+    volumes:
+      - audio_storage:/app/storage/audio
+      - smartmoon_media:/data/media       # mídia compartilhada com o smartmoon_engine
+    deploy:
+      resources:
+        limits:
+          memory: 2G
+
+  worker:
+    build:
+      context: .
+      dockerfile: Dockerfile.prod
+    container_name: nexus_worker
+    restart: unless-stopped
+    env_file: .env
+    environment:
+      DATABASE_URL: postgresql+asyncpg://nexus:${POSTGRES_PASSWORD:?POSTGRES_PASSWORD não definido}@postgres:5432/nexus_db
+      DATABASE_URL_SYNC: postgresql+psycopg2://nexus:${POSTGRES_PASSWORD:?POSTGRES_PASSWORD não definido}@postgres:5432/nexus_db
+      REDIS_URL: redis://redis:6379/0
+      CELERY_BROKER_URL: redis://redis:6379/1
+      CELERY_RESULT_BACKEND: redis://redis:6379/2
+      QDRANT_URL: http://qdrant:6333
+      KOKORO_TTS_URL: http://kokoro-tts:8880
+      LOCALAI_BASE_URL: http://nexus_localai:8080/v1
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+    command: celery -A app.workers.celery_app worker --loglevel=info --concurrency=4
+    networks:
+      - nexus_net
+    volumes:
+      - smartmoon_media:/data/media       # mídia compartilhada com o smartmoon_engine
+    deploy:
+      resources:
+        limits:
+          memory: 2G
+
+  smartmoon_engine:
+    build:
+      context: ../smartmoon-engine
+      dockerfile: Dockerfile
+    container_name: smartmoon_engine
+    restart: unless-stopped
+    environment:
+      PORT: "3100"
+      API_KEY: ${SMARTMOON_ENGINE_KEY:?SMARTMOON_ENGINE_KEY não definido}
+      REDIS_URL: redis://redis:6379/3
+      WEBHOOK_BASE_URL: http://nexus_api:8000
+      SESSIONS_DIR: /data/sessions
+      MEDIA_DIR: /data/media
+      LOG_LEVEL: info
+      NODE_ENV: production
+      # Anti-ban tuning
+      MAX_MSG_PER_MIN: "8"
+      TYPING_DELAY_MIN: "2000"
+      TYPING_DELAY_MAX: "6000"
+      ONLINE_PRESENCE: "true"
+      READ_RECEIPT_DELAY: "1500"
+    expose:
+      - "3100"                            # interno apenas — não exposto à internet
+    depends_on:
+      redis:
+        condition: service_healthy
+    networks:
+      - nexus_net
+    volumes:
+      - smartmoon_sessions:/data/sessions  # sessões WhatsApp persistentes
+      - smartmoon_media:/data/media        # mídia compartilhada com api/worker
+    healthcheck:
+      test: ["CMD", "wget", "-qO-", "http://localhost:3100/health"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 20s
+    deploy:
+      resources:
+        limits:
+          memory: 1G
+
+networks:
+  nexus_net:
+    driver: bridge
+
+volumes:
+  postgres_data:
+  redis_data:
+  qdrant_data:
+  kokoro_models:
+  audio_storage:
+  localai_models:
+  smartmoon_sessions:
+  smartmoon_media:

@@ -1,0 +1,52 @@
+# SmartMoon Engine — Standalone Docker Compose
+# Add this to the existing nexus docker-compose.yml or run alongside it.
+#
+# Usage:
+#   cd /opt/nexus/smartmoon-engine
+#   docker compose -f docker-compose.smartmoon.yml up -d --build
+#
+# Joins the nexus-backend Docker network so it can resolve nexus_api and nexus_redis.
+
+services:
+  smartmoon-engine:
+    build: .
+    container_name: smartmoon_engine
+    restart: unless-stopped
+    ports:
+      - "127.0.0.1:3100:3100"  # Internal only — NOT exposed to internet
+    volumes:
+      - smartmoon_sessions:/data/sessions    # Persistent WhatsApp sessions
+      - smartmoon_media:/data/media          # Shared media volume (Node.js ↔ Python)
+    environment:
+      - PORT=3100
+      - API_KEY=${SMARTMOON_ENGINE_KEY:-smartmoon-prod-key-change-me}
+      - REDIS_URL=redis://nexus_redis:6379/3
+      - WEBHOOK_BASE_URL=http://nexus_api:8000
+      - SESSIONS_DIR=/data/sessions
+      - MEDIA_DIR=/data/media
+      - LOG_LEVEL=info
+      - NODE_ENV=production
+      # Anti-ban tuning
+      - MAX_MSG_PER_MIN=8
+      - TYPING_DELAY_MIN=2000
+      - TYPING_DELAY_MAX=6000
+      - ONLINE_PRESENCE=true
+      - READ_RECEIPT_DELAY=1500
+    networks:
+      - nexus_net
+    healthcheck:
+      test: ["CMD", "wget", "-qO-", "http://localhost:3100/health"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 20s
+
+volumes:
+  smartmoon_sessions:
+  smartmoon_media:
+
+networks:
+  nexus_net:
+    external: true
+    name: nexus-backend_nexus_net
+

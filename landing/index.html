@@ -1,0 +1,2060 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Smart Moon — Automação Empresarial com Inteligência Artificial</title>
+<meta name="description" content="Smart Moon é o satélite central das IAs. Agentes inteligentes, automação visual, marketing com IA, licitações, gateway de pagamento e mais de 100 skills — tudo em uma única plataforma.">
+<meta name="keywords" content="inteligência artificial, automação empresarial, agentes IA, marketing IA, licitações inteligentes, Smart Moon, NEXUS.IA, chatbot, fluxos automação">
+<meta name="author" content="Smart Moon">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://smartmoon.online/home">
+<meta name="theme-color" content="#02040b">
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://smartmoon.online/home">
+<meta property="og:title" content="Smart Moon — Automação Empresarial com IA">
+<meta property="og:description" content="O satélite central das IAs. Agentes inteligentes, automação visual, marketing com IA, licitações e mais de 100 skills em uma única plataforma.">
+<meta property="og:image" content="https://smartmoon.online/landing/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:site_name" content="Smart Moon">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Smart Moon — Automação Empresarial com IA">
+<meta name="twitter:description" content="O satélite central das IAs. Agentes inteligentes, automação visual, marketing com IA, licitações e mais de 100 skills em uma única plataforma.">
+<meta name="twitter:image" content="https://smartmoon.online/landing/og-image.png">
+
+<!-- Favicon -->
+<link rel="icon" type="image/png" href="/landing/logo-icon.png">
+<link rel="apple-touch-icon" href="/landing/logo-icon.png">
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --bg: #02040b; --surface: #07101d; --card: #0c1627; --card2: #101d33;
+  --border: rgba(120,170,255,0.10); --border2: rgba(120,170,255,0.22);
+  --purple: #9b7cff; --purple-d: #7a5cf0; --cyan: #65dcff; --green: #78f0b2;
+  --amber: #ffcb6d; --red: #ff728d; --pink: #f678d7; --blue: #7da8ff;
+  --text: #edf4ff; --text2: #adbbda; --muted: #7585aa; --moon: #dbe7ff;
+}
+html { scroll-behavior: smooth; }
+body { font-family:'Inter',system-ui,-apple-system,sans-serif; background:var(--bg); color:var(--text); -webkit-font-smoothing:antialiased; line-height:1.6; overflow-x:hidden; }
+
+/* ===== BACKGROUNDS ===== */
+.bg-glow { position:fixed; inset:0; z-index:0; pointer-events:none;
+  background:
+    radial-gradient(ellipse 65% 55% at 20% 25%, rgba(101,220,255,0.06) 0%, transparent 60%),
+    radial-gradient(ellipse 55% 65% at 80% 20%, rgba(155,124,255,0.08) 0%, transparent 62%),
+    radial-gradient(ellipse 50% 50% at 50% 80%, rgba(123,168,255,0.04) 0%, transparent 65%); }
+.bg-grid { position:fixed; inset:0; z-index:0; pointer-events:none; opacity:0.02;
+  background-image: linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px),
+                    linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px);
+  background-size: 70px 70px; }
+.stars { position:fixed; inset:0; z-index:0; pointer-events:none;
+  background-image:
+    radial-gradient(circle at 12% 18%, rgba(255,255,255,0.8) 0 1px, transparent 1.5px),
+    radial-gradient(circle at 24% 72%, rgba(255,255,255,0.6) 0 1px, transparent 1.5px),
+    radial-gradient(circle at 38% 32%, rgba(101,220,255,0.7) 0 1px, transparent 1.8px),
+    radial-gradient(circle at 52% 58%, rgba(255,255,255,0.65) 0 1px, transparent 1.6px),
+    radial-gradient(circle at 68% 26%, rgba(155,124,255,0.75) 0 1px, transparent 1.8px),
+    radial-gradient(circle at 79% 64%, rgba(255,255,255,0.7) 0 1px, transparent 1.5px),
+    radial-gradient(circle at 90% 18%, rgba(255,255,255,0.6) 0 1px, transparent 1.6px),
+    radial-gradient(circle at 5% 50%, rgba(120,240,178,0.5) 0 1px, transparent 1.5px),
+    radial-gradient(circle at 45% 85%, rgba(255,203,109,0.5) 0 1px, transparent 1.5px),
+    radial-gradient(circle at 95% 45%, rgba(246,120,215,0.5) 0 1px, transparent 1.5px); }
+
+/* ===== NAVIGATION ===== */
+.navbar { position:fixed; top:0; left:0; right:0; z-index:1000; padding:14px 40px;
+  display:flex; justify-content:space-between; align-items:center;
+  background:rgba(2,4,11,0.75); backdrop-filter:blur(20px); border-bottom:1px solid var(--border);
+  transition: all 0.3s; }
+.navbar.scrolled { background:rgba(2,4,11,0.92); padding:10px 40px; }
+.nav-brand { display:flex; align-items:center; gap:0; text-decoration:none; }
+.nav-brand img { height:32px; width:auto; }
+.nav-links { display:flex; gap:28px; align-items:center; }
+.nav-links a { font-size:12px; font-weight:600; color:var(--text2); text-decoration:none; transition:color 0.2s; letter-spacing:0.3px; }
+.nav-links a:hover { color:var(--cyan); }
+.nav-cta { padding:8px 20px; border-radius:8px; border:none;
+  background:linear-gradient(135deg,var(--purple),var(--cyan)); color:#07101d;
+  font-size:12px; font-weight:800; font-family:inherit; cursor:pointer; text-decoration:none;
+  transition:all 0.3s; box-shadow:0 4px 16px rgba(101,220,255,0.2); }
+.nav-cta:hover { transform:translateY(-1px); box-shadow:0 6px 24px rgba(101,220,255,0.3); }
+
+/* ===== CONTENT WRAPPER ===== */
+.content { position:relative; z-index:1; }
+section { padding:100px 40px; max-width:1200px; margin:0 auto; }
+
+/* ===== HERO ===== */
+.hero { min-height:100vh; display:flex; flex-direction:column; justify-content:center; align-items:center; text-align:center; padding-top:100px; }
+.hero-logo { width:120px; height:120px; border-radius:50%; margin-bottom:24px;
+  box-shadow:0 0 60px rgba(101,220,255,0.2), 0 0 120px rgba(155,124,255,0.1);
+  animation: float 4s ease-in-out infinite; }
+.hero-logo img { width:100%; height:100%; object-fit:cover; border-radius:50%; }
+.hero-badge { display:inline-flex; align-items:center; gap:7px; padding:6px 16px; border-radius:20px;
+  background:rgba(101,220,255,0.06); border:1px solid rgba(101,220,255,0.12);
+  font-size:10px; font-weight:700; color:var(--cyan); text-transform:uppercase; letter-spacing:1.2px; margin-bottom:24px; }
+.hero-badge svg { width:14px; height:14px; stroke:var(--cyan); fill:none; stroke-width:2; }
+.hero h1 { font-size:64px; font-weight:900; letter-spacing:-3px; line-height:1.05; margin-bottom:20px; position:relative; }
+.hero h1 .gradient-text { background:linear-gradient(135deg,var(--moon),var(--cyan) 35%,var(--purple) 85%);
+  -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text;
+  position:relative; display:inline-block; }
+.hero h1 .gradient-text::after { content:""; position:absolute; top:0; left:-100%; width:60%; height:100%;
+  background:linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+  animation: heroShine 2s ease 0.5s forwards; pointer-events:none; }
+@keyframes heroShine {
+  0% { left:-100%; opacity:1; }
+  100% { left:150%; opacity:0; }
+}
+.hero-sub { font-size:18px; color:var(--text2); max-width:680px; margin-bottom:36px; font-weight:400; line-height:1.7; }
+.hero-pills { display:flex; gap:12px; flex-wrap:wrap; justify-content:center; margin-bottom:48px; }
+.hero-pill { display:flex; align-items:center; gap:7px; padding:8px 16px; border-radius:10px; font-size:11px; font-weight:700; }
+.hero-pill svg { width:14px; height:14px; fill:none; stroke-width:2; }
+.hero-stats { display:flex; gap:40px; margin-top:20px; opacity:0.5; }
+.hero-stats span { font-size:10px; font-weight:700; color:var(--text2); text-transform:uppercase; letter-spacing:1px; }
+.hero-cta-group { display:flex; gap:14px; flex-wrap:wrap; justify-content:center; }
+.btn-primary { display:inline-flex; align-items:center; gap:10px; padding:16px 36px; border-radius:14px; border:none;
+  background:linear-gradient(135deg,var(--purple),var(--cyan)); color:#07101d; font-size:15px; font-weight:900;
+  font-family:inherit; cursor:pointer; transition:all 0.3s; box-shadow:0 8px 30px rgba(101,220,255,0.22); letter-spacing:-0.3px; text-decoration:none; }
+.btn-primary:hover { transform:translateY(-2px); box-shadow:0 12px 40px rgba(101,220,255,0.3); }
+.btn-primary svg { width:18px; height:18px; stroke:#07101d; fill:none; stroke-width:2; }
+.btn-secondary { display:inline-flex; align-items:center; gap:8px; padding:16px 36px; border-radius:14px;
+  border:1px solid var(--border2); background:rgba(255,255,255,0.03); color:var(--text);
+  font-size:15px; font-weight:700; font-family:inherit; cursor:pointer; transition:all 0.3s; text-decoration:none; }
+.btn-secondary:hover { border-color:var(--cyan); background:rgba(101,220,255,0.06); }
+.btn-secondary svg { width:18px; height:18px; stroke:var(--cyan); fill:none; stroke-width:2; }
+
+/* ===== SECTION HEADERS ===== */
+.section-tag { display:inline-flex; align-items:center; gap:6px; padding:5px 14px; border-radius:20px;
+  font-size:9px; font-weight:800; text-transform:uppercase; letter-spacing:1.5px; margin-bottom:16px; }
+.section-tag svg { width:12px; height:12px; fill:none; stroke-width:2; }
+.section-title { font-size:42px; font-weight:900; letter-spacing:-2px; line-height:1.1; margin-bottom:14px; }
+.section-title.sm { font-size:34px; letter-spacing:-1.2px; }
+.section-sub { font-size:16px; color:var(--text2); max-width:640px; line-height:1.7; margin-bottom:48px; }
+.gradient-text { background:linear-gradient(135deg,var(--moon),var(--cyan) 35%,var(--purple) 85%);
+  -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; }
+.text-center { text-align:center; }
+.mx-auto { margin-left:auto; margin-right:auto; }
+.flex-center { display:flex; flex-direction:column; align-items:center; }
+
+/* ===== ICON WRAPPER ===== */
+.ico { display:flex; align-items:center; justify-content:center; border-radius:12px; flex-shrink:0; }
+.ico svg { stroke-width:1.8; fill:none; stroke:currentColor; }
+.ico-sm { width:38px; height:38px; } .ico-sm svg { width:18px; height:18px; }
+.ico-md { width:44px; height:44px; } .ico-md svg { width:20px; height:20px; }
+.ico-lg { width:52px; height:52px; } .ico-lg svg { width:24px; height:24px; }
+
+/* ===== FEATURE CARDS ===== */
+.modules-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:20px; width:100%; }
+.module-card { background:linear-gradient(180deg, rgba(255,255,255,0.025), rgba(255,255,255,0.01));
+  border:1px solid var(--border); border-radius:16px; padding:28px 24px; transition:all 0.4s;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,0.03); position:relative; overflow:hidden; }
+.module-card::before { content:""; position:absolute; top:0; left:0; right:0; height:2px;
+  background:linear-gradient(90deg, transparent, var(--cyan), transparent); opacity:0; transition:opacity 0.4s; }
+.module-card:hover { border-color:var(--border2); transform:translateY(-4px);
+  box-shadow:0 12px 40px rgba(0,0,0,0.3), 0 0 40px rgba(101,220,255,0.04); }
+.module-card:hover::before { opacity:1; }
+.module-card .ico { margin-bottom:14px; }
+.module-card h3 { font-size:15px; font-weight:800; margin-bottom:8px; letter-spacing:-0.3px; }
+.module-card p { font-size:12px; color:var(--muted); line-height:1.65; }
+.module-card .card-features { display:flex; flex-wrap:wrap; gap:5px; margin-top:12px; }
+.module-card .card-tag { font-size:8px; font-weight:700; padding:3px 8px; border-radius:6px; text-transform:uppercase; letter-spacing:0.4px; }
+
+/* ===== MODULE DETAIL SECTION ===== */
+.module-detail { padding:80px 40px; max-width:1200px; margin:0 auto; }
+.module-detail:nth-child(even) .detail-inner { flex-direction:row-reverse; }
+.detail-inner { display:flex; gap:60px; align-items:center; }
+.detail-content { flex:1; }
+.detail-visual { flex:1; }
+.detail-content h3 { font-size:28px; font-weight:900; letter-spacing:-1px; margin-bottom:12px; }
+.detail-content p { font-size:14px; color:var(--text2); line-height:1.75; margin-bottom:20px; }
+.detail-features { display:flex; flex-direction:column; gap:10px; }
+.detail-feature { display:flex; align-items:start; gap:10px; padding:10px 14px; border-radius:10px;
+  background:rgba(255,255,255,0.02); border:1px solid rgba(255,255,255,0.04); }
+.detail-feature .check { width:18px; height:18px; border-radius:50%; flex-shrink:0; margin-top:1px;
+  display:flex; align-items:center; justify-content:center; }
+.detail-feature .check svg { width:10px; height:10px; stroke-width:3; fill:none; }
+.detail-feature span { font-size:12px; font-weight:500; color:var(--text2); }
+
+/* ===== MOCKUP ===== */
+.mock { background:var(--card); border:1px solid var(--border2); border-radius:14px; overflow:hidden;
+  box-shadow:0 20px 70px rgba(0,0,0,0.35), 0 0 60px rgba(101,220,255,0.04); }
+.mock-bar { display:flex; align-items:center; gap:6px; padding:8px 14px;
+  background:rgba(0,0,0,0.24); border-bottom:1px solid var(--border); }
+.mock-dot { width:7px; height:7px; border-radius:50%; }
+.mock-content { padding:16px; }
+.mock-row { display:flex; gap:8px; margin-bottom:8px; }
+.mock-card { background:var(--card2); border:1px solid var(--border); border-radius:10px; padding:12px 14px; flex:1; }
+.mock-stat { font-size:22px; font-weight:900; letter-spacing:-1px; }
+.mock-label { font-size:8px; color:var(--muted); font-weight:600; text-transform:uppercase; letter-spacing:0.5px; margin-top:2px; }
+
+/* ===== PROVIDERS ===== */
+.providers-grid { display:flex; gap:14px; flex-wrap:wrap; justify-content:center; }
+.provider-card { padding:22px 20px; border-radius:14px; border:1px solid var(--border); background:var(--card);
+  text-align:center; min-width:160px; flex:1; max-width:200px; position:relative; transition:all 0.3s; }
+.provider-card:hover { border-color:var(--border2); transform:translateY(-3px);
+  box-shadow:0 8px 30px rgba(0,0,0,0.25); }
+.provider-name { font-size:14px; font-weight:800; margin-top:10px; margin-bottom:3px; }
+.provider-model { font-size:10px; color:var(--muted); }
+.provider-badge { position:absolute; top:8px; right:8px; padding:3px 8px; border-radius:8px;
+  font-size:7px; font-weight:900; text-transform:uppercase; letter-spacing:0.5px; }
+
+/* ===== PIPELINE ===== */
+.pipeline { display:flex; align-items:center; gap:6px; justify-content:center; flex-wrap:wrap; }
+.pipe-step { padding:18px 20px; border-radius:14px; text-align:center; border:1px solid var(--border);
+  background:var(--card); min-width:130px; box-shadow:inset 0 1px 0 rgba(255,255,255,0.03); transition:all 0.3s; }
+.pipe-step:hover { border-color:var(--border2); transform:translateY(-2px); }
+.pipe-label { font-size:10px; font-weight:800; text-transform:uppercase; letter-spacing:0.8px; margin-top:8px; }
+.pipe-num { font-size:18px; font-weight:900; opacity:0.2; }
+.pipe-arrow { color:var(--muted); font-size:16px; }
+.pipe-arrow svg { width:18px; height:18px; stroke:var(--muted); fill:none; stroke-width:2; }
+
+/* ===== DIFFERENTIALS ===== */
+.diff-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:16px; }
+.diff-card { background:linear-gradient(180deg, rgba(255,255,255,0.025), rgba(255,255,255,0.008));
+  border:1px solid var(--border); border-radius:14px; padding:24px 20px; transition:all 0.3s; }
+.diff-card:hover { border-color:var(--border2); transform:translateY(-2px); }
+.diff-card h4 { font-size:14px; font-weight:800; margin-bottom:6px; letter-spacing:-0.2px; }
+.diff-card p { font-size:11px; color:var(--muted); line-height:1.6; }
+
+/* ===== INTEGRATIONS ===== */
+.int-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:10px; }
+.int-item { display:flex; align-items:center; gap:10px; padding:12px 14px; border-radius:10px;
+  background:rgba(255,255,255,0.015); border:1px solid rgba(255,255,255,0.04); transition:all 0.3s; }
+.int-item:hover { border-color:var(--border2); background:rgba(255,255,255,0.03); }
+.int-name { font-size:11px; font-weight:700; }
+.int-desc { font-size:8px; color:var(--muted); }
+
+/* ===== PRICING ===== */
+.pricing-grid { display:grid; grid-template-columns:repeat(5,1fr); gap:16px; width:100%; max-width:1200px; }
+.pricing-card { background:linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.008));
+  border:1px solid var(--border); border-radius:18px; padding:28px 22px; position:relative;
+  display:flex; flex-direction:column; transition:all 0.4s; overflow:hidden; }
+.pricing-card::before { content:""; position:absolute; top:0; left:0; right:0; height:3px;
+  background:var(--card-accent, var(--border)); border-radius:18px 18px 0 0; opacity:0.6; transition:opacity 0.4s; }
+.pricing-card:hover { border-color:var(--border2); transform:translateY(-6px);
+  box-shadow:0 16px 50px rgba(0,0,0,0.3), 0 0 50px rgba(101,220,255,0.04); }
+.pricing-card:hover::before { opacity:1; }
+.pricing-card.featured { border-color:var(--border2);
+  background:linear-gradient(180deg, rgba(99,102,241,0.06), rgba(99,102,241,0.015));
+  box-shadow:0 0 60px rgba(99,102,241,0.08); }
+.pricing-card.featured::before { opacity:1; }
+.pricing-badge { position:absolute; top:14px; right:14px; padding:3px 10px; border-radius:8px;
+  font-size:7px; font-weight:900; text-transform:uppercase; letter-spacing:0.6px; }
+.pricing-icon { width:44px; height:44px; border-radius:12px; display:flex; align-items:center;
+  justify-content:center; margin-bottom:16px; box-shadow:0 0 20px rgba(0,0,0,0.15); }
+.pricing-icon svg { width:20px; height:20px; stroke:currentColor; fill:none; stroke-width:1.8; }
+.pricing-name { font-size:18px; font-weight:900; letter-spacing:-0.5px; margin-bottom:4px; }
+.pricing-desc { font-size:11px; color:var(--muted); line-height:1.5; margin-bottom:20px; min-height:34px; }
+.pricing-price { margin-bottom:20px; }
+.pricing-currency { font-size:12px; font-weight:700; color:var(--text2); vertical-align:super; }
+.pricing-value { font-size:40px; font-weight:900; letter-spacing:-2px; line-height:1; }
+.pricing-period { font-size:10px; color:var(--muted); font-weight:600; margin-left:2px; }
+.pricing-divider { height:1px; background:var(--border); margin-bottom:16px; }
+.pricing-features { display:flex; flex-direction:column; gap:8px; flex:1; margin-bottom:22px; }
+.pricing-feat { display:flex; align-items:center; gap:8px; font-size:11px; color:var(--text2); font-weight:500; }
+.pricing-feat svg { width:14px; height:14px; flex-shrink:0; stroke-width:2.5; fill:none; }
+.pricing-feat.disabled { color:var(--muted); opacity:0.4; }
+.pricing-feat.disabled svg { stroke:var(--muted); }
+.pricing-btn { display:block; text-align:center; padding:12px 14px; border-radius:12px; font-size:12px;
+  font-weight:800; text-decoration:none; transition:all 0.3s; border:none; cursor:pointer; font-family:inherit; letter-spacing:-0.2px; }
+.pricing-btn-outline { background:rgba(255,255,255,0.04); border:1px solid var(--border2); color:var(--text); }
+.pricing-btn-outline:hover { border-color:var(--cyan); background:rgba(101,220,255,0.06); color:var(--cyan); }
+.pricing-btn-fill { background:linear-gradient(135deg,var(--purple),var(--cyan)); color:#07101d;
+  box-shadow:0 6px 20px rgba(101,220,255,0.2); }
+.pricing-btn-fill:hover { transform:translateY(-1px); box-shadow:0 8px 28px rgba(101,220,255,0.3); }
+
+@media (max-width: 1024px) {
+  .pricing-grid { grid-template-columns:repeat(3,1fr); }
+}
+@media (max-width: 768px) {
+  .pricing-grid { grid-template-columns:1fr; max-width:380px; }
+  .pricing-card { padding:24px 20px; }
+  .pricing-value { font-size:36px; }
+}
+
+/* ===== CTA SECTION ===== */
+.cta-section { text-align:center; padding:120px 40px; position:relative; }
+.cta-section::before { content:""; position:absolute; top:0; left:50%; transform:translateX(-50%);
+  width:600px; height:600px; border-radius:50%; background:radial-gradient(circle, rgba(155,124,255,0.08), transparent 65%);
+  pointer-events:none; }
+.cta-glow { position:relative; z-index:1; }
+
+/* ===== FOOTER ===== */
+.footer { padding:30px 40px; border-top:1px solid var(--border); text-align:center; }
+.footer p { font-size:11px; color:var(--muted); font-weight:500; }
+.footer a { color:var(--cyan); text-decoration:none; }
+
+/* ===== DIVIDER ===== */
+.divider { height:1px; background:linear-gradient(90deg, transparent, var(--border2), transparent); margin:0 auto; max-width:800px; }
+
+/* ===== ANIMATIONS ===== */
+@keyframes fadeUp { from { opacity:0; transform:translateY(30px); } to { opacity:1; transform:translateY(0); } }
+@keyframes float { 0%,100% { transform:translateY(0); } 50% { transform:translateY(-8px); } }
+.animate { opacity:0; transform:translateY(30px); transition:opacity 0.7s ease, transform 0.7s ease; }
+.animate.visible { opacity:1; transform:translateY(0); }
+.float { animation:float 4s ease-in-out infinite; }
+
+/* ===== ORBIT DECORATION ===== */
+.orbit-container { position:absolute; width:500px; height:500px; top:50%; left:50%; transform:translate(-50%,-50%); pointer-events:none; }
+.orbit-ring-deco { position:absolute; inset:0; border-radius:50%; border:1px solid rgba(173,187,218,0.06);
+  box-shadow:0 0 60px rgba(101,220,255,0.03) inset; }
+.orbit-ring-deco::before { content:""; position:absolute; inset:50px; border-radius:50%; border:1px dashed rgba(155,124,255,0.08); }
+.orbit-ring-deco::after { content:""; position:absolute; inset:110px; border-radius:50%; border:1px solid rgba(101,220,255,0.06); }
+
+/* ===== MODAL ===== */
+.modal-overlay { display:none; position:fixed; inset:0; z-index:10000; background:rgba(2,4,11,0.85); backdrop-filter:blur(12px);
+  align-items:center; justify-content:center; padding:20px; }
+.modal-overlay.active { display:flex; }
+.modal-box { background:var(--surface); border:1px solid var(--border2); border-radius:20px; width:100%; max-width:900px;
+  max-height:85vh; overflow:hidden; display:flex; flex-direction:column; animation:modalIn 0.3s ease; }
+@keyframes modalIn { from { transform:scale(0.92) translateY(20px); opacity:0; } to { transform:scale(1) translateY(0); opacity:1; } }
+.modal-header { display:flex; align-items:center; justify-content:space-between; padding:24px 28px 16px; border-bottom:1px solid var(--border); }
+.modal-header-left { display:flex; align-items:center; gap:14px; }
+.modal-header h2 { font-size:20px; font-weight:800; letter-spacing:-0.5px; }
+.modal-header .modal-count { font-size:11px; font-weight:700; color:var(--text2); background:rgba(101,220,255,0.06);
+  border:1px solid var(--border); padding:3px 10px; border-radius:10px; }
+.modal-close { background:rgba(255,255,255,0.04); border:1px solid var(--border); border-radius:10px;
+  width:36px; height:36px; display:flex; align-items:center; justify-content:center; cursor:pointer; transition:all 0.2s; }
+.modal-close:hover { background:rgba(255,114,141,0.1); border-color:var(--red); }
+.modal-close svg { width:16px; height:16px; stroke:var(--text2); fill:none; stroke-width:2; }
+.modal-body { padding:20px 28px 28px; overflow-y:auto; }
+.modal-desc { font-size:13px; color:var(--text2); margin-bottom:20px; line-height:1.6; }
+.skills-grid { display:grid; grid-template-columns:repeat(auto-fill, minmax(240px, 1fr)); gap:10px; }
+.skill-item { display:flex; align-items:flex-start; gap:10px; padding:14px 16px; border-radius:12px;
+  background:var(--card); border:1px solid var(--border); transition:all 0.2s; }
+.skill-item:hover { border-color:var(--border2); background:var(--card2); }
+.skill-icon { font-size:20px; flex-shrink:0; width:32px; height:32px; display:flex; align-items:center; justify-content:center;
+  background:rgba(101,220,255,0.06); border-radius:8px; }
+.skill-info h4 { font-size:12px; font-weight:700; color:var(--text); margin-bottom:2px; }
+.skill-info p { font-size:10px; color:var(--muted); line-height:1.4; }
+
+@media (max-width: 768px) {
+  .modal-box { max-height:90vh; border-radius:14px; }
+  .modal-header { padding:16px 18px 12px; }
+  .modal-body { padding:14px 18px 20px; }
+  .skills-grid { grid-template-columns:1fr; }
+  .modal-header h2 { font-size:16px; }
+}
+
+/* ===== HAMBURGER ===== */
+.hamburger { display:none; background:none; border:none; cursor:pointer; padding:6px; }
+.hamburger svg { width:24px; height:24px; stroke:var(--text); fill:none; stroke-width:2; }
+.mobile-menu { display:none; position:fixed; top:52px; left:0; right:0; z-index:999;
+  background:rgba(2,4,11,0.97); backdrop-filter:blur(20px); border-bottom:1px solid var(--border);
+  padding:16px 20px; flex-direction:column; gap:4px; }
+.mobile-menu.open { display:flex; }
+.mobile-menu a { display:block; padding:12px 16px; border-radius:10px; font-size:14px; font-weight:600;
+  color:var(--text2); text-decoration:none; transition:all 0.2s; }
+.mobile-menu a:hover, .mobile-menu a:active { background:rgba(101,220,255,0.06); color:var(--cyan); }
+.mobile-menu .mobile-cta-group { display:flex; gap:8px; margin-top:8px; }
+.mobile-menu .mobile-cta-group a { flex:1; text-align:center; padding:12px; border-radius:10px; }
+.mobile-menu .btn-login-sm { background:rgba(255,255,255,0.04); border:1px solid var(--border2); color:var(--text); font-weight:700; }
+.mobile-menu .btn-register-sm { background:linear-gradient(135deg,var(--purple),var(--cyan)); color:#07101d; font-weight:800; }
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 1024px) {
+  .modules-grid { grid-template-columns:repeat(2,1fr); }
+  .diff-grid { grid-template-columns:repeat(2,1fr); }
+  .int-grid { grid-template-columns:repeat(3,1fr); }
+  .detail-inner { flex-direction:column !important; }
+  .hero h1 { font-size:48px; }
+}
+@media (max-width: 768px) {
+  section { padding:60px 16px; }
+  .navbar { padding:10px 16px; }
+  .nav-links { display:none; }
+  .hamburger { display:block; }
+  .hero { padding-top:80px; min-height:auto; padding-bottom:40px; }
+  .hero h1 { font-size:36px; letter-spacing:-1.5px; }
+  .hero-sub { font-size:14px; max-width:100%; }
+  .hero-badge { font-size:8px; padding:5px 12px; }
+  .hero-pills { gap:8px; }
+  .hero-pill { font-size:10px; padding:6px 12px; }
+  .section-title { font-size:26px; letter-spacing:-1px; }
+  .section-title.sm { font-size:22px; }
+  .section-sub { font-size:13px; margin-bottom:30px; }
+  .modules-grid { grid-template-columns:1fr; gap:12px; }
+  .diff-grid { grid-template-columns:1fr; gap:12px; }
+  .int-grid { grid-template-columns:1fr; gap:8px; }
+  .providers-grid { flex-direction:column; align-items:center; }
+  .provider-card { width:100%; max-width:320px; }
+  .pipeline { flex-direction:column; gap:4px; }
+  .pipe-arrow { transform:rotate(90deg); }
+  .pipe-step { min-width:auto; width:100%; max-width:200px; }
+  .hero-stats { flex-direction:column; gap:6px; }
+  .hero-cta-group { flex-direction:column; width:100%; max-width:320px; }
+  .btn-primary, .btn-secondary { width:100%; justify-content:center; padding:14px 24px; font-size:14px; }
+  .module-card { padding:20px 16px; }
+  .module-card h3 { font-size:14px; }
+  .module-card p { font-size:11px; }
+  .mock { border-radius:10px; }
+  .mock-content { padding:10px; }
+  .mock-stat { font-size:18px; }
+  .mock-row { flex-wrap:wrap; }
+  .mock-card { min-width:calc(50% - 4px); }
+  .orbit-container { width:300px; height:300px; }
+  .cta-section { padding:80px 16px; }
+  .cta-section::before { width:300px; height:300px; }
+  .nav-brand img { height:26px; }
+  .footer { padding:20px 16px; }
+}
+@media (max-width: 480px) {
+  .hero h1 { font-size:28px; letter-spacing:-1px; }
+  .hero-pills { flex-direction:column; align-items:center; }
+  .mock-row { gap:4px; }
+  .pipe-step { padding:14px 16px; }
+}
+
+/* ===== SCROLLBAR ===== */
+::-webkit-scrollbar { width:5px; }
+::-webkit-scrollbar-track { background:var(--bg); }
+::-webkit-scrollbar-thumb { background:rgba(101,220,255,0.25); border-radius:4px; }
+::-webkit-scrollbar-thumb:hover { background:rgba(101,220,255,0.4); }
+
+/* ===== SIDEBAR ===== */
+.sidebar-btn { background:rgba(255,255,255,0.04); border:1px solid var(--border); border-radius:10px;
+  width:36px; height:36px; display:flex; align-items:center; justify-content:center; cursor:pointer; transition:all 0.3s; }
+.sidebar-btn:hover { background:rgba(101,220,255,0.08); border-color:var(--cyan); }
+.sidebar-btn svg { width:18px; height:18px; stroke:var(--text2); fill:none; stroke-width:2; }
+.sidebar-overlay { display:none; position:fixed; inset:0; z-index:9000; background:rgba(2,4,11,0.6); backdrop-filter:blur(4px); }
+.sidebar-overlay.active { display:block; }
+.sidebar-panel { position:fixed; top:0; right:-380px; width:360px; max-width:90vw; height:100vh; z-index:9001;
+  background:var(--surface); border-left:1px solid var(--border2); transition:right 0.4s cubic-bezier(.4,0,.2,1);
+  display:flex; flex-direction:column; overflow:hidden; }
+.sidebar-panel.active { right:0; }
+.sidebar-header { display:flex; align-items:center; justify-content:space-between; padding:20px 24px 16px;
+  border-bottom:1px solid var(--border); }
+.sidebar-header h3 { font-size:16px; font-weight:800; letter-spacing:-0.3px;
+  background:linear-gradient(135deg,var(--cyan),var(--purple)); -webkit-background-clip:text; -webkit-text-fill-color:transparent; }
+.sidebar-close { background:rgba(255,255,255,0.04); border:1px solid var(--border); border-radius:10px;
+  width:32px; height:32px; display:flex; align-items:center; justify-content:center; cursor:pointer; transition:all 0.2s; }
+.sidebar-close:hover { background:rgba(255,114,141,0.1); border-color:var(--red); }
+.sidebar-close svg { width:14px; height:14px; stroke:var(--text2); fill:none; stroke-width:2; }
+.sidebar-body { flex:1; overflow-y:auto; padding:16px; }
+.sidebar-section { margin-bottom:20px; }
+.sidebar-section-title { font-size:9px; font-weight:800; color:var(--muted); text-transform:uppercase; letter-spacing:1.5px;
+  padding:0 8px 8px; }
+.sidebar-item { display:flex; align-items:center; gap:12px; padding:12px 14px; border-radius:12px;
+  cursor:pointer; transition:all 0.2s; border:1px solid transparent; }
+.sidebar-item:hover { background:rgba(101,220,255,0.04); border-color:var(--border); }
+.sidebar-item .sb-ico { width:36px; height:36px; border-radius:10px; display:flex; align-items:center; justify-content:center; flex-shrink:0; }
+.sidebar-item .sb-ico svg { width:16px; height:16px; stroke:currentColor; fill:none; stroke-width:1.8; }
+.sidebar-item .sb-info { flex:1; }
+.sidebar-item .sb-name { font-size:12px; font-weight:700; color:var(--text); }
+.sidebar-item .sb-desc { font-size:9px; color:var(--muted); margin-top:1px; }
+.sidebar-item .sb-arrow { width:16px; height:16px; stroke:var(--muted); fill:none; stroke-width:2; opacity:0; transition:opacity 0.2s; }
+.sidebar-item:hover .sb-arrow { opacity:1; }
+.sidebar-divider { height:1px; background:var(--border); margin:8px 8px 16px; }
+.sidebar-special { position:relative; overflow:hidden; }
+.sidebar-special::before { content:""; position:absolute; top:0; left:0; right:0; bottom:0; border-radius:12px;
+  background:linear-gradient(135deg, rgba(101,220,255,0.03), rgba(155,124,255,0.03)); pointer-events:none; }
+
+/* ===== OVERLAY PAGES ===== */
+.page-overlay { display:none; position:fixed; inset:0; z-index:10000;
+  background:linear-gradient(180deg, rgba(2,4,11,0.97) 0%, rgba(7,16,29,0.98) 100%);
+  backdrop-filter:blur(20px); overflow-y:auto; animation:pageIn 0.35s ease; }
+.page-overlay.active { display:block; }
+@keyframes pageIn { from { opacity:0; } to { opacity:1; } }
+.page-container { max-width:880px; margin:0 auto; padding:90px 40px 80px; }
+.page-top-bar { display:flex; align-items:center; justify-content:space-between; margin-bottom:48px; }
+.page-back { display:inline-flex; align-items:center; gap:8px; padding:10px 20px; border-radius:12px;
+  background:rgba(255,255,255,0.03); border:1px solid var(--border2); color:var(--text2); font-size:13px; font-weight:700;
+  cursor:pointer; transition:all 0.3s; text-decoration:none; }
+.page-back:hover { border-color:var(--cyan); color:var(--cyan); background:rgba(101,220,255,0.08); transform:translateX(-3px); }
+.page-back svg { width:18px; height:18px; stroke:currentColor; fill:none; stroke-width:2; }
+.page-hero-tag { display:inline-flex; align-items:center; gap:8px; padding:6px 18px; border-radius:24px;
+  font-size:10px; font-weight:800; text-transform:uppercase; letter-spacing:1.5px; margin:0; }
+.page-hero-tag svg { width:14px; height:14px; fill:none; stroke-width:2; }
+.page-title { font-size:44px; font-weight:900; letter-spacing:-2.5px; line-height:1.08; margin-bottom:20px; }
+.page-subtitle { font-size:16px; color:var(--text2); line-height:1.75; margin-bottom:56px; max-width:720px; }
+.page-steps { position:relative; padding-left:28px; margin-bottom:20px; }
+.page-steps::before { content:""; position:absolute; left:21px; top:22px; bottom:22px; width:2px;
+  background:linear-gradient(180deg, var(--cyan), var(--purple), var(--green)); border-radius:2px; opacity:0.3; }
+.page-step { display:flex; gap:24px; margin-bottom:36px; align-items:flex-start; position:relative; }
+.page-step-num { width:44px; height:44px; border-radius:50%; display:flex; align-items:center; justify-content:center;
+  font-size:15px; font-weight:900; flex-shrink:0; position:relative; z-index:1;
+  box-shadow:0 0 20px rgba(0,0,0,0.4), inset 0 1px 0 rgba(255,255,255,0.1); }
+.page-step-card { flex:1; padding:20px 24px; border-radius:14px;
+  background:linear-gradient(135deg, rgba(255,255,255,0.025), rgba(255,255,255,0.008));
+  border:1px solid var(--border); transition:all 0.3s; }
+.page-step-card:hover { border-color:var(--border2); transform:translateX(4px); }
+.page-step-content h4 { font-size:17px; font-weight:800; margin-bottom:8px; letter-spacing:-0.3px; }
+.page-step-content p { font-size:13px; color:var(--text2); line-height:1.7; }
+.page-features-title { font-size:10px; font-weight:800; color:var(--muted); text-transform:uppercase;
+  letter-spacing:1.5px; margin-bottom:16px; margin-top:48px; }
+.page-features { display:grid; grid-template-columns:repeat(3, 1fr); gap:14px; }
+.page-feature { display:flex; align-items:flex-start; gap:14px; padding:20px; border-radius:14px;
+  background:linear-gradient(180deg, rgba(255,255,255,0.025), rgba(255,255,255,0.008));
+  border:1px solid var(--border); transition:all 0.3s; position:relative; overflow:hidden; }
+.page-feature::before { content:""; position:absolute; top:0; left:0; right:0; height:1px;
+  background:linear-gradient(90deg, transparent, rgba(101,220,255,0.2), transparent); opacity:0; transition:opacity 0.3s; }
+.page-feature:hover { border-color:var(--border2); transform:translateY(-3px);
+  box-shadow:0 8px 30px rgba(0,0,0,0.2); }
+.page-feature:hover::before { opacity:1; }
+.page-feature .pf-ico { width:40px; height:40px; border-radius:12px; display:flex; align-items:center;
+  justify-content:center; flex-shrink:0; box-shadow:0 0 15px rgba(0,0,0,0.2); }
+.page-feature .pf-ico svg { width:18px; height:18px; stroke:currentColor; fill:none; stroke-width:1.8; }
+.page-feature h5 { font-size:13px; font-weight:700; margin-bottom:4px; }
+.page-feature p { font-size:11px; color:var(--muted); line-height:1.55; }
+.page-cta-box { margin-top:56px; padding:40px; border-radius:20px; text-align:center; position:relative; overflow:hidden;
+  background:linear-gradient(135deg, rgba(101,220,255,0.05), rgba(155,124,255,0.05));
+  border:1px solid var(--border2); }
+.page-cta-box::before { content:""; position:absolute; top:-50%; left:-50%; width:200%; height:200%;
+  background:radial-gradient(circle, rgba(155,124,255,0.06) 0%, transparent 50%); pointer-events:none; }
+.page-cta-box h3 { font-size:22px; font-weight:900; margin-bottom:10px; letter-spacing:-0.5px; position:relative; }
+.page-cta-box p { font-size:14px; color:var(--text2); margin-bottom:24px; position:relative; }
+@media (max-width: 768px) {
+  .page-container { padding:70px 16px 40px; }
+  .page-title { font-size:28px; letter-spacing:-1.5px; }
+  .page-top-bar { flex-direction:column; align-items:flex-start; gap:12px; }
+  .page-step { flex-direction:column; gap:12px; }
+  .page-steps { padding-left:0; }
+  .page-steps::before { display:none; }
+  .page-features { grid-template-columns:1fr; }
+  .sidebar-panel { width:320px; }
+  .page-step-card { padding:16px 18px; }
+}
+</style>
+</head>
+<body>
+
+<div class="bg-glow"></div>
+<div class="bg-grid"></div>
+<div class="stars"></div>
+
+<!-- ===== NAVBAR ===== -->
+<nav class="navbar" id="navbar">
+  <a href="#" class="nav-brand">
+    <img src="/landing/logo-horizontal.png" alt="Smart Moon">
+  </a>
+  <div class="nav-links">
+    <a href="#modulos">Módulos</a>
+    <a href="#como-funciona">Como Funciona</a>
+    <a href="#provedores">Provedores IA</a>
+    <a href="#planos">Planos</a>
+    <a onclick="openPage('licitacoes')" style="cursor:pointer;">Licitações</a>
+    <a onclick="openPage('gateway')" style="cursor:pointer;">Gateway</a>
+    <a href="/login" style="color:var(--text);">Login</a>
+    <a href="/register" class="nav-cta">Registre-se</a>
+  </div>
+  <div style="display:flex;align-items:center;gap:8px;">
+    <button class="sidebar-btn" id="sidebarBtn" aria-label="Explorar Módulos">
+      <svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
+    </button>
+    <button class="hamburger" id="hamburgerBtn" aria-label="Menu">
+      <svg viewBox="0 0 24 24"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+    </button>
+  </div>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#modulos" class="mobile-link">Módulos</a>
+  <a href="#como-funciona" class="mobile-link">Como Funciona</a>
+  <a href="#provedores" class="mobile-link">Provedores IA</a>
+  <a href="#planos" class="mobile-link">Planos</a>
+  <a onclick="openPage('licitacoes');document.getElementById('mobileMenu').classList.remove('open')" class="mobile-link" style="cursor:pointer;">Licitações Inteligentes</a>
+  <a onclick="openPage('gateway');document.getElementById('mobileMenu').classList.remove('open')" class="mobile-link" style="cursor:pointer;">Gateway de Pagamento</a>
+  <a onclick="openSidebar()" class="mobile-link" style="cursor:pointer;">Explorar Módulos →</a>
+  <div class="mobile-cta-group">
+    <a href="/login" class="btn-login-sm mobile-link">Login</a>
+    <a href="/register" class="btn-register-sm mobile-link">Registre-se</a>
+  </div>
+</div>
+
+<!-- ===== SIDEBAR ===== -->
+<div class="sidebar-overlay" id="sidebarOverlay" onclick="closeSidebar()"></div>
+<div class="sidebar-panel" id="sidebarPanel">
+  <div class="sidebar-header">
+    <h3>Módulos Inteligentes</h3>
+    <button class="sidebar-close" onclick="closeSidebar()">
+      <svg viewBox="0 0 24 24"><path d="M18 6L6 18M6 6l12 12"/></svg>
+    </button>
+  </div>
+  <div class="sidebar-body">
+    <div class="sidebar-section">
+      <div class="sidebar-section-title">Núcleo da Plataforma</div>
+      <div class="sidebar-item" onclick="closeSidebar();openModal('dashboard')">
+        <div class="sb-ico" style="background:rgba(101,220,255,0.08);color:var(--cyan);"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg></div>
+        <div class="sb-info"><div class="sb-name">Dashboard</div><div class="sb-desc">Centro de comando em tempo real</div></div>
+        <svg class="sb-arrow" viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"/></svg>
+      </div>
+      <div class="sidebar-item" onclick="closeSidebar();openModal('chat')">
+        <div class="sb-ico" style="background:rgba(155,124,255,0.08);color:var(--purple);"><svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg></div>
+        <div class="sb-info"><div class="sb-name">Chat IA</div><div class="sb-desc">5 provedores de IA com streaming</div></div>
+        <svg class="sb-arrow" viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"/></svg>
+      </div>
+      <div class="sidebar-item" onclick="closeSidebar();openModal('agentes')">
+        <div class="sb-ico" style="background:rgba(120,240,178,0.08);color:var(--green);"><svg viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M9 9h6v6H9z"/></svg></div>
+        <div class="sb-info"><div class="sb-name">Agentes de IA</div><div class="sb-desc">Personalidades especializadas 24/7</div></div>
+        <svg class="sb-arrow" viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"/></svg>
+      </div>
+      <div class="sidebar-item" onclick="closeSidebar();openModal('skills')">
+        <div class="sb-ico" style="background:rgba(246,120,215,0.08);color:var(--pink);"><svg viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><path d="M3 6h18"/></svg></div>
+        <div class="sb-info"><div class="sb-name">Skill Store</div><div class="sb-desc">100+ habilidades instaláveis</div></div>
+        <svg class="sb-arrow" viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"/></svg>
+      </div>
+      <div class="sidebar-item" onclick="closeSidebar();openModal('fluxos')">
+        <div class="sb-ico" style="background:rgba(255,203,109,0.08);color:var(--amber);"><svg viewBox="0 0 24 24"><circle cx="5" cy="6" r="3"/><circle cx="19" cy="6" r="3"/><circle cx="12" cy="18" r="3"/><path d="M5 9v3a3 3 0 003 3h8a3 3 0 003-3V9"/></svg></div>
+        <div class="sb-info"><div class="sb-name">Fluxos de Automação</div><div class="sb-desc">Editor visual drag-and-drop</div></div>
+        <svg class="sb-arrow" viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"/></svg>
+      </div>
+    </div>
+    <div class="sidebar-divider"></div>
+    <div class="sidebar-section">
+      <div class="sidebar-section-title">Skills Especializadas</div>
+      <div class="sidebar-item" onclick="closeSidebar();openModal('marketing')">
+        <div class="sb-ico" style="background:rgba(246,120,215,0.08);color:var(--pink);"><svg viewBox="0 0 24 24"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/><path d="M4 22v-7"/></svg></div>
+        <div class="sb-info"><div class="sb-name">Marketing IA</div><div class="sb-desc">22 skills de marketing digital</div></div>
+        <svg class="sb-arrow" viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"/></svg>
+      </div>
+      <div class="sidebar-item" onclick="closeSidebar();openModal('financeiro')">
+        <div class="sb-ico" style="background:rgba(120,240,178,0.08);color:var(--green);"><svg viewBox="0 0 24 24"><path d="M12 1v22"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg></div>
+        <div class="sb-info"><div class="sb-name">Skills Financeiras</div><div class="sb-desc">22 skills de FP&A e contabilidade</div></div>
+        <svg class="sb-arrow" viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"/></svg>
+      </div>
+      <div class="sidebar-item" onclick="closeSidebar();openModal('memoria')">
+        <div class="sb-ico" style="background:rgba(155,124,255,0.08);color:var(--purple);"><svg viewBox="0 0 24 24"><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10"/><circle cx="12" cy="12" r="3"/></svg></div>
+        <div class="sb-info"><div class="sb-name">Memória & Contexto</div><div class="sb-desc">22 skills de memória vetorial</div></div>
+        <svg class="sb-arrow" viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"/></svg>
+      </div>
+      <div class="sidebar-item" onclick="closeSidebar();openModal('email')">
+        <div class="sb-ico" style="background:rgba(255,203,109,0.08);color:var(--amber);"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><path d="M22 6l-10 7L2 6"/></svg></div>
+        <div class="sb-info"><div class="sb-name">Email Intelligence</div><div class="sb-desc">21 skills de gestão inteligente</div></div>
+        <svg class="sb-arrow" viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"/></svg>
+      </div>
+      <div class="sidebar-item" onclick="closeSidebar();openModal('voice')">
+        <div class="sb-ico" style="background:rgba(101,220,255,0.08);color:var(--cyan);"><svg viewBox="0 0 24 24"><path d="M12 1a3 3 0 00-3 3v8a3 3 0 006 0V4a3 3 0 00-3-3z"/><path d="M19 10v2a7 7 0 01-14 0v-2"/></svg></div>
+        <div class="sb-info"><div class="sb-name">Voice V2</div><div class="sb-desc">Identidade sonora para agentes</div></div>
+        <svg class="sb-arrow" viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"/></svg>
+      </div>
+    </div>
+    <div class="sidebar-divider"></div>
+    <div class="sidebar-section">
+      <div class="sidebar-section-title">Como Funciona</div>
+      <div class="sidebar-item sidebar-special" onclick="closeSidebar();openPage('licitacoes')">
+        <div class="sb-ico" style="background:rgba(255,114,141,0.08);color:var(--red);"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><path d="M14 2v6h6"/><path d="M9 15l2 2 4-4"/></svg></div>
+        <div class="sb-info"><div class="sb-name">Licitações Inteligentes</div><div class="sb-desc">Como funciona o radar de licitações</div></div>
+        <svg class="sb-arrow" viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"/></svg>
+      </div>
+      <div class="sidebar-item sidebar-special" onclick="closeSidebar();openPage('gateway')">
+        <div class="sb-ico" style="background:rgba(255,203,109,0.08);color:var(--amber);"><svg viewBox="0 0 24 24"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"/><path d="M1 10h22"/></svg></div>
+        <div class="sb-info"><div class="sb-name">Gateway de Pagamento</div><div class="sb-desc">Como funciona nosso sistema de cobrança</div></div>
+        <svg class="sb-arrow" viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"/></svg>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="content">
+
+<!-- ===== HERO ===== -->
+<section class="hero" id="hero">
+  <div style="position:relative;">
+    <div class="orbit-container"><div class="orbit-ring-deco"></div></div>
+    <div style="position:relative;z-index:1;" class="flex-center">
+      <div class="hero-badge">
+        <svg viewBox="0 0 24 24" style="width:14px;height:14px;stroke:var(--cyan);fill:none;stroke-width:2;"><circle cx="12" cy="12" r="3"/><path d="M19.4 15A8 8 0 105 8.6"/><path d="M16 6c3 1 4.5 4 4 7"/></svg>
+        Satélite Central das IAs
+      </div>
+      <h1><span class="gradient-text">Smart Moon</span></h1>
+      <p class="hero-sub">Automação empresarial com inteligência artificial. Agentes, fluxos visuais, marketing com IA, licitações, voz e muito mais — tudo em uma única plataforma.</p>
+      <div class="hero-pills">
+        <div class="hero-pill" style="background:rgba(155,124,255,0.08);border:1px solid rgba(155,124,255,0.14);color:var(--purple);">
+          <svg viewBox="0 0 24 24" style="stroke:var(--purple);"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M9 9h6v6H9z"/><path d="M9 1v3M15 1v3M9 20v3M15 20v3M20 9h3M20 14h3M1 9h3M1 14h3"/></svg>
+          Agentes Inteligentes
+        </div>
+        <div class="hero-pill" style="background:rgba(101,220,255,0.08);border:1px solid rgba(101,220,255,0.14);color:var(--cyan);">
+          <svg viewBox="0 0 24 24" style="stroke:var(--cyan);"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+          Automação Visual
+        </div>
+        <div class="hero-pill" style="background:rgba(120,240,178,0.08);border:1px solid rgba(120,240,178,0.14);color:var(--green);">
+          <svg viewBox="0 0 24 24" style="stroke:var(--green);"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg>
+          Marketing com IA
+        </div>
+        <div class="hero-pill" style="background:rgba(255,203,109,0.08);border:1px solid rgba(255,203,109,0.14);color:var(--amber);">
+          <svg viewBox="0 0 24 24" style="stroke:var(--amber);"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><path d="M14 2v6h6M16 13H8M16 17H8M10 9H8"/></svg>
+          Licitações Inteligentes
+        </div>
+      </div>
+      <div class="hero-cta-group">
+        <a href="/login" class="btn-primary">
+          <svg viewBox="0 0 24 24"><path d="M15 3h4a2 2 0 012 2v14a2 2 0 01-2 2h-4M10 17l5-5-5-5M13.8 12H3"/></svg>
+          Login
+        </a>
+        <a href="/register" class="btn-secondary">
+          <svg viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="8.5" cy="7" r="4"/><path d="M20 8v6M23 11h-6"/></svg>
+          Registre-se
+        </a>
+      </div>
+      <div class="hero-stats">
+        <span>14 Módulos</span><span>•</span>
+        <span>5 Provedores IA</span><span>•</span>
+        <span>15+ Integrações</span><span>•</span>
+        <span>Plataforma Completa</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== O QUE É ===== -->
+<div class="divider"></div>
+<section class="flex-center text-center" id="sobre">
+  <div class="section-tag animate" style="background:rgba(255,203,109,0.06);color:var(--amber);border:1px solid rgba(255,203,109,0.12);">
+    <svg viewBox="0 0 24 24" style="stroke:var(--amber);"><path d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8L12 3z"/></svg>
+    O que é a Smart Moon
+  </div>
+  <h2 class="section-title animate">O <span class="gradient-text">satélite central</span> que orbita todas as IAs</h2>
+  <p class="section-sub mx-auto animate">A Smart Moon é uma plataforma que conecta inteligências artificiais, agentes e automações em um único ecossistema. Em vez de usar dezenas de ferramentas separadas, centralize toda a operação da sua empresa com IA trabalhando 24/7 por você.</p>
+
+  <div class="modules-grid animate" style="max-width:900px;">
+    <div class="diff-card">
+      <div class="ico ico-md" style="background:rgba(101,220,255,0.08);color:var(--cyan);margin-bottom:10px;">
+        <svg viewBox="0 0 24 24"><path d="M21 12a9 9 0 11-6.219-8.56"/><path d="M21 3v6h-6"/></svg>
+      </div>
+      <h4>Centralização</h4>
+      <p>Múltiplas IAs em uma plataforma, com visão operacional completa e controle do ecossistema.</p>
+    </div>
+    <div class="diff-card">
+      <div class="ico ico-md" style="background:rgba(155,124,255,0.08);color:var(--purple);margin-bottom:10px;">
+        <svg viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M9 9h6v6H9z"/><path d="M9 1v3M15 1v3M9 20v3M15 20v3M20 9h3M20 14h3M1 9h3M1 14h3"/></svg>
+      </div>
+      <h4>Agentes</h4>
+      <p>Personalidades de IA especializadas para atendimento, vendas, marketing e operação.</p>
+    </div>
+    <div class="diff-card">
+      <div class="ico ico-md" style="background:rgba(120,240,178,0.08);color:var(--green);margin-bottom:10px;">
+        <svg viewBox="0 0 24 24"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg>
+      </div>
+      <h4>Autonomia</h4>
+      <p>Reduza tarefas repetitivas, acelere decisões e amplie a produtividade com IA prática.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== MÓDULOS ===== -->
+<div class="divider"></div>
+<section class="flex-center text-center" id="modulos">
+  <div class="section-tag animate" style="background:rgba(120,240,178,0.06);color:var(--green);border:1px solid rgba(120,240,178,0.12);">
+    <svg viewBox="0 0 24 24" style="stroke:var(--green);"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><path d="M22 4L12 14.01l-3-3"/></svg>
+    Módulos Disponíveis
+  </div>
+  <h2 class="section-title animate">Tudo o que sua operação precisa em um <span class="gradient-text">único lugar</span></h2>
+  <p class="section-sub mx-auto animate">14 módulos integrados para cobrir toda a jornada da sua empresa — do atendimento ao cliente até a análise de licitações.</p>
+
+  <div class="modules-grid animate">
+    <!-- Dashboard -->
+    <div class="module-card" onclick="openModal('dashboard')">
+      <div class="ico ico-md" style="background:rgba(101,220,255,0.08);color:var(--cyan);box-shadow:0 0 20px rgba(101,220,255,0.08);">
+        <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/><path d="M13 13h4M13 17h4"/><circle cx="6" cy="14" r="0.5" fill="currentColor"/></svg>
+      </div>
+      <h3>Dashboard</h3>
+      <p>Centro de comando em tempo real. Monitore agentes, execuções, modelos de IA, status de serviços e consumo de créditos.</p>
+      <div class="card-features">
+        <span class="card-tag" style="background:rgba(101,220,255,0.08);color:var(--cyan);">Tempo Real</span>
+        <span class="card-tag" style="background:rgba(120,240,178,0.08);color:var(--green);">Métricas</span>
+      </div>
+    </div>
+
+    <!-- Chat IA -->
+    <div class="module-card" onclick="openModal('chat')">
+      <div class="ico ico-md" style="background:rgba(155,124,255,0.08);color:var(--purple);box-shadow:0 0 20px rgba(155,124,255,0.08);">
+        <svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/><path d="M8 9h8M8 13h5"/><circle cx="17" cy="13" r="1" fill="currentColor"/></svg>
+      </div>
+      <h3>Chat IA</h3>
+      <p>Converse com 5 provedores de IA diferentes. Streaming em tempo real, troca de modelo instantânea e histórico salvo.</p>
+      <div class="card-features">
+        <span class="card-tag" style="background:rgba(155,124,255,0.08);color:var(--purple);">Multi-Modelo</span>
+        <span class="card-tag" style="background:rgba(101,220,255,0.08);color:var(--cyan);">Streaming</span>
+      </div>
+    </div>
+
+    <!-- Agentes -->
+    <div class="module-card" onclick="openModal('agentes')">
+      <div class="ico ico-md" style="background:rgba(120,240,178,0.08);color:var(--green);box-shadow:0 0 20px rgba(120,240,178,0.08);">
+        <svg viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M9 9h6v6H9z"/><path d="M9 1v3M15 1v3M9 20v3M15 20v3M20 9h3M20 14h3M1 9h3M1 14h3"/><circle cx="12" cy="12" r="1" fill="currentColor"/></svg>
+      </div>
+      <h3>Agentes de IA</h3>
+      <p>Crie personalidades de IA especializadas: comercial, suporte, marketing, jurídico. Configure modelo, temperamento e skills.</p>
+      <div class="card-features">
+        <span class="card-tag" style="background:rgba(120,240,178,0.08);color:var(--green);">24/7</span>
+        <span class="card-tag" style="background:rgba(255,203,109,0.08);color:var(--amber);">Treinável</span>
+      </div>
+    </div>
+
+    <!-- Skills -->
+    <div class="module-card" onclick="openModal('skills')">
+      <div class="ico ico-md" style="background:rgba(246,120,215,0.08);color:var(--pink);box-shadow:0 0 20px rgba(246,120,215,0.08);">
+        <svg viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 01-8 0"/><circle cx="8" cy="15" r="0.5" fill="currentColor"/><circle cx="12" cy="15" r="0.5" fill="currentColor"/><circle cx="16" cy="15" r="0.5" fill="currentColor"/></svg>
+      </div>
+      <h3>Skill Store</h3>
+      <p>Marketplace com 100+ habilidades instaláveis para agentes. Skills financeiras, marketing, mensagens, pesquisa e muito mais.</p>
+      <div class="card-features">
+        <span class="card-tag" style="background:rgba(246,120,215,0.08);color:var(--pink);">100+ Skills</span>
+        <span class="card-tag" style="background:rgba(125,168,255,0.08);color:var(--blue);">Modular</span>
+      </div>
+    </div>
+
+    <!-- Fluxos -->
+    <div class="module-card" onclick="openModal('fluxos')">
+      <div class="ico ico-md" style="background:rgba(255,203,109,0.08);color:var(--amber);box-shadow:0 0 20px rgba(255,203,109,0.08);">
+        <svg viewBox="0 0 24 24"><circle cx="5" cy="6" r="3"/><circle cx="19" cy="6" r="3"/><circle cx="12" cy="18" r="3"/><path d="M5 9v3a3 3 0 003 3h8a3 3 0 003-3V9"/><path d="M12 15v-3"/></svg>
+      </div>
+      <h3>Fluxos de Automação</h3>
+      <p>Construtor visual drag-and-drop. Monte automações complexas sem código conectando triggers, agentes e ações.</p>
+      <div class="card-features">
+        <span class="card-tag" style="background:rgba(255,203,109,0.08);color:var(--amber);">Sem Código</span>
+        <span class="card-tag" style="background:rgba(155,124,255,0.08);color:var(--purple);">Drag & Drop</span>
+      </div>
+    </div>
+
+    <!-- Marketing -->
+    <div class="module-card" onclick="openModal('marketing')">
+      <div class="ico ico-md" style="background:rgba(246,120,215,0.08);color:var(--pink);box-shadow:0 0 20px rgba(246,120,215,0.08);">
+        <svg viewBox="0 0 24 24"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/><path d="M4 22v-7"/><path d="M20 13.5V21"/><circle cx="20" cy="8" r="0.5" fill="currentColor"/></svg>
+      </div>
+      <h3>IA Studio / Marketing</h3>
+      <p>Suite completa de marketing digital. Gere imagens com IA, crie campanhas para Instagram, gerencie Brand Kit e biblioteca criativa.</p>
+      <div class="card-features">
+        <span class="card-tag" style="background:rgba(246,120,215,0.08);color:var(--pink);">Marketing</span>
+        <span class="card-tag" style="background:rgba(255,203,109,0.08);color:var(--amber);">Campanhas</span>
+      </div>
+    </div>
+
+    <!-- Financeiro -->
+    <div class="module-card" onclick="openModal('financeiro')">
+      <div class="ico ico-md" style="background:rgba(120,240,178,0.08);color:var(--green);box-shadow:0 0 20px rgba(120,240,178,0.08);">
+        <svg viewBox="0 0 24 24"><path d="M12 1v22"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/><path d="M6 8h2M16 16h2" stroke-width="1.2"/></svg>
+      </div>
+      <h3>Skills Financeiras</h3>
+      <p>22 skills especializadas: DRE, Fluxo de Caixa, KPIs, Valuation, Impostos, Folha de Pagamento, Análise de Crédito e muito mais.</p>
+      <div class="card-features">
+        <span class="card-tag" style="background:rgba(120,240,178,0.08);color:var(--green);">22 Skills</span>
+        <span class="card-tag" style="background:rgba(255,203,109,0.08);color:var(--amber);">FP&A</span>
+      </div>
+    </div>
+
+    <!-- Licitações -->
+    <div class="module-card" onclick="openModal('licitacoes')">
+      <div class="ico ico-md" style="background:rgba(255,114,141,0.08);color:var(--red);box-shadow:0 0 20px rgba(255,114,141,0.08);">
+        <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><path d="M14 2v6h6"/><path d="M9 15l2 2 4-4"/><path d="M16 13H8M16 17H8" opacity="0.3"/></svg>
+      </div>
+      <h3>Licitações</h3>
+      <p>Radar inteligente com busca no PNCP. Download de editais, extração de texto e análise IA automática: jurídica, fiscal e econômica.</p>
+      <div class="card-features">
+        <span class="card-tag" style="background:rgba(255,114,141,0.08);color:var(--red);">PNCP</span>
+        <span class="card-tag" style="background:rgba(155,124,255,0.08);color:var(--purple);">Análise IA</span>
+      </div>
+    </div>
+
+    <!-- Execuções -->
+    <div class="module-card" onclick="openModal('execucoes')">
+      <div class="ico ico-md" style="background:rgba(125,168,255,0.08);color:var(--blue);box-shadow:0 0 20px rgba(125,168,255,0.08);">
+        <svg viewBox="0 0 24 24"><path d="M5 12l5 5L20 7"/><path d="M12 22c5.5 0 10-4.5 10-10S17.5 2 12 2 2 6.5 2 12s4.5 10 10 10z"/></svg>
+      </div>
+      <h3>Execuções</h3>
+      <p>Monitor em tempo real de todas as atividades via WebSocket. Status, trigger, duração e steps expandíveis com output JSON.</p>
+      <div class="card-features">
+        <span class="card-tag" style="background:rgba(125,168,255,0.08);color:var(--blue);">WebSocket</span>
+        <span class="card-tag" style="background:rgba(120,240,178,0.08);color:var(--green);">Logs</span>
+      </div>
+    </div>
+
+    <!-- Memória -->
+    <div class="module-card" onclick="openModal('memoria')">
+      <div class="ico ico-md" style="background:rgba(155,124,255,0.08);color:var(--purple);box-shadow:0 0 20px rgba(155,124,255,0.08);">
+        <svg viewBox="0 0 24 24"><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10"/><path d="M22 2L13 11"/><path d="M16 2h6v6"/><circle cx="12" cy="12" r="3"/></svg>
+      </div>
+      <h3>Memória & Contexto</h3>
+      <p>22 skills de memória vetorial, sumarização, extração de fatos, cache semântico e gestão de conhecimento para agentes.</p>
+      <div class="card-features">
+        <span class="card-tag" style="background:rgba(155,124,255,0.08);color:var(--purple);">Qdrant</span>
+        <span class="card-tag" style="background:rgba(101,220,255,0.08);color:var(--cyan);">Vetorial</span>
+      </div>
+    </div>
+
+    <!-- Voice -->
+    <div class="module-card" onclick="openModal('voice')">
+      <div class="ico ico-md" style="background:rgba(101,220,255,0.08);color:var(--cyan);box-shadow:0 0 20px rgba(101,220,255,0.08);">
+        <svg viewBox="0 0 24 24"><path d="M12 1a3 3 0 00-3 3v8a3 3 0 006 0V4a3 3 0 00-3-3z"/><path d="M19 10v2a7 7 0 01-14 0v-2"/><path d="M12 19v4M8 23h8"/><path d="M6 6v0M18 6v0M6 10v0M18 10v0" stroke-width="2" stroke-linecap="round"/></svg>
+      </div>
+      <h3>Voice V2</h3>
+      <p>Identidade sonora para agentes. Biblioteca de vozes, clonagem personalizada e configuração por canal.</p>
+      <div class="card-features">
+        <span class="card-tag" style="background:rgba(101,220,255,0.08);color:var(--cyan);">Clonagem</span>
+        <span class="card-tag" style="background:rgba(120,240,178,0.08);color:var(--green);">Multi-idioma</span>
+      </div>
+    </div>
+
+    <!-- Mensagens -->
+    <div class="module-card" onclick="openModal('mensagens')">
+      <div class="ico ico-md" style="background:rgba(120,240,178,0.08);color:var(--green);box-shadow:0 0 20px rgba(120,240,178,0.08);">
+        <svg viewBox="0 0 24 24"><path d="M22 2L11 13"/><path d="M22 2l-7 20-4-9-9-4 20-7z"/><circle cx="7" cy="17" r="0.5" fill="currentColor"/><circle cx="4" cy="14" r="0.5" fill="currentColor"/></svg>
+      </div>
+      <h3>Mensagens & Canais</h3>
+      <p>Integração com Telegram e WhatsApp. Envio de texto, áudio, extração de leads de links e disparos em massa.</p>
+      <div class="card-features">
+        <span class="card-tag" style="background:rgba(120,240,178,0.08);color:var(--green);">Telegram</span>
+        <span class="card-tag" style="background:rgba(155,124,255,0.08);color:var(--purple);">WhatsApp</span>
+      </div>
+    </div>
+
+    <!-- Integrações -->
+    <div class="module-card" onclick="openModal('integracoes')">
+      <div class="ico ico-md" style="background:rgba(155,124,255,0.08);color:var(--purple);box-shadow:0 0 20px rgba(155,124,255,0.08);">
+        <svg viewBox="0 0 24 24"><path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71"/><circle cx="12" cy="12" r="1" fill="currentColor"/></svg>
+      </div>
+      <h3>Integrações</h3>
+      <p>Central com 15+ conexões: Telegram, WhatsApp, OpenAI, Gemini, Claude, Groq, Gmail, Google Calendar, Mercado Pago e mais.</p>
+      <div class="card-features">
+        <span class="card-tag" style="background:rgba(155,124,255,0.08);color:var(--purple);">15+ Serviços</span>
+        <span class="card-tag" style="background:rgba(120,240,178,0.08);color:var(--green);">Plug & Play</span>
+      </div>
+    </div>
+
+    <!-- Billing -->
+    <div class="module-card" onclick="openModal('billing')">
+      <div class="ico ico-md" style="background:rgba(255,203,109,0.08);color:var(--amber);box-shadow:0 0 20px rgba(255,203,109,0.08);">
+        <svg viewBox="0 0 24 24"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"/><path d="M1 10h22"/><circle cx="6" cy="15" r="1.5"/><path d="M13 15h5M13 18h3" stroke-width="1.2"/></svg>
+      </div>
+      <h3>Billing & Gateway</h3>
+      <p>Gestão de planos, tokens e Gateway de Pagamento integrado com Mercado Pago. PIX instantâneo, cartão e webhooks.</p>
+      <div class="card-features">
+        <span class="card-tag" style="background:rgba(255,203,109,0.08);color:var(--amber);">Planos</span>
+        <span class="card-tag" style="background:rgba(120,240,178,0.08);color:var(--green);">PIX + Cartão</span>
+      </div>
+    </div>
+
+    <!-- Pesquisa -->
+    <div class="module-card" onclick="openModal('pesquisa')">
+      <div class="ico ico-md" style="background:rgba(255,114,141,0.08);color:var(--red);box-shadow:0 0 20px rgba(255,114,141,0.08);">
+        <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/><path d="M8 8l6 6" stroke-width="1" opacity="0.4"/><circle cx="11" cy="11" r="3" stroke-width="1" opacity="0.4"/></svg>
+      </div>
+      <h3>Pesquisa & Inteligência</h3>
+      <p>7 skills de pesquisa: busca na web, inteligência competitiva, tendências de mercado, oportunidades de keywords e mais.</p>
+      <div class="card-features">
+        <span class="card-tag" style="background:rgba(255,114,141,0.08);color:var(--red);">Web Search</span>
+        <span class="card-tag" style="background:rgba(101,220,255,0.08);color:var(--cyan);">Análise</span>
+      </div>
+    </div>
+
+    <!-- Email -->
+    <div class="module-card" onclick="openModal('email')">
+      <div class="ico ico-md" style="background:rgba(255,203,109,0.08);color:var(--amber);box-shadow:0 0 20px rgba(255,203,109,0.08);">
+        <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><path d="M22 6l-10 7L2 6"/><circle cx="18" cy="5" r="3" fill="currentColor" stroke="none"/><text x="18" y="6.5" text-anchor="middle" fill="var(--bg)" font-size="4" font-weight="bold" stroke="none">21</text></svg>
+      </div>
+      <h3>Email Intelligence</h3>
+      <p>21 skills de email: leitura, auto-resposta IA, triagem, newsletters, follow-up, compliance, inbox zero e analytics.</p>
+      <div class="card-features">
+        <span class="card-tag" style="background:rgba(255,203,109,0.08);color:var(--amber);">21 Skills</span>
+        <span class="card-tag" style="background:rgba(120,240,178,0.08);color:var(--green);">Automação</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== COMO FUNCIONA ===== -->
+<div class="divider"></div>
+<section class="flex-center text-center" id="como-funciona">
+  <div class="section-tag animate" style="background:rgba(125,168,255,0.06);color:var(--blue);border:1px solid rgba(125,168,255,0.12);">
+    <svg viewBox="0 0 24 24" style="stroke:var(--blue);"><path d="M12 20V10"/><path d="M18 20V4"/><path d="M6 20v-4"/></svg>
+    Jornada do Usuário
+  </div>
+  <h2 class="section-title sm animate">Do cadastro ao resultado em <span class="gradient-text">poucos passos</span></h2>
+  <p class="section-sub mx-auto animate">A Smart Moon simplifica a adoção da IA. Em minutos você já tem agentes trabalhando por você.</p>
+
+  <div class="pipeline animate">
+    <div class="pipe-step">
+      <div class="ico ico-md" style="margin:0 auto;background:rgba(101,220,255,0.08);color:var(--cyan);">
+        <svg viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+      </div>
+      <div class="pipe-label">Cadastro</div>
+    </div>
+    <div class="pipe-arrow"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>
+    <div class="pipe-step">
+      <div class="ico ico-md" style="margin:0 auto;background:rgba(155,124,255,0.08);color:var(--purple);">
+        <svg viewBox="0 0 24 24"><path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71"/></svg>
+      </div>
+      <div class="pipe-label">Conectar IAs</div>
+    </div>
+    <div class="pipe-arrow"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>
+    <div class="pipe-step">
+      <div class="ico ico-md" style="margin:0 auto;background:rgba(120,240,178,0.08);color:var(--green);">
+        <svg viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M9 9h6v6H9z"/></svg>
+      </div>
+      <div class="pipe-label">Criar Agentes</div>
+    </div>
+    <div class="pipe-arrow"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>
+    <div class="pipe-step">
+      <div class="ico ico-md" style="margin:0 auto;background:rgba(246,120,215,0.08);color:var(--pink);">
+        <svg viewBox="0 0 24 24"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+      </div>
+      <div class="pipe-label">Montar Fluxos</div>
+    </div>
+    <div class="pipe-arrow"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>
+    <div class="pipe-step">
+      <div class="ico ico-md" style="margin:0 auto;background:rgba(255,203,109,0.08);color:var(--amber);">
+        <svg viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><path d="M22 4L12 14.01l-3-3"/></svg>
+      </div>
+      <div class="pipe-label">Automatizar</div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CANVAS MOCKUP ===== -->
+<div class="divider"></div>
+<section class="flex-center text-center">
+  <div class="section-tag animate" style="background:rgba(155,124,255,0.06);color:var(--purple);border:1px solid rgba(155,124,255,0.12);">
+    <svg viewBox="0 0 24 24" style="stroke:var(--purple);"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+    Automação Visual
+  </div>
+  <h2 class="section-title sm animate">Fluxos que você <span class="gradient-text">enxerga e controla</span></h2>
+  <p class="section-sub mx-auto animate">Monte suas automações em um canvas visual intuitivo. Conecte agentes, condições, ações e triggers sem escrever código.</p>
+
+  <div class="mock animate" style="max-width:920px;width:100%;">
+    <div class="mock-bar">
+      <div class="mock-dot" style="background:#ff728d;"></div>
+      <div class="mock-dot" style="background:#ffcb6d;"></div>
+      <div class="mock-dot" style="background:#78f0b2;"></div>
+      <span style="font-size:9px;color:var(--muted);margin-left:8px;">Smart Moon — Canvas de Fluxos</span>
+    </div>
+    <div style="display:flex;">
+      <div style="background:var(--surface);border-right:1px solid var(--border);padding:10px;width:170px;flex-shrink:0;">
+        <div style="padding:6px 10px;border-radius:7px;font-size:9px;font-weight:600;color:var(--cyan);background:rgba(101,220,255,0.10);margin-bottom:2px;">Mapa Mental</div>
+        <div style="padding:6px 10px;font-size:9px;font-weight:600;color:var(--text2);margin-bottom:2px;">Agentes</div>
+        <div style="padding:6px 10px;font-size:9px;font-weight:600;color:var(--text2);margin-bottom:2px;">Skills</div>
+        <div style="padding:6px 10px;font-size:9px;font-weight:600;color:var(--text2);margin-bottom:2px;">Tarefas</div>
+        <div style="padding:6px 10px;font-size:9px;font-weight:600;color:var(--text2);margin-bottom:2px;">Execuções</div>
+        <div style="padding:6px 10px;font-size:9px;font-weight:600;color:var(--text2);">Integrações</div>
+      </div>
+      <div style="flex:1;padding:14px;">
+        <div style="display:flex;gap:6px;margin-bottom:10px;font-size:8px;flex-wrap:wrap;">
+          <span style="padding:3px 8px;border-radius:5px;background:rgba(120,240,178,0.12);color:var(--green);font-weight:700;">Fluxo Ativo</span>
+          <span style="padding:3px 8px;border-radius:5px;background:rgba(101,220,255,0.12);color:var(--cyan);font-weight:700;">Canvas Inteligente</span>
+          <span style="padding:3px 8px;border-radius:5px;background:rgba(155,124,255,0.12);color:var(--purple);font-weight:700;">Agentes + Skills</span>
+        </div>
+        <div style="position:relative;height:280px;background:linear-gradient(180deg, rgba(7,16,29,0.95), rgba(12,22,39,0.95));border:1px solid var(--border);border-radius:12px;overflow:hidden;">
+          <svg viewBox="0 0 760 280" width="100%" height="100%" preserveAspectRatio="none">
+            <defs>
+              <linearGradient id="lineA" x1="0" x2="1"><stop offset="0%" stop-color="#65dcff"/><stop offset="100%" stop-color="#9b7cff"/></linearGradient>
+            </defs>
+            <path d="M130 75 C220 75, 220 75, 300 75" stroke="url(#lineA)" stroke-width="2.5" fill="none" opacity="0.9"/>
+            <path d="M380 75 C470 75, 470 55, 550 55" stroke="url(#lineA)" stroke-width="2.5" fill="none" opacity="0.9"/>
+            <path d="M380 75 C470 75, 470 140, 550 140" stroke="url(#lineA)" stroke-width="2.5" fill="none" opacity="0.9"/>
+            <path d="M380 75 C470 75, 470 225, 550 225" stroke="url(#lineA)" stroke-width="2.5" fill="none" opacity="0.9"/>
+          </svg>
+          <div style="position:absolute;left:34px;top:47px;width:96px;padding:10px 12px;border-radius:12px;background:rgba(101,220,255,0.10);border:1px solid rgba(101,220,255,0.24);">
+            <div style="font-size:7px;color:var(--cyan);font-weight:800;text-transform:uppercase;letter-spacing:0.6px;">Trigger</div>
+            <div style="font-size:11px;font-weight:800;margin-top:4px;">Telegram</div>
+          </div>
+          <div style="position:absolute;left:250px;top:47px;width:108px;padding:10px 12px;border-radius:12px;background:rgba(155,124,255,0.10);border:1px solid rgba(155,124,255,0.24);">
+            <div style="font-size:7px;color:var(--purple);font-weight:800;text-transform:uppercase;letter-spacing:0.6px;">Agente IA</div>
+            <div style="font-size:11px;font-weight:800;margin-top:4px;">Smart Router</div>
+          </div>
+          <div style="position:absolute;left:500px;top:27px;width:126px;padding:10px 12px;border-radius:12px;background:rgba(120,240,178,0.10);border:1px solid rgba(120,240,178,0.24);">
+            <div style="font-size:7px;color:var(--green);font-weight:800;text-transform:uppercase;letter-spacing:0.6px;">Skill</div>
+            <div style="font-size:11px;font-weight:800;margin-top:4px;">Atendimento</div>
+          </div>
+          <div style="position:absolute;left:500px;top:112px;width:126px;padding:10px 12px;border-radius:12px;background:rgba(255,203,109,0.10);border:1px solid rgba(255,203,109,0.24);">
+            <div style="font-size:7px;color:var(--amber);font-weight:800;text-transform:uppercase;letter-spacing:0.6px;">Ação</div>
+            <div style="font-size:11px;font-weight:800;margin-top:4px;">Registrar CRM</div>
+          </div>
+          <div style="position:absolute;left:500px;top:197px;width:126px;padding:10px 12px;border-radius:12px;background:rgba(246,120,215,0.10);border:1px solid rgba(246,120,215,0.24);">
+            <div style="font-size:7px;color:var(--pink);font-weight:800;text-transform:uppercase;letter-spacing:0.6px;">Resposta</div>
+            <div style="font-size:11px;font-weight:800;margin-top:4px;">WhatsApp</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== DASHBOARD MOCKUP ===== -->
+<div class="divider"></div>
+<section class="flex-center text-center">
+  <div class="section-tag animate" style="background:rgba(101,220,255,0.06);color:var(--cyan);border:1px solid rgba(101,220,255,0.12);">
+    <svg viewBox="0 0 24 24" style="stroke:var(--cyan);"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M7 14h3M7 10h5M14 14h3M14 10h3"/></svg>
+    Centro de Controle
+  </div>
+  <h2 class="section-title sm animate">Visão completa de <span class="gradient-text">todo o ecossistema</span></h2>
+  <p class="section-sub mx-auto animate">Acompanhe agentes, execuções, skills e desempenho operacional em um painel unificado.</p>
+
+  <div class="mock animate" style="max-width:900px;width:100%;">
+    <div class="mock-bar">
+      <div class="mock-dot" style="background:#ff728d;"></div>
+      <div class="mock-dot" style="background:#ffcb6d;"></div>
+      <div class="mock-dot" style="background:#78f0b2;"></div>
+      <span style="font-size:9px;color:var(--muted);margin-left:8px;">Smart Moon — Dashboard</span>
+    </div>
+    <div class="mock-content">
+      <div style="display:flex;gap:6px;margin-bottom:10px;font-size:8px;flex-wrap:wrap;">
+        <span style="padding:3px 8px;border-radius:4px;background:rgba(120,240,178,0.1);color:var(--green);font-weight:700;">Sistema Online</span>
+        <span style="padding:3px 8px;border-radius:4px;background:rgba(101,220,255,0.1);color:var(--cyan);font-weight:700;">5 Modelos IA</span>
+        <span style="padding:3px 8px;border-radius:4px;background:rgba(155,124,255,0.1);color:var(--purple);font-weight:700;">Agentes Ativos</span>
+      </div>
+      <div class="mock-row">
+        <div class="mock-card"><div class="mock-stat" style="color:var(--cyan);">28</div><div class="mock-label">Agentes Ativos</div></div>
+        <div class="mock-card"><div class="mock-stat" style="color:var(--purple);">73</div><div class="mock-label">Skills Instaladas</div></div>
+        <div class="mock-card"><div class="mock-stat" style="color:var(--green);">1.2k</div><div class="mock-label">Execuções / Mês</div></div>
+        <div class="mock-card"><div class="mock-stat" style="color:var(--amber);">98%</div><div class="mock-label">Uptime</div></div>
+      </div>
+      <div style="display:flex;gap:8px;">
+        <div style="flex:2;">
+          <div style="font-size:9px;font-weight:800;margin-bottom:6px;color:var(--text2);">Atividade Recente</div>
+          <div style="display:flex;flex-direction:column;gap:3px;">
+            <div style="display:flex;justify-content:space-between;padding:6px 8px;background:var(--surface);border-radius:6px;font-size:8px;"><span>Fluxo de onboarding executado</span><span style="color:var(--green);font-weight:700;">concluído</span></div>
+            <div style="display:flex;justify-content:space-between;padding:6px 8px;background:var(--surface);border-radius:6px;font-size:8px;"><span>Agente comercial ativado</span><span style="color:var(--green);font-weight:700;">ativo</span></div>
+            <div style="display:flex;justify-content:space-between;padding:6px 8px;background:var(--surface);border-radius:6px;font-size:8px;"><span>Skill de suporte conectada</span><span style="color:var(--cyan);font-weight:700;">em uso</span></div>
+            <div style="display:flex;justify-content:space-between;padding:6px 8px;background:var(--surface);border-radius:6px;font-size:8px;"><span>Análise de licitação completa</span><span style="color:var(--purple);font-weight:700;">finalizado</span></div>
+          </div>
+        </div>
+        <div style="flex:1;">
+          <div style="font-size:9px;font-weight:800;margin-bottom:6px;color:var(--text2);">Provedores IA</div>
+          <div style="display:flex;flex-direction:column;gap:3px;">
+            <div style="padding:6px 8px;background:var(--surface);border-radius:6px;font-size:8px;display:flex;justify-content:space-between;"><span>Ollama (Local)</span><span style="color:var(--green);font-weight:700;">ONLINE</span></div>
+            <div style="padding:6px 8px;background:var(--surface);border-radius:6px;font-size:8px;display:flex;justify-content:space-between;"><span>OpenAI</span><span style="color:var(--green);font-weight:700;">ONLINE</span></div>
+            <div style="padding:6px 8px;background:var(--surface);border-radius:6px;font-size:8px;display:flex;justify-content:space-between;"><span>Google Gemini</span><span style="color:var(--green);font-weight:700;">ONLINE</span></div>
+            <div style="padding:6px 8px;background:var(--surface);border-radius:6px;font-size:8px;display:flex;justify-content:space-between;"><span>Groq</span><span style="color:var(--green);font-weight:700;">ONLINE</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PROVEDORES IA ===== -->
+<div class="divider"></div>
+<section class="flex-center text-center" id="provedores">
+  <div class="section-tag animate" style="background:rgba(155,124,255,0.06);color:var(--purple);border:1px solid rgba(155,124,255,0.12);">
+    <svg viewBox="0 0 24 24" style="stroke:var(--purple);"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M9 9h6v6H9z"/></svg>
+    Multi-IA
+  </div>
+  <h2 class="section-title sm animate">Escolha a <span class="gradient-text">melhor IA</span> para cada tarefa</h2>
+  <p class="section-sub mx-auto animate">A Smart Moon conecta com os melhores provedores do mercado. Troque de modelo instantaneamente, sem perder dados.</p>
+
+  <div class="providers-grid animate">
+    <div class="provider-card">
+      <div class="provider-badge" style="background:rgba(120,240,178,0.15);color:var(--green);">GRÁTIS</div>
+      <div class="ico ico-md" style="margin:0 auto;background:rgba(120,240,178,0.08);color:var(--green);">
+        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+      </div>
+      <div class="provider-name">Ollama</div>
+      <div class="provider-model">gemma3, llama3.2</div>
+      <div style="font-size:8px;color:var(--green);margin-top:6px;font-weight:600;">Roda local • Privacidade total</div>
+    </div>
+    <div class="provider-card">
+      <div class="ico ico-md" style="margin:0 auto;background:rgba(120,240,178,0.08);color:var(--green);">
+        <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 100 20 10 10 0 000-20z"/><path d="M2 12h20"/></svg>
+      </div>
+      <div class="provider-name">OpenAI</div>
+      <div class="provider-model">GPT-4o, GPT-4o-mini</div>
+      <div style="font-size:8px;color:var(--text2);margin-top:6px;font-weight:600;">O mais versátil</div>
+    </div>
+    <div class="provider-card">
+      <div class="ico ico-md" style="margin:0 auto;background:rgba(125,168,255,0.08);color:var(--blue);">
+        <svg viewBox="0 0 24 24"><path d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8L12 3z"/></svg>
+      </div>
+      <div class="provider-name">Google Gemini</div>
+      <div class="provider-model">1.5 Pro, 1.5 Flash</div>
+      <div style="font-size:8px;color:var(--text2);margin-top:6px;font-weight:600;">Documentos longos</div>
+    </div>
+    <div class="provider-card">
+      <div class="ico ico-md" style="margin:0 auto;background:rgba(255,203,109,0.08);color:var(--amber);">
+        <svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+      </div>
+      <div class="provider-name">Claude</div>
+      <div class="provider-model">3.5 Sonnet</div>
+      <div style="font-size:8px;color:var(--text2);margin-top:6px;font-weight:600;">Conversação avançada</div>
+    </div>
+    <div class="provider-card">
+      <div class="provider-badge" style="background:rgba(255,203,109,0.15);color:var(--amber);">⚡ ULTRA FAST</div>
+      <div class="ico ico-md" style="margin:0 auto;background:rgba(255,203,109,0.08);color:var(--amber);">
+        <svg viewBox="0 0 24 24"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+      </div>
+      <div class="provider-name">Groq</div>
+      <div class="provider-model">Llama3 70B</div>
+      <div style="font-size:8px;color:var(--amber);margin-top:6px;font-weight:600;">Respostas instantâneas</div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ===== PLANOS ===== -->
+<div class="divider"></div>
+<section class="flex-center text-center" id="planos">
+  <div class="section-tag animate" style="background:rgba(99,102,241,0.06);color:#a5b4fc;border:1px solid rgba(99,102,241,0.14);">
+    <svg viewBox="0 0 24 24" style="stroke:#a5b4fc;"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+    Planos e Preços
+  </div>
+  <h2 class="section-title animate">Escolha o plano ideal para <span class="gradient-text">escalar com IA</span></h2>
+  <p class="section-sub mx-auto animate">Do empreendedor solo à operação enterprise — cada plano desbloqueia mais poder de automação, agentes e integrações.</p>
+
+  <div class="pricing-grid animate">
+
+    <!-- FREE -->
+    <div class="pricing-card" style="--card-accent:var(--muted);">
+      <div class="pricing-icon" style="background:rgba(100,116,139,0.08);color:#94a3b8;">
+        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+      </div>
+      <div class="pricing-name">Free</div>
+      <div class="pricing-desc">Explore a plataforma gratuitamente</div>
+      <div class="pricing-price">
+        <span class="pricing-currency">R$</span>
+        <span class="pricing-value" style="color:#94a3b8;">0</span>
+        <span class="pricing-period">/mês</span>
+      </div>
+      <div class="pricing-divider"></div>
+      <div class="pricing-features">
+        <div class="pricing-feat"><svg viewBox="0 0 24 24" style="stroke:var(--green);"><path d="M20 6L9 17l-5-5"/></svg>1 Agente de IA</div>
+        <div class="pricing-feat"><svg viewBox="0 0 24 24" style="stroke:var(--green);"><path d="M20 6L9 17l-5-5"/></svg>3 Fluxos de Automação</div>
+        <div class="pricing-feat"><svg viewBox="0 0 24 24" style="stroke:var(--green);"><path d="M20 6L9 17l-5-5"/></svg>2 Skills</div>
+        <div class="pricing-feat"><svg viewBox="0 0 24 24" style="stroke:var(--green);"><path d="M20 6L9 17l-5-5"/></svg>1 Integração</div>
+        <div class="pricing-feat disabled"><svg viewBox="0 0 24 24"><path d="M18 6L6 18M6 6l12 12"/></svg>Voz</div>
+        <div class="pricing-feat disabled"><svg viewBox="0 0 24 24"><path d="M18 6L6 18M6 6l12 12"/></svg>Campanhas IA</div>
+      </div>
+      <a href="/register" class="pricing-btn pricing-btn-outline">Começar Grátis</a>
+    </div>
+
+    <!-- STARTER -->
+    <div class="pricing-card" style="--card-accent:#3b82f6;">
+      <div class="pricing-icon" style="background:rgba(59,130,246,0.08);color:#60a5fa;">
+        <svg viewBox="0 0 24 24"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+      </div>
+      <div class="pricing-name">Starter</div>
+      <div class="pricing-desc">Ideal para empreendedores iniciantes</div>
+      <div class="pricing-price">
+        <span class="pricing-currency">R$</span>
+        <span class="pricing-value" style="color:#60a5fa;">97</span>
+        <span class="pricing-period">/mês</span>
+      </div>
+      <div class="pricing-divider"></div>
+      <div class="pricing-features">
+        <div class="pricing-feat"><svg viewBox="0 0 24 24" style="stroke:var(--green);"><path d="M20 6L9 17l-5-5"/></svg>3 Agentes de IA</div>
+        <div class="pricing-feat"><svg viewBox="0 0 24 24" style="stroke:var(--green);"><path d="M20 6L9 17l-5-5"/></svg>10 Fluxos de Automação</div>
+        <div class="pricing-feat"><svg viewBox="0 0 24 24" style="stroke:var(--green);"><path d="M20 6L9 17l-5-5"/></svg>5 Skills</div>
+        <div class="pricing-feat"><svg viewBox="0 0 24 24" style="stroke:var(--green);"><path d="M20 6L9 17l-5-5"/></svg>3 Integrações</div>
+        <div class="pricing-feat"><svg viewBox="0 0 24 24" style="stroke:var(--green);"><path d="M20 6L9 17l-5-5"/></svg>1 Perfil de Voz</div>
+        <div class="pricing-feat"><svg viewBox="0 0 24 24" style="stroke:var(--green);"><path d="M20 6L9 17l-5-5"/></svg>1 Campanha IA</div>
+      </div>
+      <a href="/register" class="pricing-btn pricing-btn-outline">Assinar Starter</a>
+    </div>
+
+    <!-- PRO (featured) -->
+    <div class="pricing-card featured" style="--card-accent:#6366f1;">
+      <div class="pricing-badge" style="background:rgba(99,102,241,0.2);color:#a5b4fc;">MAIS POPULAR</div>
+      <div class="pricing-icon" style="background:rgba(99,102,241,0.1);color:#a5b4fc;">
+        <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+      </div>
+      <div class="pricing-name" style="color:#a5b4fc;">Pro</div>
+      <div class="pricing-desc">Para empresas em crescimento</div>
+      <div class="pricing-price">
+        <span class="pricing-currency">R$</span>
+        <span class="pricing-value" style="color:#a5b4fc;">197</span>
+        <span class="pricing-period">/mês</span>
+      </div>
+      <div class="pricing-divider"></div>
+      <div class="pricing-features">
+        <div class="pricing-feat"><svg viewBox="0 0 24 24" style="stroke:var(--green);"><path d="M20 6L9 17l-5-5"/></svg>10 Agentes de IA</div>
+        <div class="pricing-feat"><svg viewBox="0 0 24 24" style="stroke:var(--green);"><path d="M20 6L9 17l-5-5"/></svg>30 Fluxos de Automação</div>
+        <div class="pricing-feat"><svg viewBox="0 0 24 24" style="stroke:var(--green);"><path d="M20 6L9 17l-5-5"/></svg>15 Skills</div>
+        <div class="pricing-feat"><svg viewBox="0 0 24 24" style="stroke:var(--green);"><path d="M20 6L9 17l-5-5"/></svg>8 Integrações</div>
+        <div class="pricing-feat"><svg viewBox="0 0 24 24" style="stroke:var(--green);"><path d="M20 6L9 17l-5-5"/></svg>3 Perfis de Voz + Clonagem</div>
+        <div class="pricing-feat"><svg viewBox="0 0 24 24" style="stroke:var(--green);"><path d="M20 6L9 17l-5-5"/></svg>5 Campanhas IA + Marketing</div>
+      </div>
+      <a href="/register" class="pricing-btn pricing-btn-fill">Assinar Pro</a>
+    </div>
+
+    <!-- BUSINESS -->
+    <div class="pricing-card" style="--card-accent:#ec4899;">
+      <div class="pricing-icon" style="background:rgba(236,72,153,0.08);color:#f472b6;">
+        <svg viewBox="0 0 24 24"><path d="M2 3h6a4 4 0 014 4v14a3 3 0 00-3-3H2z"/><path d="M22 3h-6a4 4 0 00-4 4v14a3 3 0 013-3h7z"/></svg>
+      </div>
+      <div class="pricing-name">Business</div>
+      <div class="pricing-desc">Solução completa para operações</div>
+      <div class="pricing-price">
+        <span class="pricing-currency">R$</span>
+        <span class="pricing-value" style="color:#f472b6;">497</span>
+        <span class="pricing-period">/mês</span>
+      </div>
+      <div class="pricing-divider"></div>
+      <div class="pricing-features">
+        <div class="pricing-feat"><svg viewBox="0 0 24 24" style="stroke:var(--green);"><path d="M20 6L9 17l-5-5"/></svg>30 Agentes de IA</div>
+        <div class="pricing-feat"><svg viewBox="0 0 24 24" style="stroke:var(--green);"><path d="M20 6L9 17l-5-5"/></svg>100 Fluxos de Automação</div>
+        <div class="pricing-feat"><svg viewBox="0 0 24 24" style="stroke:var(--green);"><path d="M20 6L9 17l-5-5"/></svg>50 Skills</div>
+        <div class="pricing-feat"><svg viewBox="0 0 24 24" style="stroke:var(--green);"><path d="M20 6L9 17l-5-5"/></svg>20 Integrações</div>
+        <div class="pricing-feat"><svg viewBox="0 0 24 24" style="stroke:var(--green);"><path d="M20 6L9 17l-5-5"/></svg>10 Perfis +  Voice Agents</div>
+        <div class="pricing-feat"><svg viewBox="0 0 24 24" style="stroke:var(--green);"><path d="M20 6L9 17l-5-5"/></svg>20 Campanhas IA Full</div>
+      </div>
+      <a href="/register" class="pricing-btn pricing-btn-outline">Assinar Business</a>
+    </div>
+
+    <!-- ENTERPRISE -->
+    <div class="pricing-card" style="--card-accent:var(--amber);">
+      <div class="pricing-badge" style="background:rgba(245,158,11,0.15);color:var(--amber);">ILIMITADO</div>
+      <div class="pricing-icon" style="background:rgba(245,158,11,0.08);color:var(--amber);">
+        <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+      </div>
+      <div class="pricing-name">Enterprise</div>
+      <div class="pricing-desc">Personalização total + suporte dedicado</div>
+      <div class="pricing-price">
+        <span class="pricing-currency">R$</span>
+        <span class="pricing-value" style="color:var(--amber);">997</span>
+        <span class="pricing-period">/mês</span>
+      </div>
+      <div class="pricing-divider"></div>
+      <div class="pricing-features">
+        <div class="pricing-feat"><svg viewBox="0 0 24 24" style="stroke:var(--amber);"><path d="M20 6L9 17l-5-5"/></svg>Agentes Ilimitados</div>
+        <div class="pricing-feat"><svg viewBox="0 0 24 24" style="stroke:var(--amber);"><path d="M20 6L9 17l-5-5"/></svg>Fluxos Ilimitados</div>
+        <div class="pricing-feat"><svg viewBox="0 0 24 24" style="stroke:var(--amber);"><path d="M20 6L9 17l-5-5"/></svg>Skills Ilimitados</div>
+        <div class="pricing-feat"><svg viewBox="0 0 24 24" style="stroke:var(--amber);"><path d="M20 6L9 17l-5-5"/></svg>Integrações Ilimitadas</div>
+        <div class="pricing-feat"><svg viewBox="0 0 24 24" style="stroke:var(--amber);"><path d="M20 6L9 17l-5-5"/></svg>Licitações Inteligentes</div>
+        <div class="pricing-feat"><svg viewBox="0 0 24 24" style="stroke:var(--amber);"><path d="M20 6L9 17l-5-5"/></svg>Tudo Desbloqueado</div>
+      </div>
+      <a href="/register" class="pricing-btn pricing-btn-outline" style="border-color:rgba(245,158,11,0.3);">Falar com Consultor</a>
+    </div>
+
+  </div>
+</section>
+
+<!-- ===== CTA ===== -->
+<div class="divider"></div>
+<section class="cta-section" id="contato">
+  <div class="cta-glow flex-center">
+    <div class="section-tag animate" style="background:rgba(101,220,255,0.07);color:var(--cyan);border:1px solid rgba(101,220,255,0.12);">
+      <svg viewBox="0 0 24 24" style="stroke:var(--cyan);width:12px;height:12px;fill:none;stroke-width:2;"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg>
+      Smart Moon
+    </div>
+    <h2 class="section-title animate" style="max-width:700px;">O próximo passo da sua operação começa com um <span class="gradient-text">novo universo de automação</span></h2>
+    <p class="section-sub mx-auto animate">Agentes inteligentes, fluxos visuais, marketing com IA e tecnologia para transformar tarefas em autonomia real.</p>
+    <div class="hero-cta-group animate">
+      <a href="#" class="btn-primary">
+        <svg viewBox="0 0 24 24"><path d="M15 3h4a2 2 0 012 2v14a2 2 0 01-2 2h-4M10 17l5-5-5-5M13.8 12H3"/></svg>
+        Login
+      </a>
+      <a href="#" class="btn-secondary">
+        <svg viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="8.5" cy="7" r="4"/><path d="M20 8v6M23 11h-6"/></svg>
+        Registre-se
+      </a>
+    </div>
+    <div class="hero-stats animate" style="margin-top:40px;">
+      <span>14 Módulos Funcionais</span><span>•</span>
+      <span>5 Provedores de IA</span><span>•</span>
+      <span>Deploy em Produção</span>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer">
+  <div style="display:flex;align-items:center;justify-content:center;margin-bottom:8px;">
+    <img src="/landing/logo-horizontal.png" alt="Smart Moon" style="height:28px;width:auto;">
+  </div>
+  <p>© 2026 <a href="#">Smart Moon</a> — Satélite Central das Inteligências Artificiais</p>
+</footer>
+
+<!-- ===== OVERLAY: LICITAÇÕES ===== -->
+<div class="page-overlay" id="pageLicitacoes">
+  <div class="page-container">
+    <div class="page-top-bar">
+      <a class="page-back" onclick="closePage('licitacoes')">
+        <svg viewBox="0 0 24 24"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+        Voltar
+      </a>
+      <div class="page-hero-tag" style="background:rgba(255,114,141,0.06);color:var(--red);border:1px solid rgba(255,114,141,0.12);">
+        <svg viewBox="0 0 24 24" style="stroke:var(--red);"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><path d="M14 2v6h6"/></svg>
+        Licitações Inteligentes
+      </div>
+    </div>
+    <h2 class="page-title">Como funciona o <span class="gradient-text">Radar de Licitações</span></h2>
+    <p class="page-subtitle">O módulo de Licitações Inteligentes conecta-se diretamente ao Portal Nacional de Contratações Públicas (PNCP) para monitorar, baixar e analisar editais automaticamente com IA.</p>
+
+    <div class="page-steps">
+      <div class="page-step">
+        <div class="page-step-num" style="background:rgba(255,114,141,0.15);color:var(--red);">1</div>
+        <div class="page-step-card">
+          <div class="page-step-content">
+            <h4>Busca Inteligente no PNCP</h4>
+            <p>Configure palavras-chave, região, modalidade e faixa de valor. O radar monitora automaticamente novas licitações que correspondam aos seus critérios e envia notificações quando encontra oportunidades.</p>
+          </div>
+        </div>
+      </div>
+      <div class="page-step">
+        <div class="page-step-num" style="background:rgba(155,124,255,0.15);color:var(--purple);">2</div>
+        <div class="page-step-card">
+          <div class="page-step-content">
+            <h4>Download &amp; Extração Automática</h4>
+            <p>O sistema baixa automaticamente os editais em PDF do portal, converte para texto e alimenta a IA com o conteúdo completo para análise. Nenhuma ação manual é necessária.</p>
+          </div>
+        </div>
+      </div>
+      <div class="page-step">
+        <div class="page-step-num" style="background:rgba(101,220,255,0.15);color:var(--cyan);">3</div>
+        <div class="page-step-card">
+          <div class="page-step-content">
+            <h4>Análise Tríplice por IA</h4>
+            <p>A IA realiza 3 análises simultâneas: <strong>Jurídica</strong> (cláusulas, riscos, exigências legais), <strong>Fiscal</strong> (requisitos de documentação e certidões) e <strong>Econômica</strong> (estimativa de custos, margens e viabilidade financeira).</p>
+          </div>
+        </div>
+      </div>
+      <div class="page-step">
+        <div class="page-step-num" style="background:rgba(120,240,178,0.15);color:var(--green);">4</div>
+        <div class="page-step-card">
+          <div class="page-step-content">
+            <h4>Relatório Consolidado</h4>
+            <p>Receba um relatório detalhado com parecer da IA sobre a viabilidade de participação, pontos de atenção, documentos necessários e uma recomendação final para tomada de decisão rápida.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="page-features-title">Recursos Incluídos</div>
+    <div class="page-features">
+      <div class="page-feature">
+        <div class="pf-ico" style="background:rgba(255,114,141,0.08);color:var(--red);"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg></div>
+        <div><h5>Busca por Palavra-Chave</h5><p>Pesquise licitações por termos específicos do seu segmento.</p></div>
+      </div>
+      <div class="page-feature">
+        <div class="pf-ico" style="background:rgba(155,124,255,0.08);color:var(--purple);"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><path d="M14 2v6h6"/></svg></div>
+        <div><h5>Download de Editais</h5><p>Baixe automaticamente os PDFs direto do portal.</p></div>
+      </div>
+      <div class="page-feature">
+        <div class="pf-ico" style="background:rgba(101,220,255,0.08);color:var(--cyan);"><svg viewBox="0 0 24 24"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg></div>
+        <div><h5>Análise Jurídica IA</h5><p>Cláusulas, exigências e riscos analisados automaticamente.</p></div>
+      </div>
+      <div class="page-feature">
+        <div class="pf-ico" style="background:rgba(120,240,178,0.08);color:var(--green);"><svg viewBox="0 0 24 24"><path d="M12 1v22"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg></div>
+        <div><h5>Análise Econômica</h5><p>Estimativa de custos, margem e viabilidade financeira.</p></div>
+      </div>
+      <div class="page-feature">
+        <div class="pf-ico" style="background:rgba(255,203,109,0.08);color:var(--amber);"><svg viewBox="0 0 24 24"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div>
+        <div><h5>Monitoramento Contínuo</h5><p>Radar 24/7 para novas oportunidades de licitação.</p></div>
+      </div>
+      <div class="page-feature">
+        <div class="pf-ico" style="background:rgba(246,120,215,0.08);color:var(--pink);"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><path d="M14 2v6h6M16 13H8M16 17H8M10 9H8"/></svg></div>
+        <div><h5>Relatório Completo</h5><p>Parecer IA consolidado para decisão rápida.</p></div>
+      </div>
+    </div>
+
+    <div class="page-cta-box">
+      <h3>Pronto para automatizar suas licitações?</h3>
+      <p>Comece agora e deixe a IA encontrar as melhores oportunidades para sua empresa.</p>
+      <a href="/register" class="btn-primary" onclick="closePage('licitacoes')" style="display:inline-flex;">
+        <svg viewBox="0 0 24 24"><path d="M15 3h4a2 2 0 012 2v14a2 2 0 01-2 2h-4M10 17l5-5-5-5M13.8 12H3"/></svg>
+        Começar Agora
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- ===== OVERLAY: GATEWAY ===== -->
+<div class="page-overlay" id="pageGateway">
+  <div class="page-container">
+    <div class="page-top-bar">
+      <a class="page-back" onclick="closePage('gateway')">
+        <svg viewBox="0 0 24 24"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+        Voltar
+      </a>
+      <div class="page-hero-tag" style="background:rgba(255,203,109,0.06);color:var(--amber);border:1px solid rgba(255,203,109,0.12);">
+        <svg viewBox="0 0 24 24" style="stroke:var(--amber);"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"/><path d="M1 10h22"/></svg>
+        Gateway de Pagamento
+      </div>
+    </div>
+    <h2 class="page-title">Como funciona nosso <span class="gradient-text">Gateway de Pagamento</span></h2>
+    <p class="page-subtitle">O sistema de billing da Smart Moon é integrado com o Mercado Pago, oferecendo PIX instantâneo, cartão de crédito e confirmação automática via webhooks — tudo PCI-compliant.</p>
+
+    <div class="page-steps">
+      <div class="page-step">
+        <div class="page-step-num" style="background:rgba(255,203,109,0.15);color:var(--amber);">1</div>
+        <div class="page-step-card">
+          <div class="page-step-content">
+            <h4>Escolha do Plano</h4>
+            <p>O usuário seleciona entre os planos disponíveis (Free, Starter, Pro, Enterprise). Cada plano define limites de agentes, tokens, skills e funcionalidades disponíveis na plataforma.</p>
+          </div>
+        </div>
+      </div>
+      <div class="page-step">
+        <div class="page-step-num" style="background:rgba(120,240,178,0.15);color:var(--green);">2</div>
+        <div class="page-step-card">
+          <div class="page-step-content">
+            <h4>Checkout Seguro</h4>
+            <p>O checkout é processado via Mercado Pago com criptografia end-to-end. O usuário pode pagar via <strong>PIX instantâneo</strong> (confirmação em segundos) ou <strong>cartão de crédito</strong> (aprovação em tempo real).</p>
+          </div>
+        </div>
+      </div>
+      <div class="page-step">
+        <div class="page-step-num" style="background:rgba(155,124,255,0.15);color:var(--purple);">3</div>
+        <div class="page-step-card">
+          <div class="page-step-content">
+            <h4>Confirmação via Webhook</h4>
+            <p>A confirmação do pagamento acontece automaticamente via webhook do Mercado Pago. O sistema recebe a notificação, valida a assinatura e ativa o plano instantaneamente — sem ação manual do admin.</p>
+          </div>
+        </div>
+      </div>
+      <div class="page-step">
+        <div class="page-step-num" style="background:rgba(101,220,255,0.15);color:var(--cyan);">4</div>
+        <div class="page-step-card">
+          <div class="page-step-content">
+            <h4>Ativação Imediata</h4>
+            <p>Após a confirmação, o plano é ativado automaticamente. Os limites de tokens, agentes e skills são atualizados em tempo real. O usuário já pode começar a usar todas as funcionalidades do plano contratado.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="page-features-title">Recursos do Gateway</div>
+    <div class="page-features">
+      <div class="page-feature">
+        <div class="pf-ico" style="background:rgba(120,240,178,0.08);color:var(--green);"><svg viewBox="0 0 24 24"><path d="M12 1v22"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg></div>
+        <div><h5>PIX Instantâneo</h5><p>Confirmação em segundos via QR Code ou copia-e-cola.</p></div>
+      </div>
+      <div class="page-feature">
+        <div class="pf-ico" style="background:rgba(155,124,255,0.08);color:var(--purple);"><svg viewBox="0 0 24 24"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"/><path d="M1 10h22"/></svg></div>
+        <div><h5>Cartão de Crédito</h5><p>Aprovação em tempo real com processamento PCI-compliant.</p></div>
+      </div>
+      <div class="page-feature">
+        <div class="pf-ico" style="background:rgba(255,203,109,0.08);color:var(--amber);"><svg viewBox="0 0 24 24"><path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/><path d="M12 9v4M12 17h.01"/></svg></div>
+        <div><h5>Webhooks Automáticos</h5><p>Confirmação sem ação manual via Mercado Pago webhooks.</p></div>
+      </div>
+      <div class="page-feature">
+        <div class="pf-ico" style="background:rgba(101,220,255,0.08);color:var(--cyan);"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+        <div><h5>Criptografia E2E</h5><p>Dados de pagamento nunca tocam nosso servidor.</p></div>
+      </div>
+      <div class="page-feature">
+        <div class="pf-ico" style="background:rgba(255,114,141,0.08);color:var(--red);"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><path d="M14 2v6h6M16 13H8M16 17H8"/></svg></div>
+        <div><h5>Faturas &amp; Histórico</h5><p>Todas as transações detalhadas com comprovantes.</p></div>
+      </div>
+      <div class="page-feature">
+        <div class="pf-ico" style="background:rgba(246,120,215,0.08);color:var(--pink);"><svg viewBox="0 0 24 24"><path d="M23 6l-9.5 9.5-5-5L1 18"/><path d="M17 6h6v6"/></svg></div>
+        <div><h5>Usage Analytics</h5><p>Dashboard de consumo por agente e período.</p></div>
+      </div>
+    </div>
+
+    <div class="page-cta-box">
+      <h3>Comece com o plano gratuito</h3>
+      <p>Teste a plataforma sem compromisso. Faça upgrade quando quiser, com um clique.</p>
+      <a href="/register" class="btn-primary" onclick="closePage('gateway')" style="display:inline-flex;">
+        <svg viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="8.5" cy="7" r="4"/><path d="M20 8v6M23 11h-6"/></svg>
+        Criar Conta Grátis
+      </a>
+    </div>
+  </div>
+</div>
+
+
+<!-- ===== MODAL ===== -->
+<div class="modal-overlay" id="moduleModal" onclick="if(event.target===this)closeModal()">
+  <div class="modal-box">
+    <div class="modal-header">
+      <div class="modal-header-left">
+        <h2 id="modalTitle"></h2>
+        <span class="modal-count" id="modalCount"></span>
+      </div>
+      <button class="modal-close" onclick="closeModal()">
+        <svg viewBox="0 0 24 24"><path d="M18 6L6 18M6 6l12 12"/></svg>
+      </button>
+    </div>
+    <div class="modal-body">
+      <p class="modal-desc" id="modalDesc"></p>
+      <div class="skills-grid" id="modalGrid"></div>
+    </div>
+  </div>
+</div>
+
+</div>
+
+<script>
+// Navbar scroll effect
+const navbar = document.getElementById('navbar');
+window.addEventListener('scroll', () => {
+  navbar.classList.toggle('scrolled', window.scrollY > 50);
+});
+
+// Scroll animations
+const observerOptions = { threshold: 0.1, rootMargin: '0px 0px -50px 0px' };
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+    }
+  });
+}, observerOptions);
+
+document.querySelectorAll('.animate').forEach(el => observer.observe(el));
+
+// Smooth scroll for navigation links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function(e) {
+    e.preventDefault();
+    const target = document.querySelector(this.getAttribute('href'));
+    if (target) {
+      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+    document.getElementById('mobileMenu').classList.remove('open');
+  });
+});
+
+// Hamburger menu toggle
+const hamburgerBtn = document.getElementById('hamburgerBtn');
+const mobileMenu = document.getElementById('mobileMenu');
+hamburgerBtn.addEventListener('click', () => {
+  mobileMenu.classList.toggle('open');
+});
+
+// ===== SIDEBAR =====
+function openSidebar() {
+  document.getElementById('sidebarOverlay').classList.add('active');
+  document.getElementById('sidebarPanel').classList.add('active');
+  document.getElementById('mobileMenu').classList.remove('open');
+  document.body.style.overflow = 'hidden';
+}
+function closeSidebar() {
+  document.getElementById('sidebarOverlay').classList.remove('active');
+  document.getElementById('sidebarPanel').classList.remove('active');
+  document.body.style.overflow = '';
+}
+document.getElementById('sidebarBtn').addEventListener('click', openSidebar);
+
+// ===== OVERLAY PAGES =====
+function openPage(pageId) {
+  const pages = { licitacoes: 'pageLicitacoes', gateway: 'pageGateway' };
+  const el = document.getElementById(pages[pageId]);
+  if (el) { el.classList.add('active'); document.body.style.overflow = 'hidden'; }
+}
+function closePage(pageId) {
+  const pages = { licitacoes: 'pageLicitacoes', gateway: 'pageGateway' };
+  const el = document.getElementById(pages[pageId]);
+  if (el) { el.classList.remove('active'); document.body.style.overflow = ''; }
+}
+
+// ===== SVG ICON MAP =====
+const skillIcons = {
+  // generic categories
+  'chart': '<svg viewBox="0 0 24 24"><path d="M18 20V10M12 20V4M6 20v-6"/></svg>',
+  'bolt': '<svg viewBox="0 0 24 24"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>',
+  'bot': '<svg viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M9 9h6v6H9z"/><path d="M9 1v3M15 1v3"/></svg>',
+  'brain': '<svg viewBox="0 0 24 24"><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10"/><circle cx="12" cy="12" r="3"/><path d="M22 2L13 11"/></svg>',
+  'gem': '<svg viewBox="0 0 24 24"><path d="M6 3h12l4 6-10 13L2 9z"/><path d="M2 9h20M12 22L6 9l6-6 6 6"/></svg>',
+  'message': '<svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>',
+  'send': '<svg viewBox="0 0 24 24"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg>',
+  'home': '<svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/></svg>',
+  'prompt': '<svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/><path d="M8 9h8M8 13h5"/></svg>',
+  'note': '<svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><path d="M14 2v6h6M16 13H8M16 17H8M10 9H8"/></svg>',
+  'refresh': '<svg viewBox="0 0 24 24"><path d="M21 12a9 9 0 11-6.219-8.56"/><path d="M21 3v6h-6"/></svg>',
+  'bell': '<svg viewBox="0 0 24 24"><path d="M18 8A6 6 0 006 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 01-3.46 0"/></svg>',
+  'list': '<svg viewBox="0 0 24 24"><path d="M8 6h13M8 12h13M8 18h13M3 6h.01M3 12h.01M3 18h.01"/></svg>',
+  'target': '<svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>',
+  'wrench': '<svg viewBox="0 0 24 24"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/></svg>',
+  'signal': '<svg viewBox="0 0 24 24"><path d="M2 20h.01M7 20v-4M12 20v-8M17 20V8M22 20V4"/></svg>',
+  'temp': '<svg viewBox="0 0 24 24"><path d="M14 14.76V3.5a2.5 2.5 0 00-5 0v11.26a4.5 4.5 0 105 0z"/></svg>',
+  'user': '<svg viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>',
+  'calendar': '<svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>',
+  'mail': '<svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><path d="M22 6l-10 7L2 6"/></svg>',
+  'search': '<svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>',
+  'dollar': '<svg viewBox="0 0 24 24"><path d="M12 1v22"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg>',
+  'database': '<svg viewBox="0 0 24 24"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>',
+  'grid': '<svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>',
+  'link': '<svg viewBox="0 0 24 24"><path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71"/></svg>',
+  'shield': '<svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>',
+  'timer': '<svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>',
+  'loop': '<svg viewBox="0 0 24 24"><path d="M17 1l4 4-4 4"/><path d="M3 11V9a4 4 0 014-4h14"/><path d="M7 23l-4-4 4-4"/><path d="M21 13v2a4 4 0 01-4 4H3"/></svg>',
+  'map': '<svg viewBox="0 0 24 24"><path d="M1 6v16l7-4 8 4 7-4V2l-7 4-8-4-7 4z"/><path d="M8 2v16M16 6v16"/></svg>',
+  'check': '<svg viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><path d="M22 4L12 14.01l-3-3"/></svg>',
+  'filter': '<svg viewBox="0 0 24 24"><path d="M22 3H2l8 9.46V19l4 2v-8.54L22 3z"/></svg>',
+  'camera': '<svg viewBox="0 0 24 24"><path d="M23 19a2 2 0 01-2 2H3a2 2 0 01-2-2V8a2 2 0 012-2h4l2-3h6l2 3h4a2 2 0 012 2z"/><circle cx="12" cy="13" r="4"/></svg>',
+  'phone': '<svg viewBox="0 0 24 24"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><path d="M12 18h.01"/></svg>',
+  'mic': '<svg viewBox="0 0 24 24"><path d="M12 1a3 3 0 00-3 3v8a3 3 0 006 0V4a3 3 0 00-3-3z"/><path d="M19 10v2a7 7 0 01-14 0v-2"/></svg>',
+  'globe': '<svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>',
+  'tag': '<svg viewBox="0 0 24 24"><path d="M20.59 13.41l-7.17 7.17a2 2 0 01-2.83 0L2 12V2h10l8.59 8.59a2 2 0 010 2.82z"/><circle cx="7" cy="7" r="1"/></svg>',
+  'star': '<svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>',
+  'rocket': '<svg viewBox="0 0 24 24"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 00-2.91-.09zM12 15l-3-3a22 22 0 012-3.95A12.88 12.88 0 0122 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 01-4 2z"/></svg>',
+  'palette': '<svg viewBox="0 0 24 24"><circle cx="13.5" cy="6.5" r=".5" fill="currentColor"/><circle cx="17.5" cy="10.5" r=".5" fill="currentColor"/><circle cx="8.5" cy="7.5" r=".5" fill="currentColor"/><circle cx="6.5" cy="12" r=".5" fill="currentColor"/><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.93 0 1.5-.76 1.5-1.5 0-.4-.13-.73-.33-.97a1.5 1.5 0 011.17-2.53H16c3.31 0 6-2.69 6-6 0-4.97-4.03-9-10-9z"/></svg>',
+  'eye': '<svg viewBox="0 0 24 24"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>',
+  'pen': '<svg viewBox="0 0 24 24"><path d="M12 20h9"/><path d="M16.5 3.5a2.12 2.12 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>',
+  'file': '<svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><path d="M14 2v6h6"/></svg>',
+  'folder': '<svg viewBox="0 0 24 24"><path d="M22 19a2 2 0 01-2 2H4a2 2 0 01-2-2V5a2 2 0 012-2h5l2 3h9a2 2 0 012 2z"/></svg>',
+  'flag': '<svg viewBox="0 0 24 24"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/><path d="M4 22v-7"/></svg>',
+  'activity': '<svg viewBox="0 0 24 24"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>',
+  'creditcard': '<svg viewBox="0 0 24 24"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"/><path d="M1 10h22"/></svg>',
+  'lock': '<svg viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>',
+  'building': '<svg viewBox="0 0 24 24"><path d="M3 21h18"/><path d="M5 21V7l8-4 6 4v14"/><path d="M9 21v-4h4v4"/></svg>',
+  'scale': '<svg viewBox="0 0 24 24"><path d="M16 4h2a2 2 0 012 2v14a2 2 0 01-2 2H6a2 2 0 01-2-2V6a2 2 0 012-2h2"/><rect x="8" y="2" width="8" height="4" rx="1" ry="1"/></svg>',
+  'trending': '<svg viewBox="0 0 24 24"><path d="M23 6l-9.5 9.5-5-5L1 18"/><path d="M17 6h6v6"/></svg>',
+  'box': '<svg viewBox="0 0 24 24"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/></svg>',
+  'hash': '<svg viewBox="0 0 24 24"><path d="M4 9h16M4 15h16M10 3L8 21M16 3l-2 18"/></svg>',
+  'clip': '<svg viewBox="0 0 24 24"><path d="M21.44 11.05l-9.19 9.19a6 6 0 01-8.49-8.49l9.19-9.19a4 4 0 015.66 5.66l-9.2 9.19a2 2 0 01-2.83-2.83l8.49-8.48"/></svg>',
+  'sun': '<svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>',
+  'smile': '<svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>',
+  'users': '<svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>',
+  'video': '<svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="2.18" ry="2.18"/><path d="M7 2v20M17 2v20M2 12h20M2 7h5M2 17h5M17 17h5M17 7h5"/></svg>',
+  'scissors': '<svg viewBox="0 0 24 24"><circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><path d="M20 4L8.12 15.88M14.47 14.48L20 20M8.12 8.12L12 12"/></svg>',
+  'tree': '<svg viewBox="0 0 24 24"><path d="M12 22V8"/><path d="M5 12H2l10-9 10 9h-3"/><path d="M8 21H4l8-9 8 9h-4"/></svg>',
+  'book': '<svg viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 016.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"/></svg>',
+  'key': '<svg viewBox="0 0 24 24"><path d="M21 2l-2 2m-7.61 7.61a5.5 5.5 0 11-7.778 7.778 5.5 5.5 0 017.777-7.777zm0 0L15.5 7.5m0 0l3 3L22 7l-3-3m-3.5 3.5L19 4"/></svg>',
+  'ear': '<svg viewBox="0 0 24 24"><path d="M6 8.5a6.5 6.5 0 1113 0c0 6-6 6-6 10.5"/><path d="M15 8.5a2.5 2.5 0 00-5 0"/></svg>',
+  'glass': '<svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/><circle cx="11" cy="11" r="3" opacity=".4"/></svg>',
+};
+
+// Map emoji to SVG icon key
+const emojiToIcon = {
+'📊':'chart','⚡':'bolt','🤖':'bot','📈':'trending','💰':'dollar','🔔':'bell','🔄':'loop','📋':'list',
+'🧠':'brain','💎':'gem','🟠':'target','🏠':'home','💬':'message','📝':'pen','🎯':'target','🔧':'wrench',
+'📡':'signal','🌡️':'temp','👤':'user','📅':'calendar','📧':'mail','🔍':'search','🗄️':'database',
+'📸':'camera','📲':'phone','✈️':'send','📤':'send','📨':'send','✍️':'pen','📱':'phone',
+'🔽':'filter','📝':'note','🎨':'palette','🚀':'rocket','⭐':'star','💎':'gem','🕵️':'eye',
+'🖥️':'grid','🤝':'link','👤':'user','🎬':'video','📋':'list','⚙️':'wrench',
+'💵':'dollar','📉':'chart','🏷️':'tag','🏦':'building','📥':'file','🏢':'building','⚖️':'scale',
+'🧾':'note','👥':'users','🔢':'hash','🏛️':'building','🔭':'eye','🛡️':'shield','📦':'box','📑':'note',
+'📄':'file','🟢':'check','⏱️':'timer','🗺️':'map','🗜️':'box','🔬':'glass','📂':'folder','🪟':'grid',
+'🌳':'tree','🔗':'link','✅':'check','📚':'book','✂️':'scissors','📁':'folder','📓':'book',
+'🎙️':'mic','🧬':'brain','🌍':'globe','🔊':'signal','⚙️':'wrench','💳':'creditcard',
+'🔐':'lock','📰':'note','📎':'clip','😊':'smile','🌐':'globe','☀️':'sun','🎯':'target','🔑':'key','👂':'ear',
+};
+
+function getSkillSvg(emoji) {
+  const key = emojiToIcon[emoji];
+  return skillIcons[key] || skillIcons['target'];
+}
+
+// ===== MODAL DATA =====
+const moduleData = {
+  dashboard: {
+    title: 'Dashboard', color: 'var(--cyan)',
+    desc: 'Centro de comando em tempo real. Monitore toda a operação da plataforma de um só lugar.',
+    items: [
+      {icon:'📊',name:'Status dos Agentes',desc:'Veja quais agentes estão ativos, pausados ou offline em tempo real.'},
+      {icon:'⚡',name:'Execuções Ativas',desc:'Contador de execuções em andamento com duração e status individual.'},
+      {icon:'🤖',name:'Modelos de IA',desc:'Status de cada provedor: OpenAI, Gemini, Claude, Groq, Ollama — latência e disponibilidade.'},
+      {icon:'📈',name:'Consumo de Tokens',desc:'Gráfico de uso de tokens por provedor, por dia e por agente.'},
+      {icon:'💰',name:'Créditos Disponíveis',desc:'Saldo atual, tokens utilizados e projeção de consumo para o período.'},
+      {icon:'🔔',name:'Alertas do Sistema',desc:'Notificações de limites, erros de integração ou ações necessárias.'},
+      {icon:'🔄',name:'Auto-Refresh 10s',desc:'Dashboard atualiza automaticamente a cada 10 segundos via WebSocket.'},
+      {icon:'📋',name:'Resumo de Atividades',desc:'Timeline das últimas execuções, conversas e integrações acionadas.'},
+    ]
+  },
+  chat: {
+    title: 'Chat IA', color: 'var(--purple)',
+    desc: 'Converse com múltiplos provedores de IA em uma única interface, com streaming e histórico.',
+    items: [
+      {icon:'🧠',name:'OpenAI (GPT-4o)',desc:'Modelos GPT-4o, GPT-4o-mini com streaming em tempo real.'},
+      {icon:'💎',name:'Google Gemini',desc:'Gemini 2.0 Flash, Gemini Pro com contexto estendido.'},
+      {icon:'🟠',name:'Claude (Anthropic)',desc:'Claude 3.5 Sonnet, Haiku com raciocínio avançado.'},
+      {icon:'⚡',name:'Groq',desc:'LLaMA 3, Mixtral com inferência ultrarrápida via chips LPU.'},
+      {icon:'🏠',name:'Ollama (Local)',desc:'Modelos locais: Mistral, LLaMA, Phi sem custo de API.'},
+      {icon:'💬',name:'System Prompt',desc:'Personalize o comportamento da IA com prompts customizados.'},
+      {icon:'📝',name:'Threads & Histórico',desc:'Todas as conversas salvas, pesquisáveis e organizadas por data.'},
+      {icon:'🔄',name:'Troca de Modelo',desc:'Alterne entre provedores instantaneamente sem perder contexto.'},
+    ]
+  },
+  agentes: {
+    title: 'Agentes de IA', color: 'var(--green)',
+    desc: 'Crie personalidades de IA especializadas que trabalham 24/7 por você com habilidades instaláveis.',
+    items: [
+      {icon:'🤖',name:'Personalidade Customizada',desc:'Defina nome, avatar, temperamento, tom de voz e especialização.'},
+      {icon:'🧠',name:'System Prompt Avançado',desc:'Prompt base que define o comportamento, regras e limites do agente.'},
+      {icon:'🔧',name:'Skills Instaláveis',desc:'Instale habilidades do Skill Store para expandir capacidades.'},
+      {icon:'📡',name:'Canais de Atendimento',desc:'Conecte a Telegram, WhatsApp, Email ou chat interno.'},
+      {icon:'🧠',name:'Memória de Longo Prazo',desc:'Agentes lembram de conversas anteriores via memória vetorial Qdrant.'},
+      {icon:'🎯',name:'Modelo Selecionável',desc:'Escolha qual provedor de IA cada agente utiliza (GPT, Gemini, Claude...).'},
+      {icon:'🌡️',name:'Controle de Temperatura',desc:'Ajuste criatividade vs. precisão para cada contexto de uso.'},
+      {icon:'📊',name:'Analytics do Agente',desc:'Veja métricas de uso, respostas dadas, tokens consumidos e satisfação.'},
+    ]
+  },
+  skills: {
+    title: 'Skill Store', color: 'var(--pink)',
+    desc: 'Marketplace com 100+ habilidades instaláveis para ampliar as capacidades dos seus agentes de IA.',
+    items: [
+      {icon:'📨',name:'Telegram Sender',desc:'Envie mensagens de texto e áudios pelo Telegram.'},
+      {icon:'💬',name:'WhatsApp Sender',desc:'Envie mensagens pelo WhatsApp Business API.'},
+      {icon:'📅',name:'Google Calendar',desc:'Crie, consulte e gerencie eventos no Google Calendar.'},
+      {icon:'📧',name:'Gmail Reader',desc:'Leia e envie emails através do Gmail.'},
+      {icon:'🔍',name:'Busca na Web',desc:'Pesquise informações em tempo real na internet.'},
+      {icon:'🧠',name:'Memória Vetorial',desc:'Salve e recupere contexto de conversas usando Qdrant.'},
+      {icon:'💰',name:'Consultar Pagamento',desc:'Verifique status de cobranças e pagamentos.'},
+      {icon:'🗄️',name:'Query no CRM',desc:'Busque clientes e leads por nome, telefone ou email.'},
+      {icon:'📊',name:'Gerar Relatório',desc:'Crie relatórios em PDF com dados do sistema.'},
+      {icon:'📸',name:'Instagram Publisher',desc:'Crie e publique campanhas no Instagram via Graph API.'},
+      {icon:'📲',name:'Extrator de Leads WhatsApp',desc:'Extraia contatos de links e grupos WhatsApp.'},
+      {icon:'✈️',name:'Extrator Contatos Telegram',desc:'Extraia contatos de canais e grupos Telegram.'},
+      {icon:'🎯',name:'Analisador de Nicho',desc:'Analise nichos de mercado baseado em contatos extraídos.'},
+      {icon:'📤',name:'Disparador em Massa',desc:'Envie mensagens em massa com controle de velocidade.'},
+    ]
+  },
+  fluxos: {
+    title: 'Fluxos de Automação', color: 'var(--amber)',
+    desc: 'Editor visual drag-and-drop para criar automações complexas sem escrever código.',
+    items: [
+      {icon:'🎯',name:'Triggers',desc:'Inicie fluxos por mensagem, agendamento, webhook ou evento.'},
+      {icon:'🤖',name:'Nós de Agente',desc:'Conecte agentes de IA como etapas do fluxo de automação.'},
+      {icon:'🔍',name:'Condições',desc:'Crie branches com lógica IF/ELSE para decisões inteligentes.'},
+      {icon:'📡',name:'Ações de Integração',desc:'Envie mensagens, crie eventos, registre dados no CRM.'},
+      {icon:'⏱️',name:'Delays & Timers',desc:'Adicione esperas estratégicas entre etapas do fluxo.'},
+      {icon:'🔄',name:'Loops',desc:'Repita etapas até que uma condição seja satisfeita.'},
+      {icon:'🗺️',name:'Mapa Mental Visual',desc:'Visualize todo o fluxo como um mapa de processos interativo.'},
+      {icon:'📊',name:'Logs de Execução',desc:'Cada run gera logs detalhados com duração e output por step.'},
+    ]
+  },
+  marketing: {
+    title: 'IA Studio / Marketing', color: 'var(--pink)',
+    desc: '22 skills de marketing digital profissional para agentes de IA — do copywriting ao Growth Hacking.',
+    items: [
+      {icon:'✍️',name:'Copywriting Persuasivo',desc:'AIDA, PAS, gatilhos mentais e CTAs de alta conversão.'},
+      {icon:'🔍',name:'Otimização SEO',desc:'On-page, palavras-chave, SEO técnico e análise de SERP.'},
+      {icon:'📱',name:'Gestão de Redes Sociais',desc:'Calendário editorial, hashtags e estratégias por plataforma.'},
+      {icon:'📧',name:'Email Marketing & Automação',desc:'Sequências, nutrição de leads e campanhas de retenção.'},
+      {icon:'🔽',name:'Funil de Vendas & Conversão',desc:'TOFU/MOFU/BOFU com métricas e táticas por etapa.'},
+      {icon:'💰',name:'Tráfego Pago',desc:'Meta Ads e Google Ads com foco em ROAS e CPA.'},
+      {icon:'📝',name:'Marketing de Conteúdo',desc:'Artigos, vídeos, podcasts otimizados para cada canal.'},
+      {icon:'🎨',name:'Branding & Identidade',desc:'Tom de voz, paleta, posicionamento e guia de marca.'},
+      {icon:'🚀',name:'Growth Hacking',desc:'Experimentos, loops virais e product-led growth.'},
+      {icon:'⭐',name:'Marketing de Influenciadores',desc:'Seleção, negociação e métricas de influencer marketing.'},
+      {icon:'📊',name:'Analytics & Métricas',desc:'Dashboard de KPIs, atribuição e report de performance.'},
+      {icon:'🎯',name:'Lançamento de Produto',desc:'Pré-launch, launch e pós-launch com estratégia completa.'},
+      {icon:'💎',name:'Retenção & Fidelização',desc:'NPS, churn recovery, programas de loyalty e upsell.'},
+      {icon:'🕵️',name:'Análise de Concorrentes',desc:'Benchmarking, SWOT e monitoramento de concorrência.'},
+      {icon:'🖥️',name:'Landing Page & CRO',desc:'Otimização de conversão, A/B testing e UX persuasivo.'},
+      {icon:'🤝',name:'Marketing de Afiliados',desc:'Programas, comissões, tracking e gestão de afiliados.'},
+      {icon:'💬',name:'Marketing via WhatsApp',desc:'Estratégias, automações e funis de venda pelo WhatsApp.'},
+      {icon:'👤',name:'Criação de Personas (ICP)',desc:'Mapeamento de persona com dados demográficos e comportamentais.'},
+      {icon:'🎬',name:'Marketing em Vídeo',desc:'Scripts, roteiros, edição e distribuição de vídeo marketing.'},
+      {icon:'📋',name:'Pesquisa de Mercado',desc:'Análise de mercado, sizing, tendências e oportunidades.'},
+      {icon:'⚙️',name:'Automação de Marketing',desc:'Workflows, lead scoring, segmentação dinâmica e triggers.'},
+      {icon:'📸',name:'Instagram Campaign Publisher',desc:'Criação, aprovação e publicação automática via Graph API.'},
+    ]
+  },
+  financeiro: {
+    title: 'Skills Financeiras', color: 'var(--green)',
+    desc: '22 skills de análise financeira profissional para transformar agentes em consultores financeiros especializados.',
+    items: [
+      {icon:'📊',name:'Construtor de Planilhas',desc:'Excel e Google Sheets com fórmulas, tabelas dinâmicas e formatação.'},
+      {icon:'📋',name:'DRE',desc:'Demonstração do Resultado completa: receitas, EBITDA e lucro líquido.'},
+      {icon:'💵',name:'Gestor de Fluxo de Caixa',desc:'Projeções de fluxo de caixa direto e indireto, capital de giro.'},
+      {icon:'📅',name:'Planejamento Orçamentário',desc:'Budget anual, forecast trimestral e análise de desvios.'},
+      {icon:'📈',name:'Dashboard de KPIs',desc:'Indicadores de liquidez, rentabilidade, eficiência e endividamento.'},
+      {icon:'📉',name:'Análise de Investimentos',desc:'VPL, TIR, Payback e análise de cenários para projetos.'},
+      {icon:'🏷️',name:'Precificação e Margem',desc:'Markup, margem de contribuição e ponto de equilíbrio.'},
+      {icon:'🏦',name:'Conciliação Bancária',desc:'Compare extrato vs. contábil, identifique divergências.'},
+      {icon:'📥',name:'Contas a Receber',desc:'Aging list, inadimplência, PDD e estratégias de cobrança.'},
+      {icon:'📤',name:'Contas a Pagar',desc:'Programação de pagamentos e negociação com fornecedores.'},
+      {icon:'🏢',name:'Análise Centro de Custo',desc:'Custos por departamento, rateio e controle de desvios.'},
+      {icon:'⚖️',name:'Balanço Patrimonial',desc:'Análise vertical, horizontal e indicadores de estrutura.'},
+      {icon:'🧾',name:'Calculadora de Impostos',desc:'Simples, Presumido, Real — compare regimes tributários.'},
+      {icon:'👥',name:'Folha de Pagamento',desc:'FGTS, INSS, IRRF, férias, 13º e custo real do funcionário.'},
+      {icon:'🔄',name:'Capital de Giro',desc:'NCG, ciclo financeiro e estratégias de financiamento.'},
+      {icon:'🏛️',name:'Valuation de Empresas',desc:'DCF, múltiplos e valor patrimonial para avaliação.'},
+      {icon:'🔭',name:'Projeções 3-5 Anos',desc:'Modelo financeiro integrado: DRE, Balanço e Fluxo projetados.'},
+      {icon:'🛡️',name:'Crédito e Risco',desc:'Score financeiro, 5Cs do crédito e limites recomendados.'},
+      {icon:'📦',name:'Gestão de Estoques',desc:'PEPS, Custo Médio, giro, ABC e ponto de reposição.'},
+      {icon:'🔢',name:'Expert Fórmulas Excel',desc:'PROCV, NPV, IRR, PMT, Power Query e tabelas dinâmicas.'},
+      {icon:'📑',name:'Relatório Executivo',desc:'Board pack com highlights, desvios e outlook trimestral.'},
+      {icon:'💰',name:'Consultar Pagamento',desc:'Status de cobranças e pagamentos do sistema.'},
+    ]
+  },
+  licitacoes: {
+    title: 'Licitações Inteligentes', color: 'var(--red)',
+    desc: 'Radar de licitações com busca automática no Portal Nacional (PNCP) e análise completa por IA.',
+    items: [
+      {icon:'🔍',name:'Busca no PNCP',desc:'Pesquise licitações por palavra-chave, região, modalidade e valor.'},
+      {icon:'📄',name:'Download de Editais',desc:'Baixe automaticamente os editais em PDF do portal.'},
+      {icon:'📝',name:'Extração de Texto',desc:'Converta PDFs em texto para análise automática pela IA.'},
+      {icon:'⚖️',name:'Análise Jurídica',desc:'IA analisa cláusulas, exigências e riscos legais do edital.'},
+      {icon:'📋',name:'Análise Fiscal',desc:'Verificação de requisitos fiscais e documentação necessária.'},
+      {icon:'💰',name:'Análise Econômica',desc:'Estimativa de custos, margem e viabilidade financeira.'},
+      {icon:'🏛️',name:'Radar de Licitações',desc:'Monitoramento contínuo de novas oportunidades de licitação.'},
+      {icon:'📊',name:'Relatório de Análise',desc:'Relatório consolidado com parecer IA sobre participação.'},
+    ]
+  },
+  execucoes: {
+    title: 'Execuções', color: 'var(--blue)',
+    desc: 'Monitor em tempo real de todas as atividades da plataforma via WebSocket com logs expandíveis.',
+    items: [
+      {icon:'🟢',name:'Status em Tempo Real',desc:'Veja execuções running, completed, failed e queued.'},
+      {icon:'📡',name:'WebSocket Live',desc:'Atualizações instantâneas sem necessidade de refresh.'},
+      {icon:'🔍',name:'Steps Expandíveis',desc:'Clique em cada execução para ver os steps internos detalhados.'},
+      {icon:'📝',name:'Output JSON',desc:'Visualize o output completo de cada step em JSON formatado.'},
+      {icon:'⏱️',name:'Duração & Performance',desc:'Tempo de execução de cada step e do fluxo total.'},
+      {icon:'🎯',name:'Trigger Info',desc:'Saiba o que iniciou cada execução: mensagem, cron, webhook.'},
+      {icon:'🔄',name:'Re-run',desc:'Reexecute fluxos com um clique para debug ou reprocessamento.'},
+      {icon:'📊',name:'Histórico Completo',desc:'Busque execuções passadas por data, agente ou status.'},
+    ]
+  },
+  memoria: {
+    title: 'Memória & Contexto', color: 'var(--purple)',
+    desc: '22 skills para dar memória de longo prazo e gestão de conhecimento aos seus agentes de IA.',
+    items: [
+      {icon:'🧠',name:'Memória Vetorial',desc:'Salve e recupere contexto com Qdrant (180 dias de retenção).'},
+      {icon:'📝',name:'Sumarizador de Conversas',desc:'Resuma conversas longas mantendo os pontos-chave.'},
+      {icon:'🗜️',name:'Compressor de Contexto',desc:'Reduza tokens mantendo informação essencial.'},
+      {icon:'🔬',name:'Extrator de Fatos',desc:'Extraia dados estruturados automaticamente das conversas.'},
+      {icon:'⚡',name:'Cache Semântico',desc:'Reutilize respostas similares para velocidade e economia.'},
+      {icon:'📂',name:'Indexador de Documentos',desc:'Indexe PDFs, textos e docs para busca por agentes.'},
+      {icon:'🪟',name:'Janela Deslizante',desc:'Mantenha contexto relevante em conversas longas.'},
+      {icon:'👤',name:'Perfil do Usuário',desc:'Mantenha perfil persistente de cada usuário/cliente.'},
+      {icon:'📅',name:'Memória Episódica',desc:'Lembre de eventos específicos e seus contextos.'},
+      {icon:'🌳',name:'Memória Hierárquica',desc:'Organize conhecimento em árvore de temas e subtemas.'},
+      {icon:'📋',name:'Notas de Reunião',desc:'Gere atas automáticas de reuniões com action items.'},
+      {icon:'🔗',name:'Memória Compartilhada',desc:'Agentes compartilham conhecimento entre si.'},
+      {icon:'💰',name:'Memória Financeira',desc:'Lembre valores, métricas e dados financeiros persistentemente.'},
+      {icon:'✅',name:'Acompanhamento de Tarefas',desc:'Rastreie tarefas pendentes e prazos automaticamente.'},
+      {icon:'📚',name:'Base de Conhecimento',desc:'Centralize documentação e processos do negócio.'},
+      {icon:'✂️',name:'Chunking Inteligente',desc:'Divida documentos grandes em chunks otimizados.'},
+      {icon:'⏱️',name:'Memória Temporal',desc:'Associe informações a timestamps para contexto temporal.'},
+      {icon:'📁',name:'Gerenciador de Arquivos',desc:'Organize e busque arquivos referenciados em conversas.'},
+      {icon:'✂️',name:'Poda de Contexto',desc:'Remova informações irrelevantes automaticamente.'},
+      {icon:'📓',name:'Sync com Notion',desc:'Sincronize notas e dados com workspaces do Notion.'},
+      {icon:'📊',name:'Analytics de Memória',desc:'Métricas de uso de memória e consumo de tokens.'},
+      {icon:'📨',name:'Digest de Emails',desc:'Resumo inteligente de threads de email na memória.'},
+    ]
+  },
+  voice: {
+    title: 'Voice V2', color: 'var(--cyan)',
+    desc: 'Sistema de voz para agentes com biblioteca de vozes, clonagem personalizada e suporte multi-idioma.',
+    items: [
+      {icon:'🎙️',name:'Biblioteca de Vozes',desc:'Vozes profissionais pré-configuradas para diferentes cenários.'},
+      {icon:'🧬',name:'Clonagem de Voz',desc:'Clone sua própria voz ou crie vozes personalizadas.'},
+      {icon:'📡',name:'Canal por Agente',desc:'Configure voz diferente para cada canal: Telegram, WhatsApp, etc.'},
+      {icon:'🌍',name:'Multi-idioma',desc:'Suporte a português, inglês, espanhol e outros idiomas.'},
+      {icon:'🔊',name:'ElevenLabs',desc:'Integração com vozes ultra-realistas da ElevenLabs.'},
+      {icon:'🏠',name:'Kokoro (Local)',desc:'Geração de voz local sem custo de API com qualidade HD.'},
+      {icon:'⚙️',name:'Ajuste de Velocidade',desc:'Controle velocidade, tom e entonação da fala.'},
+      {icon:'🎯',name:'Text-to-Speech',desc:'Converta qualquer resposta do agente em áudio instantâneo.'},
+    ]
+  },
+  mensagens: {
+    title: 'Mensagens & Canais', color: 'var(--green)',
+    desc: '6 skills de comunicação para envio, extração de leads e disparos em massa via Telegram e WhatsApp.',
+    items: [
+      {icon:'📨',name:'Telegram Sender',desc:'Envie textos e áudios pelo Telegram automaticamente.'},
+      {icon:'💬',name:'WhatsApp Sender',desc:'Envie mensagens pelo WhatsApp Business API.'},
+      {icon:'📲',name:'Extrator de Leads WhatsApp',desc:'Extraia contatos de links e grupos de WhatsApp.'},
+      {icon:'✈️',name:'Extrator Contatos Telegram',desc:'Extraia membros de canais e grupos Telegram.'},
+      {icon:'🎯',name:'Analisador de Nicho',desc:'Analise perfis e nichos a partir dos contatos extraídos.'},
+      {icon:'📤',name:'Disparador em Massa',desc:'Envie mensagens em lote com controle de intervalo e limites.'},
+    ]
+  },
+  integracoes: {
+    title: 'Integrações', color: 'var(--purple)',
+    desc: 'Central com 15+ serviços conectados para expandir o ecossistema da Smart Moon.',
+    items: [
+      {icon:'📨',name:'Telegram Bot API',desc:'Conecte bots para atendimento e notificações.'},
+      {icon:'💬',name:'WhatsApp Business',desc:'API oficial para envio e recebimento de mensagens.'},
+      {icon:'🧠',name:'OpenAI',desc:'GPT-4o, GPT-4o-mini, DALL-E para text e image generation.'},
+      {icon:'💎',name:'Google Gemini',desc:'Gemini 2.0 Flash e Pro para análise e geração.'},
+      {icon:'🟠',name:'Claude (Anthropic)',desc:'Claude 3.5 Sonnet e Haiku para raciocínio avançado.'},
+      {icon:'⚡',name:'Groq',desc:'Inferência ultrarrápida com LLaMA 3 e Mixtral.'},
+      {icon:'🏠',name:'Ollama',desc:'Modelos locais: Mistral, LLaMA, Phi sem custo de API.'},
+      {icon:'📧',name:'Gmail',desc:'Leitura e envio de emails integrado ao sistema.'},
+      {icon:'📅',name:'Google Calendar',desc:'Criação e consulta de eventos automatizada.'},
+      {icon:'💳',name:'Mercado Pago',desc:'Gateway de pagamento com PIX e cartão de crédito.'},
+      {icon:'🔊',name:'ElevenLabs',desc:'Geração de voz ultra-realista com clonagem.'},
+      {icon:'🏠',name:'Kokoro TTS',desc:'Text-to-Speech local com qualidade profissional.'},
+      {icon:'🔧',name:'MCP Servers',desc:'Model Context Protocol para ferramentas externas.'},
+      {icon:'📸',name:'Instagram Graph API',desc:'Publicação e gestão de conteúdo no Instagram.'},
+      {icon:'🔍',name:'Portal Nacional (PNCP)',desc:'Busca e download de editais de licitação.'},
+    ]
+  },
+  billing: {
+    title: 'Billing & Gateway de Pagamento', color: 'var(--amber)',
+    desc: 'Gestão completa de planos, tokens, faturas e processamento de pagamentos via Mercado Pago.',
+    items: [
+      {icon:'📋',name:'Planos & Assinaturas',desc:'Gerencie planos Free, Starter, Pro e Enterprise.'},
+      {icon:'🎟️',name:'Controle de Tokens',desc:'Saldo, consumo por provedor e compra de tokens extras.'},
+      {icon:'💳',name:'Gateway Mercado Pago',desc:'Checkout integrado com PIX instantâneo e cartão de crédito.'},
+      {icon:'📄',name:'Faturas & Histórico',desc:'Todas as transações detalhadas com status e comprovantes.'},
+      {icon:'🔔',name:'Webhooks',desc:'Confirmação automática de pagamentos via webhook.'},
+      {icon:'📊',name:'Usage Analytics',desc:'Dashboard de consumo por agente, modelo e período.'},
+      {icon:'🔐',name:'Checkout Seguro',desc:'Processamento PCI-compliant com criptografia end-to-end.'},
+      {icon:'🔄',name:'Upgrade Automático',desc:'Escale seu plano com um clique quando precisar de mais recursos.'},
+    ]
+  },
+  pesquisa: {
+    title: 'Pesquisa & Inteligência', color: 'var(--red)',
+    desc: '7 skills de pesquisa e inteligência de mercado para agentes tomarem decisões baseadas em dados.',
+    items: [
+      {icon:'🔍',name:'Busca na Web',desc:'Pesquise informações em tempo real na internet.'},
+      {icon:'🔬',name:'Pesquisa Profunda de Nicho',desc:'Análise aprofundada de nichos com dados de mercado.'},
+      {icon:'🕵️',name:'Inteligência Competitiva',desc:'Monitore concorrentes, preços, posicionamento e estratégias.'},
+      {icon:'📈',name:'Scanner de Tendências',desc:'Identifique tendências de mercado e oportunidades emergentes.'},
+      {icon:'👥',name:'Construtor de Personas',desc:'Crie personas de audiência com dados reais de comportamento.'},
+      {icon:'🔑',name:'Oportunidades de Keywords',desc:'Descubra palavras-chave de alto volume e baixa concorrência.'},
+      {icon:'👂',name:'Monitor de Menções',desc:'Acompanhe menções à marca em redes sociais e web.'},
+    ]
+  },
+  email: {
+    title: 'Email Intelligence', color: 'var(--amber)',
+    desc: '21 skills para transformar a gestão de email em um sistema inteligente com IA.',
+    items: [
+      {icon:'📧',name:'Leitor de Emails',desc:'Leia e organize emails automaticamente com IA.'},
+      {icon:'✍️',name:'Redator de Emails',desc:'Escreva e envie emails profissionais com tom adaptável.'},
+      {icon:'🤖',name:'Auto-Resposta IA',desc:'Respostas automáticas inteligentes baseadas no contexto.'},
+      {icon:'📋',name:'Triagem & Categorização',desc:'Classifique emails por prioridade, tema e remetente.'},
+      {icon:'📋',name:'Resumidor de Threads',desc:'Resuma threads longas mantendo pontos-chave.'},
+      {icon:'🔍',name:'Extrator de Dados',desc:'Extraia informações estruturadas de emails recebidos.'},
+      {icon:'🔔',name:'Gestor de Follow-Up',desc:'Rastreie emails sem resposta e envie follow-ups.'},
+      {icon:'📝',name:'Criador de Newsletter',desc:'Gere newsletters profissionais com conteúdo curado.'},
+      {icon:'📎',name:'Processador de Anexos',desc:'Analise e indexe automaticamente arquivos anexados.'},
+      {icon:'🛡️',name:'Filtro Anti-Spam',desc:'Detecção avançada de spam com IA além dos filtros padrão.'},
+      {icon:'🔄',name:'Sync Email ↔ CRM',desc:'Sincronize automaticamente emails com o CRM.'},
+      {icon:'⏱️',name:'Agendador de Emails',desc:'Programe envios para horários de maior engajamento.'},
+      {icon:'📊',name:'Analytics de Email',desc:'Taxa de abertura, cliques, conversão e ROI.'},
+      {icon:'🎨',name:'Templates de Email',desc:'Gerencie e personalize templates reutilizáveis.'},
+      {icon:'✂️',name:'Inbox Zero',desc:'Assistente para manter inbox limpa e organizada.'},
+      {icon:'⚖️',name:'Compliance Legal',desc:'Verifique conformidade com LGPD e termos legais.'},
+      {icon:'✍️',name:'Rascunhador IA',desc:'IA rascunha respostas para aprovação antes do envio.'},
+      {icon:'☀️',name:'Digest Diário',desc:'Resumo diário dos emails mais importantes.'},
+      {icon:'😊',name:'Análise de Sentimento',desc:'Detecte tom emocional dos emails recebidos.'},
+      {icon:'🌐',name:'Enriquecedor de Contatos',desc:'Enriqueça perfis de remetentes com dados públicos.'},
+      {icon:'📧',name:'Gmail Reader',desc:'Integração direta com contas Gmail.'},
+    ]
+  },
+};
+
+function openModal(moduleId) {
+  const data = moduleData[moduleId];
+  if (!data) return;
+  document.getElementById('modalTitle').textContent = data.title;
+  document.getElementById('modalCount').textContent = data.items.length + ' itens';
+  document.getElementById('modalDesc').textContent = data.desc;
+  const grid = document.getElementById('modalGrid');
+  const color = data.color || 'var(--cyan)';
+  grid.innerHTML = data.items.map(item => {
+    const svg = getSkillSvg(item.icon);
+    return `
+    <div class="skill-item">
+      <div class="skill-icon" style="font-size:0;background:${color}11;color:${color};">
+        <div style="width:18px;height:18px;display:flex;align-items:center;justify-content:center;">
+          <svg viewBox="0 0 24 24" style="width:18px;height:18px;stroke:${color};fill:none;stroke-width:1.8;">${svg.replace(/<\/?svg[^>]*>/g,'')}</svg>
+        </div>
+      </div>
+      <div class="skill-info">
+        <h4>${item.name}</h4>
+        <p>${item.desc}</p>
+      </div>
+    </div>
+  `}).join('');
+  document.getElementById('moduleModal').classList.add('active');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeModal() {
+  document.getElementById('moduleModal').classList.remove('active');
+  document.body.style.overflow = '';
+}
+
+document.addEventListener('keydown', e => {
+  if(e.key==='Escape') {
+    closeModal();
+    closeSidebar();
+    closePage('licitacoes');
+    closePage('gateway');
+  }
+});
+</script>
+</body>
+</html>
+

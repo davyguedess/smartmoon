@@ -1,0 +1,341 @@
+/* ══════════════════════════════════════════════════════════════
+   CRM API Docs — Premium Dark Theme
+   ══════════════════════════════════════════════════════════════ */
+
+.crm-api-docs {
+  padding: 24px;
+  max-width: 900px;
+  margin: 0 auto;
+  color: #e4e4e7;
+}
+
+.crm-api-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+.crm-api-header h1 { margin: 0; font-size: 1.5rem; }
+.crm-api-subtitle { margin: 4px 0 0; font-size: 0.85rem; color: #71717a; }
+.crm-api-version {
+  padding: 4px 12px;
+  border-radius: 20px;
+  background: rgba(99, 102, 241, 0.15);
+  color: #a78bfa;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+/* Tabs */
+.crm-api-tabs {
+  display: flex;
+  gap: 4px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid rgba(99, 102, 241, 0.1);
+  padding-bottom: 2px;
+}
+
+.crm-api-tab {
+  padding: 8px 16px;
+  border: none;
+  background: transparent;
+  color: #71717a;
+  font-size: 0.82rem;
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+  transition: all 0.15s;
+  border-radius: 6px 6px 0 0;
+}
+
+.crm-api-tab:hover { color: #e4e4e7; background: rgba(99, 102, 241, 0.04); }
+.crm-api-tab.active {
+  color: #a78bfa;
+  border-bottom-color: #8b5cf6;
+  background: rgba(99, 102, 241, 0.06);
+}
+
+/* Cards */
+.crm-api-card {
+  padding: 20px;
+  border-radius: 14px;
+  background: rgba(15, 15, 28, 0.6);
+  border: 1px solid rgba(99, 102, 241, 0.1);
+  margin-bottom: 16px;
+}
+
+.crm-api-card h3 { margin: 0 0 12px; font-size: 1rem; }
+.crm-api-card p { font-size: 0.85rem; color: #a1a1aa; margin: 6px 0; line-height: 1.5; }
+
+/* Auth */
+.crm-api-auth { border-color: rgba(16, 185, 129, 0.2); }
+
+.crm-api-code-block {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 14px;
+  border-radius: 8px;
+  background: rgba(30, 30, 50, 0.8);
+  border: 1px solid rgba(99, 102, 241, 0.15);
+  margin: 10px 0;
+}
+
+.crm-api-code-block code {
+  flex: 1;
+  font-size: 0.85rem;
+  color: #34d399;
+  font-family: 'JetBrains Mono', 'Fira Code', monospace;
+}
+
+.crm-api-copy {
+  padding: 4px 10px;
+  border-radius: 6px;
+  background: rgba(99, 102, 241, 0.1);
+  border: 1px solid rgba(99, 102, 241, 0.2);
+  color: #a1a1aa;
+  font-size: 0.75rem;
+  cursor: pointer;
+  transition: all 0.15s;
+  white-space: nowrap;
+}
+
+.crm-api-copy:hover { background: rgba(99, 102, 241, 0.2); color: #e4e4e7; }
+
+.crm-api-copy-inline {
+  position: absolute;
+  top: 6px;
+  right: 6px;
+}
+
+.crm-api-hint { font-size: 0.8rem !important; color: #71717a !important; }
+.crm-api-hint code { background: rgba(99, 102, 241, 0.1); padding: 1px 6px; border-radius: 4px; color: #a78bfa; }
+.crm-api-hint strong { color: #a78bfa; }
+
+/* Steps */
+.crm-api-steps { display: flex; flex-direction: column; gap: 16px; }
+
+.crm-api-step {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+}
+
+.crm-api-step-num {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #6366f1, #8b5cf6);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.85rem;
+  font-weight: 800;
+  flex-shrink: 0;
+}
+
+.crm-api-step-content {
+  flex: 1;
+}
+
+.crm-api-step-content strong { font-size: 0.9rem; }
+.crm-api-step-content p { margin: 2px 0 6px; font-size: 0.8rem; color: #a1a1aa; }
+
+.crm-api-step-content .crm-api-curl {
+  position: relative;
+  margin-top: 4px;
+}
+
+.crm-api-step-content .crm-api-curl pre {
+  padding: 10px 40px 10px 10px;
+  border-radius: 6px;
+  background: rgba(20, 20, 40, 0.9);
+  border: 1px solid rgba(99, 102, 241, 0.1);
+  font-size: 0.72rem;
+  color: #34d399;
+  white-space: pre-wrap;
+  word-break: break-all;
+  font-family: 'JetBrains Mono', 'Fira Code', monospace;
+  margin: 0;
+}
+
+/* Flow */
+.crm-api-flow {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  padding: 10px 0;
+}
+
+.crm-api-flow-step {
+  padding: 8px 20px;
+  border-radius: 8px;
+  background: rgba(30, 30, 50, 0.6);
+  border: 1px solid rgba(99, 102, 241, 0.1);
+  font-size: 0.82rem;
+  min-width: 320px;
+  text-align: center;
+}
+
+.crm-api-flow-step.highlight {
+  background: rgba(99, 102, 241, 0.1);
+  border-color: rgba(99, 102, 241, 0.3);
+  color: #a78bfa;
+  font-weight: 600;
+}
+
+.crm-api-flow-arrow {
+  font-size: 1rem;
+  color: #52525b;
+  line-height: 1;
+}
+
+/* Endpoints */
+.crm-api-endpoints { display: flex; flex-direction: column; gap: 4px; }
+
+.crm-api-endpoint {
+  border-radius: 8px;
+  border: 1px solid rgba(99, 102, 241, 0.08);
+  overflow: hidden;
+  transition: all 0.2s;
+}
+
+.crm-api-endpoint.open { border-color: rgba(99, 102, 241, 0.2); }
+
+.crm-api-ep-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 14px;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.crm-api-ep-header:hover { background: rgba(99, 102, 241, 0.04); }
+
+.crm-api-method {
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 0.65rem;
+  font-weight: 800;
+  color: white;
+  letter-spacing: 0.5px;
+  min-width: 48px;
+  text-align: center;
+}
+
+.crm-api-path {
+  font-size: 0.8rem;
+  color: #e4e4e7;
+  font-family: 'JetBrains Mono', 'Fira Code', monospace;
+}
+
+.crm-api-desc { flex: 1; font-size: 0.8rem; color: #71717a; }
+.crm-api-chevron { color: #52525b; font-size: 0.8rem; }
+
+/* Detail */
+.crm-api-ep-detail {
+  padding: 12px 14px;
+  border-top: 1px solid rgba(99, 102, 241, 0.08);
+  background: rgba(10, 10, 20, 0.4);
+  animation: fadeIn 0.15s ease-out;
+}
+
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+
+.crm-api-params {
+  font-size: 0.8rem;
+  color: #a1a1aa;
+  margin-bottom: 8px;
+}
+
+.crm-api-params strong { color: #f59e0b; }
+
+.crm-api-body { font-size: 0.8rem; margin-bottom: 10px; }
+.crm-api-body strong { color: #3b82f6; }
+.crm-api-body pre {
+  margin: 6px 0 0;
+  padding: 10px;
+  border-radius: 6px;
+  background: rgba(30, 30, 50, 0.8);
+  font-size: 0.75rem;
+  color: #a1a1aa;
+  white-space: pre-wrap;
+  word-break: break-all;
+  font-family: 'JetBrains Mono', 'Fira Code', monospace;
+}
+
+.crm-api-curl { margin-top: 10px; }
+.crm-api-curl-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 6px;
+}
+
+.crm-api-curl-header strong { font-size: 0.75rem; color: #71717a; text-transform: uppercase; letter-spacing: 0.5px; }
+
+.crm-api-curl pre {
+  padding: 10px;
+  border-radius: 6px;
+  background: rgba(20, 20, 40, 0.9);
+  border: 1px solid rgba(99, 102, 241, 0.1);
+  font-size: 0.75rem;
+  color: #34d399;
+  white-space: pre-wrap;
+  word-break: break-all;
+  font-family: 'JetBrains Mono', 'Fira Code', monospace;
+  margin: 0;
+}
+
+/* Response Example */
+.crm-api-response-example {
+  padding: 14px;
+  border-radius: 8px;
+  background: rgba(20, 20, 40, 0.9);
+  border: 1px solid rgba(99, 102, 241, 0.1);
+  font-size: 0.78rem;
+  color: #a1a1aa;
+  white-space: pre-wrap;
+  margin: 8px 0 0;
+  font-family: 'JetBrains Mono', 'Fira Code', monospace;
+  line-height: 1.5;
+}
+
+/* Error Table */
+.crm-api-error-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 12px;
+  font-size: 0.82rem;
+}
+
+.crm-api-error-table th {
+  text-align: left;
+  padding: 8px 12px;
+  background: rgba(30, 30, 50, 0.6);
+  color: #a1a1aa;
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border-bottom: 1px solid rgba(99, 102, 241, 0.1);
+}
+
+.crm-api-error-table td {
+  padding: 8px 12px;
+  border-bottom: 1px solid rgba(99, 102, 241, 0.06);
+  color: #e4e4e7;
+}
+
+.crm-api-error-table td code {
+  padding: 2px 8px;
+  border-radius: 4px;
+  background: rgba(239, 68, 68, 0.15);
+  color: #f87171;
+  font-weight: 700;
+  font-size: 0.8rem;
+}
+
+.crm-api-error-table td:last-child { color: #a1a1aa; font-size: 0.78rem; }

@@ -1,0 +1,4 @@
+# NEXUS.IA — Alembic Migration Environment
+# Run: alembic init alembic (already done)
+# Run: alembic revision --autogenerate -m "initial"
+# Run: alembic upgrade head

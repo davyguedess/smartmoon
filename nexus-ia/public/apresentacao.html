@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Smart Moon — Apresentação</title>
+<link rel="stylesheet" href="/slides/presentation.css">
+</head>
+<body>
+<div class="bg-glow"></div>
+<div class="bg-grid"></div>
+<button class="fs" onclick="toggleFullscreen()">
+  <svg viewBox="0 0 24 24"><path d="M8 3H5a2 2 0 00-2 2v3m18 0V5a2 2 0 00-2-2h-3m0 18h3a2 2 0 002-2v-3M3 16v3a2 2 0 002 2h3"/></svg>Tela cheia
+</button>
+
+<div class="deck" id="deck">
+
+<!-- S1: CAPA -->
+<div class="slide active" data-slide="0">
+  <div class="tag" style="background:rgba(139,92,246,0.08);color:var(--purple);border:1px solid rgba(139,92,246,0.12);">
+    <svg viewBox="0 0 24 24" style="width:12px;height:12px;stroke:var(--purple);fill:none;stroke-width:2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+    BETA v1.0 — Plataforma de Automação Inteligente
+  </div>
+  <h1 class="title" style="font-size:58px;"><span class="gradient-text">Smart Moon</span></h1>
+  <p class="subtitle" style="font-size:18px;color:var(--text);opacity:0.65;">Automação Empresarial com Inteligência Artificial</p>
+  <div style="display:flex;gap:16px;margin-top:16px;">
+    <div style="display:flex;align-items:center;gap:7px;padding:7px 14px;border-radius:8px;background:rgba(139,92,246,0.06);border:1px solid rgba(139,92,246,0.1);font-size:10px;color:var(--purple);font-weight:700;">
+      <svg viewBox="0 0 24 24" style="width:14px;height:14px;stroke:var(--purple);fill:none;stroke-width:2"><path d="M12 8V4H8"/><rect x="4" y="12" width="16" height="8" rx="2"/><path d="M2 20h20"/></svg>
+      Agentes Autônomos
+    </div>
+    <div style="display:flex;align-items:center;gap:7px;padding:7px 14px;border-radius:8px;background:rgba(6,182,212,0.06);border:1px solid rgba(6,182,212,0.1);font-size:10px;color:var(--cyan);font-weight:700;">
+      <svg viewBox="0 0 24 24" style="width:14px;height:14px;stroke:var(--cyan);fill:none;stroke-width:2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+      Fluxos Visuais
+    </div>
+    <div style="display:flex;align-items:center;gap:7px;padding:7px 14px;border-radius:8px;background:rgba(16,185,129,0.06);border:1px solid rgba(16,185,129,0.1);font-size:10px;color:var(--green);font-weight:700;">
+      <svg viewBox="0 0 24 24" style="width:14px;height:14px;stroke:var(--green);fill:none;stroke-width:2"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg>
+      Comunicação Multicanal
+    </div>
+  </div>
+  <div style="margin-top:40px;display:flex;gap:24px;opacity:0.35;">
+    <span style="font-size:9px;font-weight:600;color:var(--text2);">18 MÓDULOS</span>
+    <span style="font-size:9px;font-weight:600;color:var(--text2);">•</span>
+    <span style="font-size:9px;font-weight:600;color:var(--text2);">5+ PROVEDORES IA</span>
+    <span style="font-size:9px;font-weight:600;color:var(--text2);">•</span>
+    <span style="font-size:9px;font-weight:600;color:var(--text2);">15+ INTEGRAÇÕES</span>
+    <span style="font-size:9px;font-weight:600;color:var(--text2);">•</span>
+    <span style="font-size:9px;font-weight:600;color:var(--text2);">MULTI-TENANT</span>
+  </div>
+</div>
+
+<!-- S2: PROBLEMA -->
+<div class="slide" data-slide="1">
+  <div class="tag" style="background:rgba(239,68,68,0.06);color:var(--red);border:1px solid rgba(239,68,68,0.12);">
+    <svg viewBox="0 0 24 24" style="width:12px;height:12px;stroke:var(--red);fill:none;stroke-width:2"><path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0zM12 9v4M12 17h.01"/></svg>
+    O Cenário Atual
+  </div>
+  <h1 class="title">Empresas perdem <span class="c-red">tempo e receita</span></h1>
+  <p class="subtitle">com operações fragmentadas e processos que não escalam.</p>
+  <div class="bullets">
+    <div class="bullet">
+      <div class="ico ico-sm" style="background:rgba(239,68,68,0.08);color:var(--red);">
+        <svg viewBox="0 0 24 24"><path d="M18 20V6M6 20V6M2 20h20M2 6h20M2 12h20"/></svg>
+      </div>
+      <div><h4>Ferramentas Fragmentadas</h4><p>CRM desconectado do atendimento. Marketing isolado das vendas. Dados espalhados em dezenas de plataformas.</p></div>
+    </div>
+    <div class="bullet">
+      <div class="ico ico-sm" style="background:rgba(245,158,11,0.08);color:var(--amber);">
+        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+      </div>
+      <div><h4>Processos Manuais</h4><p>Equipes gastam horas em tarefas repetitivas: copiar dados, responder perguntas frequentes, gerar relatórios.</p></div>
+    </div>
+    <div class="bullet">
+      <div class="ico ico-sm" style="background:rgba(139,92,246,0.08);color:var(--purple);">
+        <svg viewBox="0 0 24 24"><path d="M21 12a9 9 0 11-6.219-8.56"/><path d="M21 3v6h-6"/></svg>
+      </div>
+      <div><h4>Zero Inteligência nos Dados</h4><p>Informações existem, mas ninguém analisa. Decisões são tomadas por intuição, não por dados.</p></div>
+    </div>
+    <div class="bullet">
+      <div class="ico ico-sm" style="background:rgba(236,72,153,0.08);color:var(--pink);">
+        <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>
+      </div>
+      <div><h4>Atendimento 8h por dia</h4><p>Clientes esperam. Leads esfriam. O concorrente responde primeiro. Ninguém atende fora do horário comercial.</p></div>
+    </div>
+  </div>
+</div>
+
+<!-- S3: SOLUÇÃO -->
+<div class="slide" data-slide="2">
+  <div class="tag" style="background:rgba(16,185,129,0.06);color:var(--green);border:1px solid rgba(16,185,129,0.12);">
+    <svg viewBox="0 0 24 24" style="width:12px;height:12px;stroke:var(--green);fill:none;stroke-width:2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><path d="M22 4L12 14.01l-3-3"/></svg>
+    A Solução
+  </div>
+  <h1 class="title">Um <span class="gradient-text">cérebro central</span> que conecta tudo</h1>
+  <p class="subtitle">Agentes de IA, automações, comunicação e análise — em um único painel inteligente.</p>
+  <div class="grid-3">
+    <div class="fcard"><div class="ico ico-md" style="background:rgba(139,92,246,0.08);color:var(--purple);"><svg viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M9 9h6v6H9z"/><path d="M9 1v3M15 1v3M9 20v3M15 20v3M20 9h3M20 14h3M1 9h3M1 14h3"/></svg></div>
+      <h3>Agentes de IA</h3><p>Personalidades especializadas que atendem, analisam e executam tarefas 24/7.</p></div>
+    <div class="fcard"><div class="ico ico-md" style="background:rgba(6,182,212,0.08);color:var(--cyan);"><svg viewBox="0 0 24 24"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div>
+      <h3>Automação Visual</h3><p>Construtor drag-and-drop de fluxos. Automações complexas sem programação.</p></div>
+    <div class="fcard"><div class="ico ico-md" style="background:rgba(16,185,129,0.08);color:var(--green);"><svg viewBox="0 0 24 24"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg></div>
+      <h3>Multicanal</h3><p>WhatsApp, Telegram, Instagram, Email e Chat Web — mesma IA, canais múltiplos.</p></div>
+    <div class="fcard"><div class="ico ico-md" style="background:rgba(245,158,11,0.08);color:var(--amber);"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><path d="M14 2v6h6M16 13H8M16 17H8M10 9H8"/></svg></div>
+      <h3>Licitações IA</h3><p>Download e análise automática de editais com categorização inteligente.</p></div>
+    <div class="fcard"><div class="ico ico-md" style="background:rgba(236,72,153,0.08);color:var(--pink);"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg></div>
+      <h3>Marketing IA</h3><p>Pipeline do briefing à publicação com criativo e legenda gerados por IA.</p></div>
+    <div class="fcard"><div class="ico ico-md" style="background:rgba(239,68,68,0.08);color:var(--red);"><svg viewBox="0 0 24 24"><path d="M12 1a3 3 0 00-3 3v8a3 3 0 006 0V4a3 3 0 00-3-3z"/><path d="M19 10v2a7 7 0 01-14 0v-2M12 19v4M8 23h8"/></svg></div>
+      <h3>Voz Inteligente</h3><p>Clonagem de voz personalizada. Síntese em 5+ idiomas. Voz natural por canal.</p></div>
+  </div>
+</div>
+
+<!-- S4: DASHBOARD MOCKUP -->
+<div class="slide" data-slide="3">
+  <div class="tag" style="background:rgba(139,92,246,0.06);color:var(--purple);border:1px solid rgba(139,92,246,0.12);">
+    <svg viewBox="0 0 24 24" style="width:12px;height:12px;stroke:var(--purple);fill:none;stroke-width:2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+    Centro de Comando
+  </div>
+  <h1 class="title sm">Dashboard em <span class="gradient-text">tempo real</span></h1>
+  <p class="subtitle" style="font-size:13px;">Visão panorâmica de todo o ecossistema: métricas, execuções, modelos conectados e saúde do sistema.</p>
+  <div class="mock" style="max-width:880px;">
+    <div class="mock-bar"><div class="mock-dot" style="background:#ef4444;"></div><div class="mock-dot" style="background:#f59e0b;"></div><div class="mock-dot" style="background:#10b981;"></div><span style="font-size:9px;color:var(--muted);margin-left:8px;">Smart Moon — Dashboard</span></div>
+    <div style="display:flex;">
+      <div class="mock-sidebar">
+        <div class="mock-sidebar-item act">Dashboard</div>
+        <div class="mock-sidebar-item">Fluxos</div>
+        <div class="mock-sidebar-item">Execuções</div>
+        <div class="mock-sidebar-item">Chat IA</div>
+        <div class="mock-sidebar-item">Integrações</div>
+        <div class="mock-sidebar-item">Clientes</div>
+        <div class="mock-sidebar-item">Agentes IA</div>
+        <div class="mock-sidebar-item">Plano & Uso</div>
+        <div class="mock-sidebar-item">Voz da IA</div>
+        <div class="mock-sidebar-item">Bots Telegram</div>
+        <div class="mock-sidebar-item">Monitor</div>
+        <div class="mock-sidebar-item">Campanhas IG</div>
+        <div class="mock-sidebar-item">Radar Licitações</div>
+      </div>
+      <div class="mock-main">
+        <div style="display:flex;gap:6px;margin-bottom:8px;font-size:8px;">
+          <span style="padding:3px 8px;border-radius:4px;background:rgba(16,185,129,0.1);color:var(--green);font-weight:700;">API Online</span>
+          <span style="padding:3px 8px;border-radius:4px;background:rgba(16,185,129,0.1);color:var(--green);font-weight:700;">Ollama Online</span>
+          <span style="padding:3px 8px;border-radius:4px;background:rgba(139,92,246,0.1);color:var(--purple);font-weight:700;">5 modelos conectados</span>
+        </div>
+        <div class="mock-row">
+          <div class="mock-card"><div class="mock-stat c-purple">248</div><div class="mock-label">Execuções Totais</div></div>
+          <div class="mock-card"><div class="mock-stat c-green">231</div><div class="mock-label">Concluídas · 93%</div></div>
+          <div class="mock-card"><div class="mock-stat c-cyan">4</div><div class="mock-label">Em execução</div></div>
+          <div class="mock-card"><div class="mock-stat c-amber">8</div><div class="mock-label">Fluxos Publicados</div></div>
+        </div>
+        <div style="display:flex;gap:8px;">
+          <div style="flex:2;">
+            <div style="font-size:9px;font-weight:800;margin-bottom:6px;color:var(--text2);">Execuções Recentes</div>
+            <div style="display:flex;flex-direction:column;gap:3px;">
+              <div style="display:flex;justify-content:space-between;padding:5px 8px;background:var(--surface);border-radius:4px;font-size:8px;"><span>Atendimento Telegram — Cliente VIP</span><span style="color:var(--green);font-weight:700;">success</span></div>
+              <div style="display:flex;justify-content:space-between;padding:5px 8px;background:var(--surface);border-radius:4px;font-size:8px;"><span>Análise Edital #47 — Prefeitura de SP</span><span style="color:var(--green);font-weight:700;">success</span></div>
+              <div style="display:flex;justify-content:space-between;padding:5px 8px;background:var(--surface);border-radius:4px;font-size:8px;"><span>Campanha IG — Lançamento Produto</span><span style="color:var(--green);font-weight:700;">success</span></div>
+              <div style="display:flex;justify-content:space-between;padding:5px 8px;background:var(--surface);border-radius:4px;font-size:8px;"><span>WhatsApp Bot — Qualificação de Lead</span><span style="color:var(--cyan);font-weight:700;">running</span></div>
+            </div>
+          </div>
+          <div style="flex:1;">
+            <div style="font-size:9px;font-weight:800;margin-bottom:6px;color:var(--text2);">Modelos IA</div>
+            <div style="display:flex;flex-direction:column;gap:3px;">
+              <div style="padding:5px 8px;background:var(--surface);border-radius:4px;font-size:8px;display:flex;justify-content:space-between;"><span>GPT-4o</span><span style="color:var(--green);font-weight:700;">ATIVO</span></div>
+              <div style="padding:5px 8px;background:var(--surface);border-radius:4px;font-size:8px;display:flex;justify-content:space-between;"><span>Gemini 1.5 Pro</span><span style="color:var(--green);font-weight:700;">ATIVO</span></div>
+              <div style="padding:5px 8px;background:var(--surface);border-radius:4px;font-size:8px;display:flex;justify-content:space-between;"><span>Claude 3.5</span><span style="color:var(--green);font-weight:700;">ATIVO</span></div>
+              <div style="padding:5px 8px;background:var(--surface);border-radius:4px;font-size:8px;display:flex;justify-content:space-between;"><span>Llama 3.2</span><span style="color:var(--green);font-weight:700;">ATIVO</span></div>
+              <div style="padding:5px 8px;background:var(--surface);border-radius:4px;font-size:8px;display:flex;justify-content:space-between;"><span>Gemma 3 4B</span><span style="color:var(--green);font-weight:700;">ATIVO</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- S5: AGENTES -->
+<div class="slide" data-slide="4">
+  <div class="tag" style="background:rgba(139,92,246,0.06);color:var(--purple);border:1px solid rgba(139,92,246,0.12);">
+    <svg viewBox="0 0 24 24" style="width:12px;height:12px;stroke:var(--purple);fill:none;stroke-width:2"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M9 9h6v6H9z"/><path d="M9 1v3M15 1v3M9 20v3M15 20v3M20 9h3M20 14h3M1 9h3M1 14h3"/></svg>
+    Equipe Virtual
+  </div>
+  <h1 class="title sm">Agentes <span class="c-purple">Inteligentes</span></h1>
+  <p class="subtitle" style="font-size:13px;">Personalidades de IA especializadas com modelo, temperatura, system prompt e skills configuráveis.</p>
+  <div class="grid-4">
+    <div class="fcard" style="border-color:rgba(59,130,246,0.2);">
+      <div class="ico ico-md" style="background:rgba(59,130,246,0.08);color:var(--blue);"><svg viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></div>
+      <h3>Agente Comercial</h3><p>Qualifica leads, negocia propostas e acompanha o funil de vendas.</p>
+      <div style="margin-top:8px;display:flex;gap:4px;">
+        <span style="font-size:7px;padding:2px 6px;border-radius:4px;background:rgba(59,130,246,0.1);color:var(--blue);font-weight:700;">GPT-4o</span>
+        <span style="font-size:7px;padding:2px 6px;border-radius:4px;background:rgba(16,185,129,0.1);color:var(--green);font-weight:700;">Ativo</span>
+      </div>
+    </div>
+    <div class="fcard" style="border-color:rgba(16,185,129,0.2);">
+      <div class="ico ico-md" style="background:rgba(16,185,129,0.08);color:var(--green);"><svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg></div>
+      <h3>Agente Suporte</h3><p>Resolve dúvidas, escala problemas complexos e mantém o cliente satisfeito.</p>
+      <div style="margin-top:8px;display:flex;gap:4px;">
+        <span style="font-size:7px;padding:2px 6px;border-radius:4px;background:rgba(16,185,129,0.1);color:var(--green);font-weight:700;">Gemini Pro</span>
+        <span style="font-size:7px;padding:2px 6px;border-radius:4px;background:rgba(16,185,129,0.1);color:var(--green);font-weight:700;">Ativo</span>
+      </div>
+    </div>
+    <div class="fcard" style="border-color:rgba(139,92,246,0.2);">
+      <div class="ico ico-md" style="background:rgba(139,92,246,0.08);color:var(--purple);"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><path d="M14 2v6h6"/></svg></div>
+      <h3>Agente Jurídico</h3><p>Analisa contratos, editais e documentos legais com categorização por tipo.</p>
+      <div style="margin-top:8px;display:flex;gap:4px;">
+        <span style="font-size:7px;padding:2px 6px;border-radius:4px;background:rgba(139,92,246,0.1);color:var(--purple);font-weight:700;">Claude 3.5</span>
+        <span style="font-size:7px;padding:2px 6px;border-radius:4px;background:rgba(16,185,129,0.1);color:var(--green);font-weight:700;">Ativo</span>
+      </div>
+    </div>
+    <div class="fcard" style="border-color:rgba(236,72,153,0.2);">
+      <div class="ico ico-md" style="background:rgba(236,72,153,0.08);color:var(--pink);"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg></div>
+      <h3>Agente Marketing</h3><p>Cria conteúdo, gera legendas com tom customizável e analisa engajamento.</p>
+      <div style="margin-top:8px;display:flex;gap:4px;">
+        <span style="font-size:7px;padding:2px 6px;border-radius:4px;background:rgba(236,72,153,0.1);color:var(--pink);font-weight:700;">GPT-4o</span>
+        <span style="font-size:7px;padding:2px 6px;border-radius:4px;background:rgba(16,185,129,0.1);color:var(--green);font-weight:700;">Ativo</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- S6: SKILL STORE -->
+<div class="slide" data-slide="5">
+  <div class="tag" style="background:rgba(236,72,153,0.06);color:var(--pink);border:1px solid rgba(236,72,153,0.12);">
+    <svg viewBox="0 0 24 24" style="width:12px;height:12px;stroke:var(--pink);fill:none;stroke-width:2"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4zM3 6h18M16 10a4 4 0 01-8 0"/></svg>
+    Marketplace de Habilidades
+  </div>
+  <h1 class="title sm">Skill Store</h1>
+  <p class="subtitle" style="font-size:13px;">Instale habilidades nos agentes como aplicativos. Cada skill expande a capacidade de atendimento e automação.</p>
+  <div class="grid-3">
+    <div class="skill"><div class="ico ico-sm" style="background:rgba(16,185,129,0.08);color:var(--green);"><svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg></div><div><div class="skill-name">WhatsApp Business Bot</div><div class="skill-cat c-green">Comunicação</div><div class="skill-stars">★★★★★</div></div></div>
+    <div class="skill"><div class="ico ico-sm" style="background:rgba(139,92,246,0.08);color:var(--purple);"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><path d="M14 2v6h6"/></svg></div><div><div class="skill-name">Análise de Contratos</div><div class="skill-cat c-purple">Jurídico</div><div class="skill-stars">★★★★★</div></div></div>
+    <div class="skill"><div class="ico ico-sm" style="background:rgba(236,72,153,0.08);color:var(--pink);"><svg viewBox="0 0 24 24"><path d="M12 20h9M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/></svg></div><div><div class="skill-name">Geração de Conteúdo</div><div class="skill-cat c-pink">Marketing</div><div class="skill-stars">★★★★☆</div></div></div>
+    <div class="skill"><div class="ico ico-sm" style="background:rgba(6,182,212,0.08);color:var(--cyan);"><svg viewBox="0 0 24 24"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div><div><div class="skill-name">Funil de Vendas</div><div class="skill-cat c-cyan">Vendas</div><div class="skill-stars">★★★★★</div></div></div>
+    <div class="skill"><div class="ico ico-sm" style="background:rgba(245,158,11,0.08);color:var(--amber);"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 015.83 1c0 2-3 3-3 3M12 17h.01"/></svg></div><div><div class="skill-name">FAQ Automático</div><div class="skill-cat c-amber">Atendimento</div><div class="skill-stars">★★★★☆</div></div></div>
+    <div class="skill"><div class="ico ico-sm" style="background:rgba(239,68,68,0.08);color:var(--red);"><svg viewBox="0 0 24 24"><path d="M12 1a3 3 0 00-3 3v8a3 3 0 006 0V4a3 3 0 00-3-3z"/><path d="M19 10v2a7 7 0 01-14 0v-2"/></svg></div><div><div class="skill-name">Clonagem de Voz</div><div class="skill-cat c-red">Voz</div><div class="skill-stars">★★★★★</div></div></div>
+    <div class="skill"><div class="ico ico-sm" style="background:rgba(16,185,129,0.08);color:var(--green);"><svg viewBox="0 0 24 24"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg></div><div><div class="skill-name">Cobrança Inteligente</div><div class="skill-cat c-green">Financeiro</div><div class="skill-stars">★★★★☆</div></div></div>
+    <div class="skill"><div class="ico ico-sm" style="background:rgba(59,130,246,0.08);color:var(--blue);"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><path d="M22 6l-10 7L2 6"/></svg></div><div><div class="skill-name">Email Handler</div><div class="skill-cat c-blue">Comunicação</div><div class="skill-stars">★★★★★</div></div></div>
+    <div class="skill"><div class="ico ico-sm" style="background:rgba(139,92,246,0.08);color:var(--purple);"><svg viewBox="0 0 24 24"><path d="M18 20V10M12 20V4M6 20v-6"/></svg></div><div><div class="skill-name">Relatórios IA</div><div class="skill-cat c-purple">Análise</div><div class="skill-stars">★★★★☆</div></div></div>
+  </div>
+</div>
+
+<!-- S7: FLUXOS CANVAS VISUAL -->
+<div class="slide" data-slide="6">
+  <div class="tag" style="background:rgba(6,182,212,0.06);color:var(--cyan);border:1px solid rgba(6,182,212,0.12);">
+    <svg viewBox="0 0 24 24" style="width:12px;height:12px;stroke:var(--cyan);fill:none;stroke-width:2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+    Automação Visual
+  </div>
+  <h1 class="title sm">Construtor de Fluxos <span class="c-cyan">drag-and-drop</span></h1>
+  <p class="subtitle" style="font-size:13px;">Canvas visual com nós inteligentes. Conecte blocos, defina condições e publique automações sem escrever código.</p>
+  <div class="mock" style="max-width:900px;height:365px;position:relative;overflow:hidden;">
+    <div class="mock-bar">
+      <div class="mock-dot" style="background:#ef4444;"></div>
+      <div class="mock-dot" style="background:#f59e0b;"></div>
+      <div class="mock-dot" style="background:#10b981;"></div>
+      <span style="font-size:9px;color:var(--muted);margin-left:8px;">Editor de Fluxos — Atendimento WhatsApp + IA</span>
+      <div style="margin-left:auto;display:flex;gap:6px;">
+        <span style="font-size:8px;padding:2px 8px;border-radius:4px;background:rgba(16,185,129,0.1);color:var(--green);font-weight:700;">Publicado</span>
+        <span style="font-size:8px;padding:2px 8px;border-radius:4px;background:rgba(139,92,246,0.1);color:var(--purple);font-weight:700;">5 nós</span>
+      </div>
+    </div>
+    <!-- Canvas area com grid de pontos -->
+    <div style="position:relative;width:100%;height:327px;background:var(--surface);background-image:radial-gradient(circle,rgba(255,255,255,0.04) 1px,transparent 1px);background-size:24px 24px;overflow:hidden;">
+
+      <!-- SVG das conexões -->
+      <svg style="position:absolute;inset:0;width:100%;height:100%;pointer-events:none;" viewBox="0 0 900 282">
+        <!-- Trigger → IA -->
+        <path d="M 158 100 C 200 100, 220 141, 265 141" stroke="rgba(16,185,129,0.4)" stroke-width="1.5" fill="none" stroke-dasharray="4,3"/>
+        <!-- IA → Condição SIM -->
+        <path d="M 395 115 C 430 115, 450 90, 480 90" stroke="rgba(16,185,129,0.4)" stroke-width="1.5" fill="none" stroke-dasharray="4,3"/>
+        <!-- IA → Condição NÃO -->
+        <path d="M 395 167 C 430 167, 450 200, 480 200" stroke="rgba(239,68,68,0.35)" stroke-width="1.5" fill="none" stroke-dasharray="4,3"/>
+        <!-- Cond SIM → Resposta -->
+        <path d="M 610 90 C 640 90, 660 100, 690 100" stroke="rgba(16,185,129,0.4)" stroke-width="1.5" fill="none" stroke-dasharray="4,3"/>
+        <!-- Cond NÃO → Humano -->
+        <path d="M 610 200 C 650 200, 660 210, 690 210" stroke="rgba(245,158,11,0.4)" stroke-width="1.5" fill="none" stroke-dasharray="4,3"/>
+        <!-- Pontos nas extremidades -->
+        <circle cx="158" cy="100" r="3" fill="rgba(16,185,129,0.6)"/>
+        <circle cx="265" cy="141" r="3" fill="rgba(139,92,246,0.6)"/>
+        <circle cx="395" cy="115" r="3" fill="rgba(139,92,246,0.6)"/>
+        <circle cx="395" cy="167" r="3" fill="rgba(139,92,246,0.6)"/>
+        <circle cx="480" cy="90" r="3" fill="rgba(16,185,129,0.6)"/>
+        <circle cx="480" cy="200" r="3" fill="rgba(239,68,68,0.6)"/>
+        <circle cx="610" cy="90" r="3" fill="rgba(6,182,212,0.6)"/>
+        <circle cx="610" cy="200" r="3" fill="rgba(245,158,11,0.6)"/>
+        <circle cx="690" cy="100" r="3" fill="rgba(6,182,212,0.6)"/>
+        <circle cx="690" cy="210" r="3" fill="rgba(245,158,11,0.6)"/>
+      </svg>
+
+      <!-- Nó 1: Trigger WhatsApp -->
+      <div style="position:absolute;left:30px;top:66px;width:130px;background:var(--card);border:1px solid rgba(16,185,129,0.3);border-radius:9px;padding:10px 12px;box-shadow:0 4px 16px rgba(0,0,0,0.3);">
+        <div style="display:flex;align-items:center;gap:6px;margin-bottom:5px;">
+          <div style="width:24px;height:24px;border-radius:6px;background:rgba(16,185,129,0.12);display:flex;align-items:center;justify-content:center;">
+            <svg viewBox="0 0 24 24" style="width:12px;height:12px;stroke:var(--green);fill:none;stroke-width:2;"><path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"/></svg>
+          </div>
+          <span style="font-size:8px;font-weight:800;color:var(--green);text-transform:uppercase;letter-spacing:0.5px;">Trigger</span>
+        </div>
+        <div style="font-size:9px;font-weight:700;">WhatsApp Message</div>
+        <div style="font-size:7px;color:var(--muted);margin-top:3px;">Ao receber mensagem</div>
+      </div>
+
+      <!-- Nó 2: Agente IA -->
+      <div style="position:absolute;left:260px;top:100px;width:138px;background:var(--card);border:1px solid rgba(139,92,246,0.35);border-radius:9px;padding:10px 12px;box-shadow:0 4px 20px rgba(139,92,246,0.1);">
+        <div style="display:flex;align-items:center;gap:6px;margin-bottom:5px;">
+          <div style="width:24px;height:24px;border-radius:6px;background:rgba(139,92,246,0.12);display:flex;align-items:center;justify-content:center;">
+            <svg viewBox="0 0 24 24" style="width:12px;height:12px;stroke:var(--purple);fill:none;stroke-width:1.8;"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M9 9h6v6H9z"/></svg>
+          </div>
+          <span style="font-size:8px;font-weight:800;color:var(--purple);text-transform:uppercase;letter-spacing:0.5px;">Agente IA</span>
+        </div>
+        <div style="font-size:9px;font-weight:700;">Analisar Intenção</div>
+        <div style="font-size:7px;color:var(--muted);margin-top:3px;">GPT-4o · Temp 0.3</div>
+        <div style="font-size:7px;color:var(--muted);">Classificar: suporte / venda</div>
+      </div>
+
+      <!-- Labels das saídas -->
+      <div style="position:absolute;left:408px;top:68px;font-size:7px;font-weight:800;color:var(--green);background:rgba(16,185,129,0.08);padding:2px 6px;border-radius:4px;">SIM</div>
+      <div style="position:absolute;left:408px;top:174px;font-size:7px;font-weight:800;color:var(--red);background:rgba(239,68,68,0.08);padding:2px 6px;border-radius:4px;">NÃO</div>
+
+      <!-- Nó 3: Condição SIM → automático -->
+      <div style="position:absolute;left:475px;top:56px;width:138px;background:var(--card);border:1px solid rgba(6,182,212,0.3);border-radius:9px;padding:10px 12px;box-shadow:0 4px 16px rgba(0,0,0,0.2);">
+        <div style="display:flex;align-items:center;gap:6px;margin-bottom:5px;">
+          <div style="width:24px;height:24px;border-radius:6px;background:rgba(6,182,212,0.1);display:flex;align-items:center;justify-content:center;">
+            <svg viewBox="0 0 24 24" style="width:12px;height:12px;stroke:var(--cyan);fill:none;stroke-width:2;"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+          </div>
+          <span style="font-size:8px;font-weight:800;color:var(--cyan);text-transform:uppercase;letter-spacing:0.5px;">Resposta</span>
+        </div>
+        <div style="font-size:9px;font-weight:700;">Responder Automaticamente</div>
+        <div style="font-size:7px;color:var(--muted);margin-top:3px;">Template + voz natural</div>
+      </div>
+
+      <!-- Nó 4: Condição NÃO → escalar -->
+      <div style="position:absolute;left:475px;top:168px;width:138px;background:var(--card);border:1px solid rgba(245,158,11,0.3);border-radius:9px;padding:10px 12px;box-shadow:0 4px 16px rgba(0,0,0,0.2);">
+        <div style="display:flex;align-items:center;gap:6px;margin-bottom:5px;">
+          <div style="width:24px;height:24px;border-radius:6px;background:rgba(245,158,11,0.1);display:flex;align-items:center;justify-content:center;">
+            <svg viewBox="0 0 24 24" style="width:12px;height:12px;stroke:var(--amber);fill:none;stroke-width:2;"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
+          </div>
+          <span style="font-size:8px;font-weight:800;color:var(--amber);text-transform:uppercase;letter-spacing:0.5px;">Escalar</span>
+        </div>
+        <div style="font-size:9px;font-weight:700;">Transferir para Humano</div>
+        <div style="font-size:7px;color:var(--muted);margin-top:3px;">Notifica atendente</div>
+      </div>
+
+      <!-- Nó 5: Log / Finalizar -->
+      <div style="position:absolute;left:688px;top:56px;width:118px;background:var(--card);border:1px solid rgba(16,185,129,0.2);border-radius:9px;padding:10px 12px;box-shadow:0 4px 16px rgba(0,0,0,0.2);">
+        <div style="display:flex;align-items:center;gap:6px;margin-bottom:5px;">
+          <div style="width:24px;height:24px;border-radius:6px;background:rgba(16,185,129,0.1);display:flex;align-items:center;justify-content:center;">
+            <svg viewBox="0 0 24 24" style="width:12px;height:12px;stroke:var(--green);fill:none;stroke-width:2;"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><path d="M22 4L12 14.01l-3-3"/></svg>
+          </div>
+          <span style="font-size:8px;font-weight:800;color:var(--green);text-transform:uppercase;letter-spacing:0.5px;">Finalizar</span>
+        </div>
+        <div style="font-size:9px;font-weight:700;">Registrar & Concluir</div>
+        <div style="font-size:7px;color:var(--muted);margin-top:3px;">Log + métricas</div>
+      </div>
+
+      <!-- Nó 6: Notificação humano -->
+      <div style="position:absolute;left:688px;top:175px;width:118px;background:var(--card);border:1px solid rgba(245,158,11,0.2);border-radius:9px;padding:10px 12px;box-shadow:0 4px 16px rgba(0,0,0,0.2);">
+        <div style="display:flex;align-items:center;gap:6px;margin-bottom:5px;">
+          <div style="width:24px;height:24px;border-radius:6px;background:rgba(245,158,11,0.1);display:flex;align-items:center;justify-content:center;">
+            <svg viewBox="0 0 24 24" style="width:12px;height:12px;stroke:var(--amber);fill:none;stroke-width:2;"><path d="M18 8A6 6 0 006 8c0 7-3 9-3 9h18s-3-2-3-9M13.73 21a2 2 0 01-3.46 0"/></svg>
+          </div>
+          <span style="font-size:8px;font-weight:800;color:var(--amber);text-transform:uppercase;letter-spacing:0.5px;">Notificar</span>
+        </div>
+        <div style="font-size:9px;font-weight:700;">Alerta Equipe</div>
+        <div style="font-size:7px;color:var(--muted);margin-top:3px;">Telegram · Email</div>
+      </div>
+
+      <!-- Mini toolbar bottom left -->
+      <div style="position:absolute;bottom:10px;left:10px;display:flex;gap:4px;">
+        <div style="padding:4px 8px;border-radius:5px;background:rgba(139,92,246,0.08);border:1px solid rgba(139,92,246,0.12);font-size:7px;color:var(--purple);font-weight:700;">+ Nó</div>
+        <div style="padding:4px 8px;border-radius:5px;background:rgba(0,0,0,0.3);border:1px solid var(--border);font-size:7px;color:var(--muted);font-weight:600;">Zoom 100%</div>
+        <div style="padding:4px 8px;border-radius:5px;background:rgba(0,0,0,0.3);border:1px solid var(--border);font-size:7px;color:var(--muted);font-weight:600;">Histórico</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- S8: CHAT MULTI-IA -->
+<div class="slide" data-slide="7">
+  <div class="tag" style="background:rgba(6,182,212,0.06);color:var(--cyan);border:1px solid rgba(6,182,212,0.12);">
+    <svg viewBox="0 0 24 24" style="width:12px;height:12px;stroke:var(--cyan);fill:none;stroke-width:2"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+    Assistente IA
+  </div>
+  <h1 class="title sm">Chat com <span class="c-cyan">múltiplos provedores</span></h1>
+  <p class="subtitle" style="font-size:13px;">Alterne entre 5+ provedores instantaneamente. System prompt customizável. Streaming em tempo real. Histórico por threads.</p>
+  <div class="mock" style="max-width:880px;">
+    <div class="mock-bar"><div class="mock-dot" style="background:#ef4444;"></div><div class="mock-dot" style="background:#f59e0b;"></div><div class="mock-dot" style="background:#10b981;"></div><span style="font-size:9px;color:var(--muted);margin-left:8px;">Chat IA — Assistente Inteligente</span></div>
+    <div style="display:flex;height:280px;">
+      <div style="width:180px;background:var(--surface);border-right:1px solid var(--border);padding:10px;">
+        <div style="font-size:8px;font-weight:800;color:var(--muted);margin-bottom:6px;text-transform:uppercase;letter-spacing:0.5px;">Threads</div>
+        <div style="padding:6px 8px;border-radius:5px;background:rgba(139,92,246,0.1);font-size:8px;font-weight:600;color:var(--purple);margin-bottom:3px;">Análise Contrato #47</div>
+        <div style="padding:6px 8px;border-radius:5px;font-size:8px;font-weight:500;color:var(--text2);margin-bottom:3px;">Proposta Comercial</div>
+        <div style="padding:6px 8px;border-radius:5px;font-size:8px;font-weight:500;color:var(--text2);margin-bottom:3px;">Estratégia Marketing Q2</div>
+        <div style="padding:6px 8px;border-radius:5px;font-size:8px;font-weight:500;color:var(--text2);margin-bottom:3px;">Relatório Financeiro</div>
+        <div style="padding:6px 8px;border-radius:5px;font-size:8px;font-weight:500;color:var(--text2);">Planejamento Sprint</div>
+      </div>
+      <div style="flex:1;display:flex;flex-direction:column;">
+        <div style="padding:8px 12px;border-bottom:1px solid var(--border);display:flex;gap:6px;align-items:center;">
+          <span style="font-size:8px;color:var(--text2);font-weight:600;">Provider:</span>
+          <span style="padding:3px 8px;border-radius:4px;background:rgba(139,92,246,0.1);color:var(--purple);font-size:8px;font-weight:700;">OpenAI</span>
+          <span style="padding:3px 8px;border-radius:4px;background:var(--surface);color:var(--text2);font-size:8px;font-weight:600;">Gemini</span>
+          <span style="padding:3px 8px;border-radius:4px;background:var(--surface);color:var(--text2);font-size:8px;font-weight:600;">Claude</span>
+          <span style="padding:3px 8px;border-radius:4px;background:var(--surface);color:var(--text2);font-size:8px;font-weight:600;">Groq</span>
+          <span style="padding:3px 8px;border-radius:4px;background:var(--surface);color:var(--text2);font-size:8px;font-weight:600;">Ollama</span>
+          <span style="margin-left:auto;font-size:8px;color:var(--text2);font-weight:600;">Modelo: GPT-4o</span>
+        </div>
+        <div style="flex:1;padding:12px;overflow:hidden;">
+          <div style="padding:8px 12px;background:var(--card2);border-radius:8px;margin-bottom:8px;max-width:80%;font-size:9px;line-height:1.5;color:var(--text2);">Analise as cláusulas de penalidade do contrato #47 e identifique riscos para nossa empresa.</div>
+          <div style="padding:8px 12px;background:rgba(139,92,246,0.06);border:1px solid rgba(139,92,246,0.1);border-radius:8px;margin-left:auto;max-width:85%;font-size:9px;line-height:1.5;">
+            <strong style="color:var(--purple);">Análise de Risco — Contrato #47</strong><br><br>
+            Identifiquei 3 cláusulas críticas:<br>
+            <strong>1. Cláusula 8.2</strong> — Multa de 15% sobre valor total por atraso &gt; 30 dias<br>
+            <strong>2. Cláusula 12.1</strong> — Rescisão unilateral sem aviso prévio<br>
+            <strong>3. Cláusula 15.4</strong> — Foro exclusivo em comarca distante<br><br>
+            <em style="color:var(--amber);">Recomendação: Renegociar cláusulas 8.2 e 12.1 antes da assinatura.</em>
+          </div>
+        </div>
+        <div style="padding:8px 12px;border-top:1px solid var(--border);display:flex;gap:6px;">
+          <div style="flex:1;padding:6px 10px;border-radius:6px;background:var(--surface);border:1px solid var(--border);font-size:9px;color:var(--muted);">Digite sua mensagem...</div>
+          <div style="padding:6px 10px;border-radius:6px;background:var(--purple);display:flex;align-items:center;"><svg viewBox="0 0 24 24" style="width:12px;height:12px;stroke:white;fill:none;stroke-width:2;"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- S9-S15 no arquivo JS -->
+</div>
+
+<!-- Desktop Nav bar -->
+<div class="nav">
+  <div class="nav-brand"><div class="nav-logo"><svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" stroke="white" fill="none" stroke-width="2"/></svg></div><div class="nav-name">Smart Moon<span>/span></div></div>
+  <div class="nav-dots" id="dots"></div>
+  <div class="nav-r"><div class="nav-counter" id="counter">1 / 15</div><div class="nav-btns">
+    <button class="nav-btn" id="prevBtn" onclick="go(-1)">Anterior</button>
+    <button class="nav-btn" id="nextBtn" onclick="go(1)">Próximo</button>
+  </div></div>
+</div>
+
+<!-- Mobile Floating Nav -->
+<div class="m-nav">
+  <div class="m-nav-inner">
+    <button class="m-btn" id="mPrevBtn" onclick="go(-1)">
+      <svg viewBox="0 0 24 24"><path d="M15 18l-6-6 6-6"></path></svg>
+    </button>
+    <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:6px;padding:0 4px;">
+      <div class="m-progress"><div class="m-progress-bar" id="mProgress" style="width:6.67%"></div></div>
+      <div class="m-counter" id="mCounter">1 / 15</div>
+    </div>
+    <button class="m-btn" id="mNextBtn" onclick="go(1)">
+      <svg viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"></path></svg>
+    </button>
+  </div>
+</div>
+
+<script src="/slides/slides-extra.js"></script>
+<script>
+let current = 0;
+const slides = document.querySelectorAll('.slide');
+const total = slides.length;
+const dotsEl = document.getElementById('dots');
+const counter = document.getElementById('counter');
+for (let i = 0; i < total; i++) {
+  const d = document.createElement('div');
+  d.className = 'dot' + (i===0?' active':'');
+  d.onclick = () => goTo(i);
+  dotsEl.appendChild(d);
+}
+function goTo(n) {
+  if (n<0||n>=total||n===current) return;
+  const dir = n > current ? 1 : -1;
+  slides[current].classList.remove('active');
+  slides[current].classList.add('prev');
+  setTimeout(() => slides[n < current ? n+1 : n-1]?.classList.remove('prev'), 500);
+  current = n;
+  slides[current].classList.add('active');
+  updateUI();
+}
+function go(dir) { goTo(current+dir); }
+function updateUI() {
+  const pct = ((current+1)/total*100).toFixed(2);
+  // Desktop nav
+  counter.textContent = `${current+1} / ${total}`;
+  document.getElementById('prevBtn').disabled = current===0;
+  document.getElementById('nextBtn').disabled = current===total-1;
+  dotsEl.querySelectorAll('.dot').forEach((d,i) => d.className='dot'+(i===current?' active':''));
+  // Mobile nav
+  const mProg = document.getElementById('mProgress');
+  const mCtr  = document.getElementById('mCounter');
+  const mPrev = document.getElementById('mPrevBtn');
+  const mNext = document.getElementById('mNextBtn');
+  if(mProg) mProg.style.width = pct+'%';
+  if(mCtr)  mCtr.textContent = `${current+1} / ${total}`;
+  if(mPrev) mPrev.disabled = current===0;
+  if(mNext) mNext.disabled = current===total-1;
+}
+document.addEventListener('keydown', e => {
+  if(e.key==='ArrowRight'||e.key===' '){e.preventDefault();go(1);}
+  if(e.key==='ArrowLeft'){e.preventDefault();go(-1);}
+  if(e.key==='f'||e.key==='F') toggleFullscreen();
+});
+function toggleFullscreen() { document.fullscreenElement ? document.exitFullscreen() : document.documentElement.requestFullscreen(); }
+let ts=0, ty=0;
+document.addEventListener('touchstart', e =>{ts=e.touches[0].clientX; ty=e.touches[0].clientY;});
+document.addEventListener('touchend', e =>{
+  const dx=ts-e.changedTouches[0].clientX;
+  const dy=ty-e.changedTouches[0].clientY;
+  if(Math.abs(dx)>Math.abs(dy)&&Math.abs(dx)>40) go(dx>0?1:-1);
+});
+updateUI();
+
+/* ── MOBILE AUTO-SCALE ─────────────────────────────────────────
+   Scales each slide's content down so everything fits in the
+   viewport with ZERO scrolling — like Google Slides on mobile.
+   ─────────────────────────────────────────────────────────────*/
+function initMobileScale() {
+  if (window.innerWidth > 768) {
+    // Desktop: reset any previous scaling
+    document.querySelectorAll('.slide-scaler').forEach(s => {
+      s.style.transform = '';
+    });
+    return;
+  }
+
+  const NAV_H  = 90;   // bottom mobile nav height
+  const TOP_H  = 52;   // top spacing
+  const PAD_X  = 32;   // horizontal padding (16px each side)
+  const availH = window.innerHeight - NAV_H - TOP_H;
+  const availW = window.innerWidth - PAD_X;
+
+  document.querySelectorAll('.slide').forEach(slide => {
+    // Wrap content once
+    let scaler = slide.querySelector('.slide-scaler');
+    if (!scaler) {
+      scaler = document.createElement('div');
+      scaler.className = 'slide-scaler';
+      scaler.style.cssText = `
+        width: ${availW}px;
+        transform-origin: top center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: inherit;
+      `;
+      // Move all children into scaler
+      while (slide.firstChild) scaler.appendChild(slide.firstChild);
+      slide.appendChild(scaler);
+    }
+
+    // Reset scale to measure natural size
+    scaler.style.transform = 'none';
+    scaler.style.marginBottom = '0';
+    scaler.style.width = availW + 'px';
+
+    const naturalH = scaler.scrollHeight;
+
+    if (naturalH > availH) {
+      const scale = Math.min((availH / naturalH) * 0.97, 1);
+      scaler.style.transform = `scale(${scale})`;
+      // Collapse the whitespace that transform leaves behind
+      const shrink = naturalH * (1 - scale);
+      scaler.style.marginBottom = `-${shrink}px`;
+    }
+  });
+}
+
+// Run after slides-extra.js has injected all slides
+setTimeout(initMobileScale, 80);
+window.addEventListener('resize', () => { clearTimeout(window._mscT); window._mscT = setTimeout(initMobileScale, 100); });
+window.addEventListener('orientationchange', () => setTimeout(initMobileScale, 300));
+</script>
+</body>
+</html>
